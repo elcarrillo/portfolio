@@ -4,7 +4,7 @@ import { faAppStore, faGithub, faGooglePlay } from '@fortawesome/free-brands-svg
 import { } from '@fortawesome/free-solid-svg-icons';
 
 export const navigation = {
-	name: "Hashir",
+	name: "Edgar",
 	links: [
 		{
 			title: "About",
@@ -25,8 +25,8 @@ export const navigation = {
 	],
 }
 export const intro = {
-	title: "Hey, I'm Hashir",
-	description: "A Computer Engineer creating mobile apps and static websites.",
+	title: "Hi, im Edgar",
+	description: "A PhD student researching the physics of explosive volcanic eruptions",
 	image: profile.src,
 	buttons: [
 		{
@@ -36,7 +36,7 @@ export const intro = {
 		},
 		{
 			title: "Resume",
-			link: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+			link: "https://drive.google.com/file/d/1XEnKkaNySUnfJy4o3xS0y6d9-F4igAk4/view?usp=sharing",
 			isPrimary: false,
 		},
 	],
@@ -45,9 +45,7 @@ export const intro = {
 export const about = {
 	title: "Who I am",
 	description: [
-		"I graduated from National University of Sciences and Technology (NUST) in 2020 with a degree in Computer Engineering. I kick started my professional career as a mobile application developer working remotely for a UK based startup — Lessgo.",
-		"The tech industry is ever-evolving and I love being able to grow with it, while continually solidifying the fundamentals. I opensource my code from a place of empathy - for future developers, teammates, users, and with accessibility in mind. I also love joining communities, helping and mentoring new developers, and supporting organizations to promote diversity in tech. I’m sharing my programming journey on instagram, helping people who are just getting into the space of programming.",
-		"When I’m not programming, I focus on my hobbies which are: diary writing, doodling, meeting people and growing my network.",
+		" I'm a PhD student at Vanderbilt University, and my academic journey started with a BS in Physics from Cal State San Bernardino in 2019. After that, I dabbled in tech in the California Bay Area before heading to Nashville, TN for grad school. I recently wrapped up my MS in Physics from Fisk University in August 2023. Currently, my interests are in physical volcanology and dynamics of explosive eruptions. I am interested in how mathematical models, physical models and experiments can be used as a tool to explore natural processes, predict how dynamic systems will behave, and gain insight into processes that are difficult to directly observe. ",
 	],
 }
 
@@ -55,15 +53,21 @@ export const work = {
 	title: "What I do",
 	cards: [
 		{
-			title: "Mobile App Development",
-			description: "I create pixel perfect iOS and Andriod apps using Flutter.",
+			title: "Dynamics of water rich plumes",
+			description: "Researching the impact of external water on volcanic plume height."
+            using the one-dimensional Plumeria model",
 			icons: null,
 		},
 		{
-			title: "Web Development",
-			description: "I create responsive static websites using Reactjs.",
+			title: "Computational Science",
+			description: "I build and use compuational tools, spanning from automating routine tasks to developing numerical models that capture complex physical phenomena",
 			icons: null,
 		}
+        {
+            title: "Student Advocate",
+            description: "In part because of experiencing the difficulties associated with being a first-generation Underrepresented Minority (URM) student firsthand, I dedicate time for outreach and mentorship of prospective/current students in physical science.",
+            icons: null,
+        }
 	],
 }
 
@@ -71,41 +75,41 @@ export const projects = {
 	title: "Projects",
 	cards: [
 		{
-			title: "StarBook",
-			description: "A digital diary and mood tracking app that helps you in keeping track of your mood and productivity throughout the month/year.",
+			title: "TBD",
+			description: "will be added soon.",
 			icons: [
 				{
 					icon: faAppStore,
-					link: "https://apps.apple.com/us/app/starbook-journal-ai-diary/id1552418289",
+//					link: "https://apps.apple.com/us/app/starbook-journal-ai-diary/id1552418289",
 				},
 				{
 					icon: faGithub,
-					link: "https://github.com/hashirshoaeb/star_book",
+//					link: "https://github.com/hashirshoaeb/star_book",
 				},
 			]
 		},
-		{
-			title: "QuranTalk",
-			description: "An emotional well being and mental health app. The app helps people to navigate their emotions in the light of the Quran.",
-			icons: [
-				{
-					icon: faAppStore,
-					link: "https://apps.apple.com/us/app/qurantalk/id1563425149",
-				},
-				{
-					icon: faGooglePlay,
-					link: "https://play.google.com/store/apps/details?id=com.ayahemotion.quran_talk",
-				},
-			]
-		},
-		{
-			title: "Portfolio",
-			description: "A portfolio website template that helps you showcase your work, projects and skills as a software developer or freelancer.",
-			icons: [
-				{
-					icon: faGithub,
-					link: "https://github.com/hashirshoaeb/portfolio",
-				},
+//		{
+//			title: "QuranTalk",
+//			description: "An emotional well being and mental health app. The app helps people to navigate their emotions in the light of the Quran.",
+//			icons: [
+//				{
+//					icon: faAppStore,
+//					link: "https://apps.apple.com/us/app/qurantalk/id1563425149",
+//				},
+//				{
+//					icon: faGooglePlay,
+//					link: "https://play.google.com/store/apps/details?id=com.ayahemotion.quran_talk",
+//				},
+//			]
+//		},
+//		{
+//			title: "Portfolio",
+//			description: "A portfolio website template that helps you showcase your work, projects and skills as a software developer or freelancer.",
+//			icons: [
+//				{
+//					icon: faGithub,
+//					link: "https://github.com/hashirshoaeb/portfolio",
+//				},
 			]
 		},
 	],
@@ -113,53 +117,53 @@ export const projects = {
 
 export const contact = {
 	title: "Get in touch",
-	description: "Coffee Chat! Please do not hesitate to schedule a meeting. Alternatively, feel free to reach out directly by email at hashirshoaeb@gmail.com.",
+	description: "Coffee Chat! Please do not hesitate to reach out. My email is edgar.carrillo@vanderbilt.edu.",
 	buttons: [
 		{
 			title: "Email Me",
-			link: "mailto:hashirshoaeb@gmail.com",
+			link: "edgar.carrillo@vanderbilt.edu",
 			isPrimary: true,
 		},
-		{
-			title: "Schedule Meeting",
-			link: "",
-			isPrimary: false,
-		},
+//		{
+//			title: "Schedule Meeting",
+//			link: "",
+//			isPrimary: false,
+//		},
 	]
 }
 
 // SEARCH ENGINE 
 export const SEO = {
 	// 50 - 60 char  
-	title: "Hashir Shoaib | Computer Engineer | Flutter | Reactjs developer",
-	description: "I create mobile apps and static websites. I graduated from National University of Sciences and Technology (NUST) in 2020 with a degree in Computer Engineering.",
+	title: "Edgar Carrillo | PhD Student | Volcano Physics | Computational Physics",
+	description: "I am a PhD student at Vanderbitl University in Earth and Environmental Science. I reserach the dynamics of explosive volcanic eruptions. I graduated from Fisk University in August 2023 with an MS in Physics.",
 	image: profile.src,
 }
 
 export const links = {
 	image: profile.src,
-	title: "@hashirshoaeb",
-	description: "Computer Engineer | Flutter | Reactjs Developer",
+	title: "@EdgarLCarrillo",
+	description: "PhD Student | PhD Student| Vanderbilt University",
 	cards: [
 		{
 			title: "My website",
-			link: "https://hashirshoaeb.com/",
+			link: "",
 		},
-		{
-			title: "QuranTalk App",
-			link: "https://www.qurantalk.app/",
-		},
-		{
-			title: "StarBook App",
-			link: "https://starbook.dev/",
-		},
+//		{
+//			title: "QuranTalk App",
+//			link: "https://www.qurantalk.app/",
+//		},
+//		{
+//			title: "StarBook App",
+//			link: "https://starbook.dev/",
+//		},
 		{
 			title: "My GitHub",
-			link: "https://github.com/hashirshoaeb/",
+			link: "https://github.com/elcarrillo",
 		},
 		{
 			title: "My LinkedIn",
-			link: "https://www.linkedin.com/in/hashirshoaeb/",
+			link: "https://www.linkedin.com/in/elcarrillo/",
 		},
 	]
 }
