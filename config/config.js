@@ -61,7 +61,7 @@ export const work = {
 			title: "Computational Science",
 			description: "I build and use compuational tools, spanning from automating routine tasks to developing numerical models that capture complex physical phenomena",
 			icons: null,
-		}
+		},
         {
             title: "Student Advocate",
             description: "In part because of experiencing the difficulties associated with being a first-generation Underrepresented Minority (URM) student firsthand, I dedicate time for outreach and mentorship of prospective/current students in physical science.",
@@ -109,8 +109,8 @@ export const projects = {
 //					icon: faGithub,
 //					link: "https://github.com/hashirshoaeb/portfolio",
 //				},
-			]
-		},
+		// 	]
+		// },
 	],
 }
 
