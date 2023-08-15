@@ -45,7 +45,9 @@ export const intro = {
 export const about = {
 	title: "Who I am",
 	description: [
-		" I'm a PhD student at Vanderbilt University, and my academic journey started with a BS in Physics from Cal State San Bernardino in 2019. After that, I dabbled in tech in the California Bay Area before heading to Nashville, TN for grad school. I recently wrapped up my MS in Physics from Fisk University in August 2023. Currently, my interests are in physical volcanology and dynamics of explosive eruptions. I am interested in how mathematical models, physical models and experiments can be used as a tool to explore natural processes, predict how dynamic systems will behave, and gain insight into processes that are difficult to directly observe. ",
+		" I'm a PhD student at Vanderbilt University, and my academic journey started with a BS in Physics from Cal State San Bernardino in 2019.",
+		" After that, I dabbled in tech in the California Bay Area before heading to Nashville, TN for grad school. ", 
+		"I recently wrapped up my MS in Physics from Fisk University in August 2023. Currently, my interests are in physical volcanology and dynamics of explosive eruptions. I am interested in how mathematical models, physical models and experiments can be used as a tool to explore natural processes, predict how dynamic systems will behave, and gain insight into processes that are difficult to directly observe. ",
 	],
 }
 
@@ -142,12 +144,12 @@ export const SEO = {
 export const links = {
 	image: profile.src,
 	title: "@EdgarLCarrillo",
-	description: "PhD Student | PhD Student| Vanderbilt University",
+	description: "PhD Student | Vanderbilt University",
 	cards: [
-		{
-			title: "My website",
-			link: "",
-		},
+		// {
+		// 	title: "My website",
+		// 	link: " ",
+		// },
 //		{
 //			title: "QuranTalk App",
 //			link: "https://www.qurantalk.app/",
