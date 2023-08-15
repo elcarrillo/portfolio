@@ -54,8 +54,7 @@ export const work = {
 	cards: [
 		{
 			title: "Dynamics of water rich plumes",
-			description: "Researching the impact of external water on volcanic plume height."
-            using the one-dimensional Plumeria model",
+			description: "Researching the impact of external water on volcanic plume height using the one-dimensional Plumeria model.",
 			icons: null,
 		},
 		{
