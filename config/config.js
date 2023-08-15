@@ -146,10 +146,10 @@ export const links = {
 	title: "@EdgarLCarrillo",
 	description: "PhD Student | Vanderbilt University",
 	cards: [
-		// {
-		// 	title: "My website",
-		// 	link: " ",
-		// },
+		{
+			title: "My website",
+			link: "https://elcarrillo.github.io/portfolio/",
+		},
 //		{
 //			title: "QuranTalk App",
 //			link: "https://www.qurantalk.app/",
