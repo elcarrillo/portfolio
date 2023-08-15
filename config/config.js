@@ -25,7 +25,7 @@ export const navigation = {
 	],
 }
 export const intro = {
-	title: "Hi, im Edgar",
+	title: "Hi, I'm Edgar",
 	description: "A PhD student researching the physics of explosive volcanic eruptions",
 	image: profile.src,
 	buttons: [
@@ -47,7 +47,7 @@ export const about = {
 	description: [
 		" I'm a PhD student at Vanderbilt University, and my academic journey started with a BS in Physics from Cal State San Bernardino in 2019.",
 		" After that, I dabbled in tech in the California Bay Area before heading to Nashville, TN for grad school. ", 
-		"I recently wrapped up my MS in Physics from Fisk University in August 2023. Currently, my interests are in physical volcanology and dynamics of explosive eruptions. I am interested in how mathematical models, physical models and experiments can be used as a tool to explore natural processes, predict how dynamic systems will behave, and gain insight into processes that are difficult to directly observe. ",
+		"I recently wrapped up my MS in Physics from Fisk University in August 2023. Currently, my interests are in physical volcanology and the dynamics of explosive eruptions. I am interested in how mathematical models, physical models and experiments can be used as a tool to explore natural processes, predict how dynamic systems will behave, and gain insight into processes that are difficult to directly observe. ",
 	],
 }
 
@@ -81,11 +81,11 @@ export const projects = {
 			icons: [
 				{
 					icon: faAppStore,
-//					link: "https://apps.apple.com/us/app/starbook-journal-ai-diary/id1552418289",
+					link: "#url",
 				},
 				{
 					icon: faGithub,
-//					link: "https://github.com/hashirshoaeb/star_book",
+					link: "#url",
 				},
 			]
 		},
@@ -165,6 +165,10 @@ export const links = {
 		{
 			title: "My LinkedIn",
 			link: "https://www.linkedin.com/in/elcarrillo/",
+		},
+				{
+			title: "Fisk-Vanderbilt Bridge Program",
+			link: "https://www.fisk-vanderbilt-bridge.org/",
 		},
 	]
 }
