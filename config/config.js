@@ -137,7 +137,7 @@ export const contact = {
 export const SEO = {
 	// 50 - 60 char  
 	title: "Edgar Carrillo | PhD Student | Volcano Physics | Computational Physics",
-	description: "I am a PhD student at Vanderbitl University in Earth and Environmental Science. I reserach the dynamics of explosive volcanic eruptions. I graduated from Fisk University in August 2023 with an MS in Physics.",
+	description: "I am a PhD student at Vanderbilt University in Earth and Environmental Science. I research the dynamics of explosive volcanic eruptions. I graduated from Fisk University in August 2023 with an MS in Physics.",
 	image: profile.src,
 }
 
