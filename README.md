@@ -10,8 +10,6 @@
     <a href="https://hashirshoaeb.github.io/portfolio"> hashirshoaeb.github.io/portfolio</a>
     <br />
     <br />
-    <a href="https://hashirshoaeb.com">About Me</a>
-    ·
     <a href="https://github.com/hashirshoaeb/portfolio/issues">Report Bug</a>
     ·
     <a href="https://github.com/hashirshoaeb/portfolio/issues">Request Feature</a>
