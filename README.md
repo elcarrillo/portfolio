@@ -4,7 +4,7 @@
   <h1 align="center">Developer's Portfolio ✨</h1>
 
   <p align="center">
-    It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects.
+    This is a personal static website/portfolio template hosted with GitHub Pages. The original build was done by hashirshoaeb (link below) and is opensourced. 
     <br />
     <strong>Site URL / Demo » </strong>
     <a href="https://hashirshoaeb.github.io/portfolio"> hashirshoaeb.github.io/portfolio</a>
