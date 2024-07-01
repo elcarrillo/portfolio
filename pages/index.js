@@ -3,8 +3,9 @@ import { Nav } from '../components/Navbar';
 import { Intro, About } from '../components/Intro';
 import { Skills, Projects } from '../components/Work';
 import { Footer, Contact } from '../components/Footer';
-import { about, contact, intro, navigation, projects, SEO, work } from '../config/config';
+import { about, contact, intro, navigation, projects, SEO, work, pictures } from '../config/config';
 import { Header } from '../components/Header';
+import Pictures from '../components/Pictures'; 
 
 export default function Home() {
   return (
@@ -31,6 +32,11 @@ export default function Home() {
       <Projects
         title={projects.title}
         cards={projects.cards}
+      />
+      <Pictures  // Add the Pictures component here
+        title={pictures.title}
+        description={pictures.description}
+        images={pictures.images}
       />
       <Contact
         title={contact.title}
