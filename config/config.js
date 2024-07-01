@@ -1,4 +1,3 @@
-
 import profile from './profile.png';
 import { faAppStore, faGithub, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 import { } from '@fortawesome/free-solid-svg-icons';
@@ -22,8 +21,13 @@ export const navigation = {
 			title: "Links",
 			link: "/links",
 		},
+		{
+			title: "Pictures",  // New tab
+			link: "#pictures",  // Link to the pictures section
+		},
 	],
 }
+
 export const intro = {
 	title: "Hi, I'm Edgar",
 	description: "A PhD student researching the physics of explosive volcanic eruptions",
@@ -35,7 +39,7 @@ export const intro = {
 			isPrimary: true,
 		},
 		{
-			title: "Resume",
+			title: "CV",
 			link: "https://drive.google.com/file/d/1CllHA0hiCnKEEWJvmqfZAVEQFa4A4q4Z/view?usp=sharing",
 			isPrimary: false,
 		},
@@ -171,4 +175,15 @@ export const links = {
 			link: "https://www.fisk-vanderbilt-bridge.org/",
 		},
 	]
+}
+
+// Section for pictures
+export const pictures = {
+	title: "Memorable Moments",
+	description: "A collection of photos",
+	images: [
+   { src: './redwood.png', alt: 'Hiking in the California bay area', caption: 'Hiking in the California bay area' }, // pictures must be in public folder
+   { src: './italy.png', alt: 'Field work in northern Italy', caption: 'Field work in northern Italy' },
+	{ src: './utah.png', alt: 'Exploring Utah', caption: 'Exploring Utah' },
+	],
 }
