@@ -40,7 +40,7 @@ export const intro = {
 		},
 		{
 			title: "CV",
-			link: "https://drive.google.com/file/d/1CllHA0hiCnKEEWJvmqfZAVEQFa4A4q4Z/view?usp=sharing",
+			link: "https://drive.google.com/file/d/1bdoqjwzDkJNU5T2v-4puN1hb2nWwZnUz/view?usp=sharing",
 			isPrimary: false,
 		},
 	],
@@ -49,9 +49,9 @@ export const intro = {
 export const about = {
 	title: "Who I am",
 	description: [
-		" I'm a PhD student at Vanderbilt University, and my academic journey started with a BS in Physics from Cal State San Bernardino in 2019.",
-		" After that, I dabbled in tech in the California Bay Area before heading to Nashville, TN for grad school. ", 
-		"I recently wrapped up my MS in Physics from Fisk University in August 2023. Currently, my interests are in physical volcanology and the dynamics of explosive eruptions. I am interested in how mathematical models, physical models and experiments can be used as a tool to explore natural processes, predict how dynamic systems will behave, and gain insight into processes that are difficult to directly observe. ",
+		" I'm a PhD student at the University of Oregon studying the dynamics of volcanic flows. My academic journey started with a BS in Physics from Cal State San Bernardino in 2019.",
+		" After that, I worked in tech in the San Francisco Bay Area before heading to Nashville, TN, for grad school. ", 
+		"I completed my MS in Physics at Fisk University in August 2023. Currently, my interests are in physical volcanology and the dynamics of explosive eruptions. I am interested in how mathematical models, physical models and experiments can be used as a tool to explore natural processes, predict how dynamic systems will behave, and gain insight into processes that are difficult to directly observe. ",
 	],
 }
 
@@ -59,13 +59,13 @@ export const work = {
 	title: "What I do",
 	cards: [
 		{
-			title: "Dynamics of water rich plumes",
+			title: "Dynamics of water-rich plumes",
 			description: "Researching the impact of external water on volcanic plume height using the one-dimensional Plumeria model.",
 			icons: null,
 		},
 		{
 			title: "Computational Science",
-			description: "I build and use compuational tools, spanning from automating routine tasks to developing numerical models that capture complex physical phenomena",
+			description: "I build and use computational tools, spanning from automating routine tasks to developing numerical models that capture complex physical phenomena",
 			icons: null,
 		},
         {
