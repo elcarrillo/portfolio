@@ -49,9 +49,10 @@ export const intro = {
 export const about = {
 	title: "Who I am",
 	description: [
-		" I'm a PhD student at the University of Oregon studying the dynamics of volcanic flows. My academic journey started with a BS in Physics from Cal State San Bernardino in 2019.",
-		" After that, I worked in tech in the San Francisco Bay Area before heading to Nashville, TN, for grad school. ", 
-		"I completed my MS in Physics at Fisk University in August 2023. Currently, my interests are in physical volcanology and the dynamics of explosive eruptions. I am interested in how mathematical models, physical models and experiments can be used as a tool to explore natural processes, predict how dynamic systems will behave, and gain insight into processes that are difficult to directly observe. ",
+	"Hello! I'm a Ph.D. student at the University of Oregon researching the dynamics of volcanic flows.",
+	"Leveraging my physics background (B.S. and M.S.), I focus my research on mathematical modeling and numerical simulations to explore and predict the behavior of dynamic natural systems, particularly explosive volcanic eruptions. Through computational science, I aim to gain insights into complex processes that are challenging to observe directly.",
+	"I'm passionate about advancing our understanding of volcanic systems and their interactions with the environment. I highly value collaboration within the Earth Science community and am dedicated to mentoring and inspiring the next generation of scientists.",
+
 	],
 }
 
