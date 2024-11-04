@@ -150,3 +150,21 @@ a {
   transform: translate(-0.5rem, -0.5rem);
   box-shadow: 2rem 2rem $primary;
 }
+
+.back-to-home {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.project-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.project-section img {
+  border-radius: 8px;
+}
+
+
