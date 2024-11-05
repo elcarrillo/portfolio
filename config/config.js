@@ -72,7 +72,7 @@ export const work = {
 			title: "Research Assistant",
 			description:
 			    "As a research assistant at the University of Oregon, I study the physics of volcanic eruption processes.",
-			link: "https://elcarrillo.github.io/portfolio/research",
+			link: "https://pages.uoregon.edu/volcanologycenter/",
 			icons: null,
 		},
 
