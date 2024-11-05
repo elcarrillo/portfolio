@@ -1,4 +1,11 @@
 import profile from './profile.png';
+
+import redwoodImage from '/public/redwood.png';
+import italyImage from '/public/italy.png';
+import utahImage from '/public/utah.png';
+
+
+
 import { faAppStore, faGithub, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 import { } from '@fortawesome/free-solid-svg-icons';
 
@@ -189,14 +196,15 @@ export const links = {
 
 // added section for pictures
 export const pictures = {
-	title: "Memorable Moments",
-	description: "A collection of photos",
-	images: [
-   { src: './redwood.png', alt: 'Hiking in the California bay area', caption: 'Hiking in the California bay area' }, // pictures must be in public folder
-   { src: './italy.png', alt: 'Field work in northern Italy', caption: 'Field work in northern Italy' },
-	{ src: './utah.png', alt: 'Exploring Utah', caption: 'Exploring Utah' },
-	],
+  title: "Memorable Moments",
+  description: "A collection of photos",
+  images: [
+    { src: redwoodImage.src, alt: 'Hiking in the California bay area', caption: 'Hiking in the California bay area' },
+    { src: italyImage.src, alt: 'Field work in northern Italy', caption: 'Field work in northern Italy' },
+    { src: utahImage.src, alt: 'Exploring Utah', caption: 'Exploring Utah' },
+  ],
 }
+
 
 // added research page
 export const research = {
