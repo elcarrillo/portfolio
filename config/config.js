@@ -10,6 +10,10 @@ export const navigation = {
 			link: "#about",
 		},
 		{
+			title: "Research",
+			link: "/research",
+		},
+		{
 			title: "Software Projects",
 			link: "#projects",
 		},
@@ -25,16 +29,13 @@ export const navigation = {
 			title: "Pictures",  // new tab
 			link: "#pictures",  // link to the pictures section
 		},
-		{
-			title: "Research",
-			link: "/research",
-		},
+
 	],
 }
 
 export const intro = {
 	title: "Hi, I'm Edgar",
-	description: "A PhD student researching the dynamics of volcanic flow",
+	description: "A PhD student researching the dynamics of volcanic flow.",
 	image: profile.src,
 	buttons: [
 		{
@@ -71,17 +72,20 @@ export const work = {
 			title: "Research Assistant",
 			description:
 			    "As a research assistant at the University of Oregon, I study the physics of volcanic eruption processes.",
+			link: "https://elcarrillo.github.io/portfolio/research",
 			icons: null,
 		},
 
 		{
 			title: "Computational Science",
 			description: "I build and use computational tools, spanning from automating routine tasks to developing numerical models that capture complex physical phenomena",
+			link: "https://github.com/elcarrillo",
 			icons: null,
 		},
         {
             title: "Student Advocate",
             description: "In part because of experiencing the difficulties associated with being a first-generation Underrepresented Minority (URM) student firsthand, I dedicate time for outreach and mentorship of prospective/current students in physical science.",
+            link: "https://gems-program.org/",
             icons: null,
         }
 	],
@@ -132,20 +136,15 @@ export const projects = {
 }
 
 export const contact = {
-	title: "Get in touch",
-	description: "Coffee Chat! Please do not hesitate to reach out. My email is elcar@uoregon.edu.",
-	buttons: [
-		{
-			title: "Email Me",
-			link: "elcar@uoregon.edu",
-			isPrimary: true,
-		},
-//		{
-//			title: "Schedule Meeting",
-//			link: "",
-//			isPrimary: false,
-//		},
-	]
+  title: "Get in touch",
+  description: "Coffee Chat! Please do not hesitate to reach out. My email is elcar@uoregon.edu.",
+  buttons: [
+    {
+      title: "Email Me",
+      link: "mailto:elcar@uoregon.edu",  // Ensure link starts with "mailto:"
+      isPrimary: true,
+    },
+  ]
 }
 
 // SEARCH ENGINE 
@@ -193,9 +192,9 @@ export const pictures = {
 	title: "Memorable Moments",
 	description: "A collection of photos",
 	images: [
-   { src: './redwood.png', alt: 'Hiking in the California bay area', caption: 'Hiking in the California bay area' }, // pictures must be in public folder
-   { src: './italy.png', alt: 'Field work in northern Italy', caption: 'Field work in northern Italy' },
-	{ src: './utah.png', alt: 'Exploring Utah', caption: 'Exploring Utah' },
+   { src: '/redwood.png', alt: 'Hiking in the California bay area', caption: 'Hiking in the California bay area' }, // pictures must be in public folder
+   { src: '/italy.png', alt: 'Field work in northern Italy', caption: 'Field work in northern Italy' },
+	{ src: '/utah.png', alt: 'Exploring Utah', caption: 'Exploring Utah' },
 	],
 }
 
@@ -207,10 +206,11 @@ export const research = {
     {
       title: "Dynamics of Shallow Conduit Flow",
       description: `As a member of the Karlstrom lab, my research focuses on understanding the magma flow beneath the Earth's surface and during volcanic eruptions. Specifically, I examine how magma transitions from dike intrusions to conduit flow, which can lead to fissure eruptions that eventually consolidate into a single vent. Using computational fluid dynamics (CFD) simulations, 
-	      I analyze magma flow and conduit morphology changes over time. This is particularly challenging for thermo-viscous flows, as heat flux within the conduit alters its geometry.
-	      
-	      To address these challenges, I utilize numerical modeling to investigate the evolution of flow dynamics. By calibrating these models with observational data from real-world volcanic systems, I aim to enhance their accuracy and predictive capabilities. Understanding the mechanics of magma movement is essential because it influences how far lava flows can travel and where magma will solidify upon cooling.`,
-      image: "./fissures.png",
+	       
+	       I analyze magma flow and conduit morphology changes over time. This is particularly challenging for thermo-viscous flows, as heat flux within the conduit alters its geometry.
+	       
+	       To address these challenges, I utilize numerical modeling to investigate the evolution of flow dynamics. By calibrating these models with observational data from real-world volcanic systems, I aim to enhance their accuracy and predictive capabilities. Understanding the mechanics of magma movement is essential because it influences how far lava flows can travel and where magma will solidify upon cooling.`,
+      image: "/fissures.png",
     },
     {
       title: "Dynamics of Water-Rich Columns",
@@ -224,21 +224,19 @@ export const research = {
 
 			This research enhances our understanding of how external water affects volcanic plume behavior, including height and stability. Events like the recent (2022) Hunga eruption highlight the importance of understanding water's role in volcanic eruptions. 
 
-			Full results will be available soon (manuscript in revision)!
-			`,
-      image: "./plumes.png",
+			Full results will be available soon (manuscript in revision)!`,
+      image: "/plumes.png",
     },
     {
       title: "Thermodynamics of Magma Evolution",
       description:`The 2011-2012 eruption of Chile's Cordón Caulle volcano provides valuable insight into how high-silica rhyolite can form directly from basaltic magma. Observations of mafic (basaltic) enclaves surrounded by rhyolitic glass suggest this transformation process.
 
-Using the rhyolite-MELTS program, we simulated magma evolution under varying pressures and water contents. Understanding this mechanism enhances our knowledge of magma evolution and volcanic behavior, with applications to other volcanic systems to improve predictions of volcanic activity.
+			Using the rhyolite-MELTS program, we simulated magma evolution under varying pressures and water contents. Understanding this mechanism enhances our knowledge of magma evolution and volcanic behavior, with applications to other volcanic systems to improve predictions of volcanic activity.
 
-Our full results will be available soon! (Corresponding Author: Anna Ruefer, Stanford University; Principal Investigator: Guil Gualda, Vanderbilt University)
+			Our full results will be available soon! (Corresponding Author: Anna Ruefer, Stanford University; Principal Investigator: Guil Gualda, Vanderbilt University)
 
-This research was conducted as part of the MESSY group at Vanderbilt University.`
-,
-      image: "./pcc_project.png",
+			This research was conducted as part of the MESSY group at Vanderbilt University.`,
+      image: "/pcc_project.png",
     },
     // add as needed
   ],
