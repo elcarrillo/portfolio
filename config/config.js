@@ -3,6 +3,9 @@ import profile from './profile.png';
 import redwoodImage from '/public/redwood.png';
 import italyImage from '/public/italy.png';
 import utahImage from '/public/utah.png';
+import fissuresImage from '/public/fissures.png';
+import plumesImage from '/public/plumes.png';
+import pccProjectImage from '/public/pcc_project.png';
 
 
 
@@ -218,7 +221,7 @@ export const research = {
 	       I analyze magma flow and conduit morphology changes over time. This is particularly challenging for thermo-viscous flows, as heat flux within the conduit alters its geometry.
 	       
 	       To address these challenges, I utilize numerical modeling to investigate the evolution of flow dynamics. By calibrating these models with observational data from real-world volcanic systems, I aim to enhance their accuracy and predictive capabilities. Understanding the mechanics of magma movement is essential because it influences how far lava flows can travel and where magma will solidify upon cooling.`,
-      image: "./fissures.png",
+      image: fissuresImage.src,
     },
     {
       title: "Dynamics of Water-Rich Columns",
@@ -233,7 +236,7 @@ export const research = {
 			This research enhances our understanding of how external water affects volcanic plume behavior, including height and stability. Events like the recent (2022) Hunga eruption highlight the importance of understanding water's role in volcanic eruptions. 
 
 			Full results will be available soon (manuscript in revision)!`,
-      image: "./plumes.png",
+      image: plumesImage.src,
     },
     {
       title: "Thermodynamics of Magma Evolution",
@@ -244,9 +247,10 @@ export const research = {
 			Our full results will be available soon! (Corresponding Author: Anna Ruefer, Stanford University; Principal Investigator: Guil Gualda, Vanderbilt University)
 
 			This research was conducted as part of the MESSY group at Vanderbilt University.`,
-      image: "./pcc_project.png",
+      image: pccProjectImage.src,
     },
     // add as needed
   ],
 };
+
 
