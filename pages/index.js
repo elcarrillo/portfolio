@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Nav } from '../components/Navbar';
 import { Intro, About } from '../components/Intro';
 import { Skills, Projects } from '../components/Work';
@@ -8,6 +8,12 @@ import { Header } from '../components/Header';
 import Pictures from '../components/Pictures'; 
 
 export default function Home() {
+  const [key, setKey] = useState(0); // add state for key
+
+  useEffect(() => {
+    setKey((prev) => prev + 1); // update key on component mount
+  }, []);
+
   return (
     <Fragment>
       <Header seo={SEO} />
@@ -33,12 +39,13 @@ export default function Home() {
         title={projects.title}
         cards={projects.cards}
       />
-      <Pictures  // Add the Pictures component here
+      <Pictures
         title={pictures.title}
         description={pictures.description}
         images={pictures.images}
       />
       <Contact
+        key={key} // force remount on key change
         title={contact.title}
         description={contact.description}
         buttons={contact.buttons}
