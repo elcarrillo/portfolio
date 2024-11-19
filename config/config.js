@@ -9,6 +9,7 @@ import pccProjectImage from '/public/pcc_project.png';
 
 
 
+
 import { faAppStore, faGithub, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 import { } from '@fortawesome/free-solid-svg-icons';
 
@@ -24,20 +25,20 @@ export const navigation = {
 			link: "#projects",
 		},
 		{
-			title: "Contact",
-			link: "#contact",
-		},
-		{
-			title: "Links",
-			link: "/links",
-		},
-		{
 			title: "Pictures",  // new tab
 			link: "#pictures",  // link to the pictures section
 		},
 		{
+			title: "Contact",
+			link: "#contact",
+		},
+		{
 			title: "Research",
 			link: "/research",
+		},
+		{
+			title: "Links",
+			link: "/links",
 		},
 
 	],
@@ -151,11 +152,18 @@ export const contact = {
   buttons: [
     {
       title: "Email Me",
-      link: "mailto:elcar@uoregon.edu",  // Ensure link starts with "mailto:"
+      link: "mailto:elcar@uoregon.edu",
       isPrimary: true,
     },
-  ]
-}
+    {
+      title: "Schedule Meeting",
+      link: "https://calendar.google.com/calendar/appointments/AcZssZ0W4lQXM_I6ySNf--chhc8bl6TvBiF0ba1B_Eo=?gv=true",
+      type: "google-calendar",
+      isPrimary: false,
+    },
+  ],
+};
+
 
 // SEARCH ENGINE 
 export const SEO = {
