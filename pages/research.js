@@ -8,7 +8,7 @@ const Research = () => {
     <div>
       {/* Back to Home Button */}
       <div className="back-to-home">
-        <Link href="https://elcarrillo.github.io/portfolio/" passHref>
+        <Link href="https://elcarrillo.github.io/portfolio" passHref>
           <a className="btn btn-primary">Back to Home</a>
         </Link>
       </div>

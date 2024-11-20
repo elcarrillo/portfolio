@@ -94,7 +94,7 @@ export const Footer = () => {
             <h5 className="fw-bold">Quick Links</h5>
             <ul className="list-unstyled">
               <li>
-                <Link href="https://elcarrillo.github.io/portfolio/" passHref>
+                <Link href="https://elcarrillo.github.io/portfolio" passHref>
                   <a className="text-light text-decoration-none">Main Page</a>
                 </Link>
               </li>
