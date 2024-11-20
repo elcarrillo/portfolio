@@ -6,6 +6,7 @@ import utahImage from '/public/utah.png';
 import fissuresImage from '/public/fissures.png';
 import plumesImage from '/public/plumes.png';
 import pccProjectImage from '/public/pcc_project.png';
+import volcanoImage from '/public/crater_lake.JPG';
 
 
 
@@ -221,6 +222,7 @@ export const pictures = {
 export const research = {
   title: "Research",
   description: "Highlighting my current and past research projects.",
+  headerImage: volcanoImage.src, // Add your header image path here
   projects: [
     {
       title: "Dynamics of Shallow Conduit Flow",

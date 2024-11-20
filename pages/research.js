@@ -1,21 +1,49 @@
 import React from 'react';
 import Link from 'next/link';
 import { research } from '../config/config';
+import { Footer } from '../components/Footer'; // Import Footer component
 
 const Research = () => {
   return (
     <div>
       {/* Back to Home Button */}
       <div className="back-to-home">
-        <Link href="/">
+        <Link href="https://elcarrillo.github.io/portfolio/" passHref>
           <a className="btn btn-primary">Back to Home</a>
         </Link>
       </div>
 
-      {/* Page Title and Description */}
-      <div style={{ backgroundColor: '#f8f9fa' }} className="py-5 px-5 text-center">
-        <h1 className="text-primary fw-bold">{research.title}</h1>
-        <p>{research.description}</p>
+      {/* Header Section with Image and Title */}
+      <div
+        className="research-header position-relative text-center text-white"
+        style={{
+          backgroundImage: `url(${research.headerImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "400px",
+        }}
+      >
+        <div
+          className="overlay"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.5)", // Dark overlay for contrast
+          }}
+        ></div>
+        <div
+          className="content position-relative"
+          style={{
+            zIndex: 2, // Ensures content appears above the overlay
+            paddingTop: "100px",
+          }}
+        >
+          <h1 className="fw-bold display-4">{research.title}</h1>
+          <p className="lead">{research.description}</p>
+        </div>
       </div>
 
       {/* Research Projects - Each project as a stacked section with alternating image alignment */}
@@ -62,6 +90,9 @@ const Research = () => {
           </div>
         </div>
       ))}
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
