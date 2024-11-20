@@ -120,7 +120,7 @@ export const Footer = () => {
                 <FontAwesomeIcon icon={faLinkedin} size="lg" />
               </a>
             </Link>
-            <Link href="https://twitter.com/elcarrillo" passHref>
+            <Link href="https://x.com/edgarlcarrillo" passHref>
               <a className="text-light me-3" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faTwitter} size="lg" />
               </a>
