@@ -11,7 +11,7 @@ import volcanoImage from '/public/crater_lake.JPG';
 
 
 
-import { faAppStore, faGithub, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
+import { faAppStore, faGithub, faGooglePlay} from '@fortawesome/free-brands-svg-icons';
 import { } from '@fortawesome/free-solid-svg-icons';
 
 export const navigation = {
@@ -26,7 +26,7 @@ export const navigation = {
 			link: "#projects",
 		},
 		{
-			title: "Pictures",  // new tab
+			title: "Pictures",  // new subitem
 			link: "#pictures",  // link to the pictures section
 		},
 		{
@@ -187,22 +187,31 @@ export const links = {
 //			title: "QuranTalk App",
 //			link: "https://www.qurantalk.app/",
 //		},
-//		{
-//			title: "StarBook App",
-//			link: "https://starbook.dev/",
-//		},
 		{
 			title: "My GitHub",
 			link: "https://github.com/elcarrillo",
 		},
+		// {
+		// 	title: "My LinkedIn",
+		// 	link: "https://www.linkedin.com/in/elcarrillo/",
+		// },
 		{
-			title: "My LinkedIn",
-			link: "https://www.linkedin.com/in/elcarrillo/",
+			title: "My ORCID",
+			link: "https://orcid.org/0009-0006-4140-8637",
 		},
-				{
+		{
 			title: "Fisk-Vanderbilt Bridge Program",
 			link: "https://www.fisk-vanderbilt-bridge.org/",
 		},
+		{
+			title: "University of Oregon ERTH",
+			link: "https://naturalsciences.uoregon.edu/earth-sciences",
+		},
+		{
+		  title: "Support my opensource work!",
+		  link: "https://buymeacoffee.com/elcarrillo",
+		}
+
 	]
 }
 
