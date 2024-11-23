@@ -1,17 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
-import { research } from '../config/config';
+import { research, navigation } from '../config/config'; // Import navigation config
+import { Nav } from '../components/Navbar'; // Import Nav component
 import { Footer } from '../components/Footer'; // Import Footer component
 
 const Research = () => {
   return (
     <div>
-      {/* Back to Home Button */}
-      <div className="back-to-home">
-        <Link href="https://elcarrillo.github.io/portfolio" passHref>
-          <a className="btn btn-primary">Back to Home</a>
-        </Link>
-      </div>
+      {/* Navigation Header */}
+      <Nav
+        title={navigation.name} // Pass the title for the header
+        links={navigation.links} // Pass the links for navigation
+      />
 
       {/* Header Section with Image and Title */}
       <div
