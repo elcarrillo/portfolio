@@ -35,7 +35,7 @@ const Updates = () => {
       <div
         className="updates-header text-center text-white"
         style={{
-          backgroundImage: `headerImage`,
+    backgroundImage: `url(${headerImage.src})`, // Dynamically use the image's source
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "400px",
