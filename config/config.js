@@ -13,11 +13,11 @@ import radnorImage from '/public/images/radnor_lake.png';
 import ashvilleImage from '/public/images/teaching_con.png';
 import FauriaLabImage from '/public/images/fauria_lab_cascades.png';
 import creekImage from '/public/images/creek.png';
-import sketchImage from '/public/images/sketch.JPG';
+import sketchImage from '/public/images/sketch.jpg';
 import snowyNashImage from '/public/images/snowy_nash.png';
 import obsidianImage from '/public/images/obsidian.png';
 import vesuviusImage from '/public/images/vesuvius.png';
-import NashvilleImage from '/public/images/Nashville.png';
+import NashvilleImage from '/public/images/nashville.png';
 
 
 
