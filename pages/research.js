@@ -1,17 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-import { research, navigation } from '../config/config'; // Import navigation config
-import { Nav } from '../components/Navbar'; // Import Nav component
+import { research } from '../config/config';
 import { Footer } from '../components/Footer'; // Import Footer component
+import { Nav } from '../components/Navbar'; // Import Navbar component
 
 const Research = () => {
   return (
     <div>
-      {/* Navigation Header */}
-      <Nav
-        title={navigation.name} // Pass the title for the header
-        links={navigation.links} // Pass the links for navigation
-      />
+      {/* Navbar */}
+      <Nav title="Edgar" links={[]} />
 
       {/* Header Section with Image and Title */}
       <div
@@ -47,49 +44,117 @@ const Research = () => {
       </div>
 
       {/* Research Projects - Each project as a stacked section with alternating image alignment */}
-      {research.projects.map((project, index) => (
-        <div
-          key={index}
-          style={{
-            backgroundColor: index % 2 === 0 ? '#ffffff' : '#f8f9fa',
-          }}
-          className="project-section py-5"
-        >
-          <div className="container">
-            <div className="row align-items-center">
-              {index % 2 === 0 ? (
-                <>
-                  <div className="col-md-6 mb-4 mb-md-0">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="img-fluid rounded custom-image-size"
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <h3 className="text-primary fw-bold">{project.title}</h3>
-                    <p>{project.description}</p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="col-md-6">
-                    <h3 className="text-primary fw-bold">{project.title}</h3>
-                    <p>{project.description}</p>
-                  </div>
-                  <div className="col-md-6 mb-4 mb-md-0">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="img-fluid rounded custom-image-size"
-                    />
-                  </div>
-                </>
-              )}
+      <div id="projects">
+        {research.projects.map((project, index) => (
+          <div
+            key={index}
+            className={`project-section py-5 ${index % 2 === 0 ? '' : 'alt'}`} // Add "alt" class for alternating sections
+          >
+            <div className="container">
+              <div className="row align-items-center">
+                {index % 2 === 0 ? (
+                  <>
+                    <div className="col-md-6 mb-4 mb-md-0">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="img-fluid rounded custom-image-size"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <h3 className="text-primary fw-bold">{project.title}</h3>
+                      <p>{project.description}</p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="col-md-6">
+                      <h3 className="text-primary fw-bold">{project.title}</h3>
+                      <p>{project.description}</p>
+                    </div>
+                    <div className="col-md-6 mb-4 mb-md-0">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="img-fluid rounded custom-image-size"
+                      />
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Collaborations Section */}
+      <div id="collaborations" className="collaborations-section py-5">
+        <div className="container">
+          <h2 className="text-primary fw-bold">Collaborations</h2>
+          <p className="mb-4">
+            My research has greatly benefited from collaborations with talented scientists and institutions. Additionally, my academic and professional growth has been supported by the mentorship and development opportunities provided by the Fisk-Vanderbilt Bridge Program.
+          </p>
+
+          <p className="mb-4">
+            Below, I highlight the individuals I have had the privilege to work with on various scientific projects.
+          </p>
+
+          <div className="row">
+            <div className="col-md-6">
+              <ul className="list-unstyled">
+                <li className="mb-3">
+                  <strong>Dr. Karlstrom</strong> – University of Oregon
+                  <p>Current Doctoral Advisor</p>
+                </li>
+                <li className="mb-3">
+                  <strong>Dr. Kristen Fauria</strong> – Vanderbilt University
+                  <p>Advisor for Masters Thesis</p>
+                </li>
+                <li className="mb-3">
+                  <strong>Dr. Guil Gualda</strong> – Vanderbilt University
+                  <p>Mentor and Thesis Committee Member</p>
+                </li>
+                <li className="mb-3">
+                  <strong>Liam Kelly</strong> – Vanderbilt University
+                  <p>Collaborator</p>
+                </li>
+                <li className="mb-3">
+                  <strong>Sarah Ward</strong> – Vanderbilt University
+                  <p>Collaborator</p>
+                </li>
+                <li className="mb-3">
+                  <strong>Dr. Tushar Mittal</strong> – Penn State
+                  <p>Collaborator</p>
+                </li>
+              </ul>
+            </div>
+            <div className="col-md-6">
+              <ul className="list-unstyled">
+                <li className="mb-3">
+                  <strong>Dr. Larry Mastin</strong> – Retired Volcanologist, USGS
+                  <p>Collaborator</p>
+                </li>
+                <li className="mb-3">
+                  <strong>Anna Ruefer</strong> – Stanford University
+                  <p>Collaborator</p>
+                </li>
+                <li className="mb-3">
+                  <strong>Sarah Hickernell</strong> – Stanford University
+                  <p>Collaborator</p>
+                </li>
+                <li className="mb-3">
+                  <strong>Dr. Heather Winslow</strong> – USGS, Hawaii Volcano Observatory
+                  <p>Collaborator</p>
+                </li>
+                <li className="mb-3">
+                  <strong>Dr. Phillip Ruprecht</strong> – University of Nevada, Reno
+                  <p>Collaborator</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      ))}
+      </div>
 
       {/* Footer */}
       <Footer />

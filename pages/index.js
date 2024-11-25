@@ -5,14 +5,28 @@ import { Skills, Projects } from '../components/Work';
 import { Footer, Contact } from '../components/Footer';
 import { about, contact, intro, navigation, projects, SEO, work, pictures } from '../config/config';
 import { Header } from '../components/Header';
-import Pictures from '../components/Pictures'; 
+import Pictures from '../components/Pictures';
 
 export default function Home() {
-  const [key, setKey] = useState(0); // add state for key
+  const [key, setKey] = useState(0); // Add state for key
+  const [isDarkMode, setIsDarkMode] = useState(false); // Add state for dark mode
 
   useEffect(() => {
-    setKey((prev) => prev + 1); // update key on component mount
+    setKey((prev) => prev + 1); // Update key on component mount
   }, []);
+
+  useEffect(() => {
+    // Add or remove the dark-mode class on the body element
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode((prev) => !prev);
+  };
 
   return (
     <Fragment>
@@ -20,6 +34,8 @@ export default function Home() {
       <Nav
         title={navigation.name}
         links={navigation.links}
+        toggleDarkMode={toggleDarkMode} // Pass toggleDarkMode to Navbar
+        isDarkMode={isDarkMode} // Pass current dark mode state
       />
       <Intro
         title={intro.title}
@@ -45,7 +61,7 @@ export default function Home() {
         images={pictures.images}
       />
       <Contact
-        key={key} // force remount on key change
+        key={key} // Force remount on key change
         title={contact.title}
         description={contact.description}
         buttons={contact.buttons}
