@@ -1,12 +1,15 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h1 align="center">Developer's Portfolio ✨</h1>
+  <h1 align="center">Researcher’s Portfolio ✨</h1>
 
   <p align="center">
-    This is a personal static website/portfolio template hosted with GitHub Pages. The original build was done by hashirshoaeb (link below) and is opensourced. 
-    <br />
-    <strong>Site URL / Demo » </strong>
+        <br />
+    This project is based on the original <strong>Developer's Portfolio</strong> template by <strong>hashirshoaeb</strong>. 
+    Check out the <a href="https://github.com/hashirshoaeb/portfolio" target="_blank">original repository</a>.
+    It has been enhanced to include features tailored for researchers, such as research project highlights, updates integration, and more.
+    <br /><br />
+    <strong>Site URL / Demo (Original) » </strong>
     <a href="https://hashirshoaeb.github.io/portfolio"> hashirshoaeb.github.io/portfolio</a>
     <br />
     <br />
@@ -37,6 +40,8 @@
         <li><a href="#setup">Setup</a></li>
       </ul>
     </li>
+    <li><a href="#features-and-updates">Features and Updates</a></li>
+    <li><a href="#support-my-work">Support My Work</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
   </ol>
@@ -49,49 +54,54 @@
 
 [![Product Name Screen Shot](/READMEdocs/screenshot.gif)](https://example.com)
 
-There are many portfolio website templates available on Github, however, I didn't find one that really suit my needs so I created this one. A simple, easy to configure, lightweight, and responsive static portfolio website.
+This portfolio website serves as a personal showcase for projects, research, updates, and achievements. It is lightweight, responsive, and highly customizable.
 
-I know one template doesn't fulfill everyone's needs. So I'll try adding more features in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
+In this enhanced version, we've added **dedicated pages for research and updates**, enabling you to document and share your professional journey in detail.
 
 **Features**
 
 - [x] Easy to configure
-- [x] SEO friendly
-- [x] Responsive
+- [x] SEO-friendly
+- [x] Responsive design
 - [x] Lightweight
-- [x] Linktree Page
+- [x] Dedicated **Research** and **Updates** sections
+- [x] Integrated pagination for updates
+- [x] Linktree-style page
 
-**Built with** [Nextjs](https://nextjs.org/) & [Bootstrap5](https://getbootstrap.com).
+**Built with** [Next.js](https://nextjs.org/) & [Bootstrap 5](https://getbootstrap.com).
 
 
 
 <!-- GETTING STARTED -->
 # Getting Started
 
-Building your own personal website from this project can take as little as 30 minutes. Follow the setup instructions below. Please feel free to reach out to me by filing an [issue](https://github.com/hashirshoaeb/portfolio/issues) or emailing me at hashirshoaeb@gmail.com for help configuring your project.
+Building your own personal website from this project can take as little as 30 minutes. Follow the setup instructions below. Please feel free to reach out by filing an [issue](https://github.com/hashirshoaeb/portfolio/issues) or emailing for help configuring your project.
 
 ## Prerequisites
 
-You should have [Nodejs](https://nodejs.org/en/) and [Git](https://git-scm.com/downloads) installed on your PC. You should also own a GitHub account.
+You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/downloads) installed on your PC. You should also own a GitHub account.
 
 ## Setup
 
-1. Fork this repoistory and clone it to your local machine.
+1. Fork this repository and clone it to your local machine.
     ```sh
       git clone https://github.com/<your-username>/portfolio.git
     ``` 
 
-2. Edit the [config/config.js](https://github.com/hashirshoaeb/portfolio/blob/main/config/config.js) file. Replace [config/profile.png](https://github.com/hashirshoaeb/portfolio/blob/main/config/profile.png) with your image. 
-    >Note: You need to rename your image file as `profile.png`.
+2. Edit the configuration files:
+    - Update the `config/config.js` file to customize profile, projects, research, and updates.
+    - Replace `profile.png` in `config/profile.png` with your image. 
+    > **Note**: Rename your image file as `profile.png`.
 
-3. Run following scripts in terminal/command prompt to install dependencies.
+3. Install dependencies:
     ```sh
       npm install
       npm run build
     ```
+
 ## Testing
 
-1. To test on your local server, run the following command:
+1. To test on your local server:
     ```sh
       npm run dev
     ```
@@ -100,31 +110,51 @@ You should have [Nodejs](https://nodejs.org/en/) and [Git](https://git-scm.com/d
 
 ## Deployment
 
-If it works locally, you can deploy your project to GitHub Pages. GitHub Pages provides two types of free domains, `<username>.github.io` and `<username>.github.io/<repository>`. You can choose the one that suits your needs. You can learn more about domain types from [here](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites).
+If it works locally, you can deploy your project to GitHub Pages. GitHub Pages provides two types of free domains, `<username>.github.io` and `<username>.github.io/<repository>`. Choose the one that suits your needs.
 
-### Deploy to \<your-username>.github.io/portfolio
+### Deploy to `<your-username>.github.io/portfolio`
 
-Simply you just need to commit and push your changes to github. And [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions#overview) will take care of the deployment. Your site will be available at `https://<your-username>.github.io/portfolio`
+Simply commit and push your changes to GitHub. [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions#overview) will handle the deployment. Your site will be available at `https://<your-username>.github.io/portfolio`.
 
-### Deploy to \<your-username>.github.io
+---
 
-Create a new repository with your username as `<your-username>.github.io`. And let the following command do the job for you.
+<!-- FEATURES AND UPDATES -->
+# Features and Updates
 
-```sh
-  npm run predeploy
-  node scripts/pages.js <your-username> master
-```
+### Research Page
 
-Your site will be available at `https://<your-username>.github.io`
+- Dedicated section to showcase ongoing and completed research projects.
+- Support for project images and detailed descriptions.
+- Alternating layouts for a modern, dynamic design.
 
->Note: You need to replace `<your-username>` with your username. To add CNAME for custom domain, see [scripts/cname.js](https://github.com/hashirshoaeb/portfolio/blob/main/scripts/cname.js)
+### Updates Page
 
+- Chronicle your professional journey with a paginated updates feed.
+- Separate featured updates section for highlights.
+- Direct links to internal or external resources for more details.
 
+### Enhanced Configurability
+
+- Easily update content for both **Research** and **Updates** sections through the `config/config.js` file.
+- Images and descriptions for research projects and updates are fully customizable.
+
+---
+
+<!-- SUPPORT MY WORK -->
+## Support My Work 🌟
+
+If you find this **Researcher’s Portfolio Project** helpful or inspiring, I would greatly appreciate it if you could ⭐️ the repository on [GitHub](https://github.com/elcarrillo/portfolio). 
+
+Your support keeps this project alive! Future updates include a dedicated **personal page** and plans for **dark mode** integration in the near future. 
+
+Thank you for supporting this journey!
+
+---
 
 <!-- CONTRIBUTING -->
 # Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contribution you make would be **appreciated**.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contribution you make would be **appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -138,3 +168,9 @@ Contributions are what make the open source community such an amazing place to l
 # License
 
 Distributed under the `MIT` License. See [LICENSE](https://github.com/hashirshoaeb/portfolio/blob/main/LICENSE) for more information.
+
+---
+
+### Notes
+1. Remember to replace `<your-username>` with your GitHub username in the instructions.
+2. Update your `config/config.js` file with your personal details and content for the new sections.
