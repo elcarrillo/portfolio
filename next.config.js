@@ -22,24 +22,16 @@ console.warn(
   `P.S. [basePath] is {${basePath}}`
 );
 
-/** @type {import('next').NextConfig} */
+
 const nextConfig = {
+
   reactStrictMode: true,
   basePath: basePath,
   assetPrefix: basePath,
   publicRuntimeConfig: {
     basePath: basePath,
-  },
-  images: {
-    domains: [
-      'githubusercontent.com', // For images in GitHub-hosted markdown files
-      'unsplash.com',          // For Unsplash images
-    ],  },
-  experimental: {
-    appDir: true, // Add experimental features if needed
-  },
-};
 
-
+  },
+}
 
 module.exports = nextConfig;
