@@ -13,7 +13,7 @@ const BootcampExperience = () => (
       <p>
         Teaching my first course as a graduate instructor was an incredible experience! The 
         <strong> Computational Physics Bootcamp</strong> is a rigorous two-week summer program 
-        designed to equip incoming master's students in the Fisk-Vanderbilt Bridge Program with 
+        designed to equip incoming master&apos;s students in the Fisk-Vanderbilt Bridge Program with 
         essential computational skills.
       </p>
       <p>

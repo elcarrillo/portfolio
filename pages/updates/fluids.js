@@ -13,7 +13,7 @@ const EarthFluidsCourse = () => (
       <p>
       In Spring 2023, I had the privilege of taking the <strong>Earth Fluids</strong> course taught by 
       <strong> Dr. David Furbish </strong>, a distinguished Professor and Geophysicist at Vanderbilt University. Renowned for his expertise and 
-      engaging teaching style, Dr. Furbish's passion for fluid dynamics in Earth systems made this course one of the most 
+      engaging teaching style, Dr. Furbish&apos;s passion for fluid dynamics in Earth systems made this course one of the most 
       impactful experiences of my graduate journey. His thought-provoking discussions and dynamic lectures inspired a 
       deeper appreciation for the complexities of fluid mechanics in geological contexts.
       </p>
@@ -58,7 +58,7 @@ const EarthFluidsCourse = () => (
 
       <p>
         Beyond the technical knowledge, the course also underscored the importance of curiosity and critical 
-        thinking in scientific inquiry. Dr. Furbish's approachable teaching style and his ability to simplify 
+        thinking in scientific inquiry. Dr. Furbish&apos;s approachable teaching style and his ability to simplify 
         complex topics made this learning experience both enjoyable and intellectually enriching.
       </p>
 

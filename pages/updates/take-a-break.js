@@ -22,7 +22,7 @@ const TakeABreak = () => (
 </p>
 <p>
   One of my favorite memories is celebrating a tough assignment with my colleagues. After a long night in the lab, 
-  we grabbed pizza, swapped stories, and laughed about our shared struggles. It wasn't just a break—it was a reminder 
+  we grabbed pizza, swapped stories, and laughed about our shared struggles. It wasn&apos;t just a break—it was a reminder 
   that none of us are in this alone.
 </p>
 <p>

@@ -62,7 +62,7 @@ const GeologyLabExperience = () => (
             }}
           />
           <figcaption className="mt-2 text-muted">
-            Fossilized coral from Fort Negley, showcasing the site's ancient marine history 
+            Fossilized coral from Fort Negley, showcasing the site&apos;s ancient marine history 
             (Approximately 450 million years old).
           </figcaption>
         </figure>
