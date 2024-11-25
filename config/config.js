@@ -8,6 +8,16 @@ import plumesImage from '/public/plumes.png';
 import pccProjectImage from '/public/pcc_project.png';
 import volcanoImage from '/public/crater_lake.JPG';
 
+import uoLogoImage from '/public/images/uo_logo.png';
+import radnorImage from '/public/images/radnor_lake.png';
+import ashvilleImage from '/public/images/teaching_con.png';
+import FauriaLabImage from '/public/images/fauria_lab_cascades.png';
+import creekImage from '/public/images/creek.png';
+import sketchImage from '/public/images/sketch.JPG';
+import snowyNashImage from '/public/images/snowy_nash.png';
+import obsidianImage from '/public/images/obsidian.png';
+import vesuviusImage from '/public/images/vesuvius.png';
+import NashvilleImage from '/public/images/Nashville.png';
 
 
 
@@ -306,7 +316,7 @@ export const updates = [
 	date: "September 16, 2024",
 	snippet: "I am excitect to continue my doctoral studies at the University of Oregon under the guidance of Dr. Leif Karlstrom! Click the link below to learn more about the Karlstrom research group. Go Ducks!",
 	type: "external",
-	image: "/images/uo_logo.png",
+	image: uoLogoImage.src,
 	link: "https://pages.uoregon.edu/leif/markdown/",
 	},
 
@@ -321,7 +331,7 @@ export const updates = [
 	{
 	title   : "🎉 PlumeViz Beta Released!",
 	date    : "September 2, 2024",
-    snippet : "Thrilled to announce the beta release of PlumeViz 1.1.0! This cross-platform software acts as a user-friendly wrapper, complete with enhanced features, for running the Fortran90 version of Plumeria. A big thank you to Liam Kelly for his help in testing the Windows implementation. Click 'Learn More' to visit the GitHub repository!",
+  snippet : "Thrilled to announce the beta release of PlumeViz 1.1.0! This cross-platform software acts as a user-friendly wrapper, complete with enhanced features, for running the Fortran90 version of Plumeria. A big thank you to Liam Kelly for his help in testing the Windows implementation. Click 'Learn More' to visit the GitHub repository!",
 	type    : "external",
 	link    : "https://github.com/elcarrillo/PlumeViz",
 	},
@@ -342,7 +352,7 @@ export const updates = [
 	title: "Finding Balance in PhD Life",
 	date: "January 29, 2024",
 	snippet: "PhD life is demanding, but taking time to recharge and connect with others has been essential. From late-night lab sessions to unwinding with soccer or coffee chats, these moments remind me to enjoy the journey.",
-	image: "/images/radnor_lake.png",
+	image: radnorImage.src,
 	type: "internal",
 	link: "/updates/take-a-break"
 	},
@@ -352,7 +362,7 @@ export const updates = [
 	date: "April 29, 2024", 
 	snippet: "I recently attended a teaching workshop at the GSA Southeastern Section meeting in Asheville, NC. The event focused on accessible and hands-on learning techniques for undergraduate students, providing valuable insights to enhance geoscience education.",
 	type: "none",
-	image: "/images/teaching_con.png", 
+	image: ashvilleImage.src, 
 	},
 
 	{
@@ -360,7 +370,7 @@ export const updates = [
 	date: "June 07, 2023", 
 	snippet: "Our advisor, Dr. Kristen Fauria, invited us to the University of Oregon during her time as a Meierjurgen Visiting Fellow. Joined by my lab mate, Sarah Ward,  we spent a productive couple of weeks at a writing retreat, making significant progress on our theses. We also had the incredible opportunity to explore the Cascades and examine lava flows!",
 	type: "internal",
-	image: "/images/fauria_lab_cascades.png",
+	image: FauriaLabImage.src,
 	link: "/updates/writing-retreat", 
 	},
 
@@ -369,7 +379,7 @@ export const updates = [
 	date: "April 10, 2024",
 	snippet: "Led my first geology field trip as part of the Intro to Physical Geology Lab at Vanderbilt University, guiding students through hands-on learning at Richland Creek and Fort Negley.",
 	type: "internal",
-	image: "/images/creek.png",
+	image: creekImage.src,
 	link: "/updates/geo_class",
 	},
 	{
@@ -403,13 +413,13 @@ export const updates = [
 	snippet: "In Spring 2023, I had the privilege of taking an Earth Fluids course with Dr. David Furbish, an exceptional teacher whose engaging lectures and insightful discussions profoundly shaped my understanding of fluid dynamics in Earth systems. Through this course, I gained the foundational knowledge needed to build a pyroclastic density current (PDC) model from scratch!",
 	type: "internal",
 	link: "/updates/fluids",
-	image: "/images/sketch.jpg"
+	image: sketchImage.src
 	},
 	{
 	title: "Cold weather:  Lessons in Adaptability",
 	date: "January 16, 2022",
 	snippet: "From the desert to the Bay Area, now an snow storm in Nash. Academia has taught me the value of resilience and community. Moving for opportunities is a challenge, but it’s also a chance for growth and discovery.",
-	image: "/images/snowy_nash.png",
+	image: snowyNashImage.src,
 	type: "internal",
 	link: "/updates/snowy_nash"
 	},
@@ -425,14 +435,14 @@ export const updates = [
 	date: "May 15, 2022", 
 	snippet: "I participated in a one-week short course in Bishop, CA, where we explored the Bishop Tuff and learned to examine outcrops and igneous rocks in the field. Am I a gelogist now?",
 	type: "none",
-	image: "/images/obsidian.png"
+	image: obsidianImage.src
 	},
 
 	{
 	title: "Field Experience in Volcanology!",
 	date: "June 03, 2022",
 	snippet: "I embarked on my first fieldwork experience as a volcanology student in Italy, led by Dr. Guil Gualda and joined by the volcanology group from Vanderbilt University! Exploring the volcanic zones of Mount Stromboli and the Ora Caldera, I gained hands-on experience collecting samples and analyzing geological features. This unforgettable trip has deepened my passion for volcanic research.",
-	image: "/images/vesuvius.png",
+	image: vesuviusImage.src,
 	type: "none",
 	},
 	{
@@ -453,7 +463,7 @@ export const updates = [
 	date: "August 1, 2021",
 	snippet: "Excited to embark on my graduate journey as a Fisk-Vanderbilt Bridge Fellow in Nashville, TN! Through the prestigious Masters-to-PhD Bridge Program, I will pursue an M.S. in Physics while applying my computational science expertise to research and thesis development.",
 	type: "external",
-	image: "/images/Nashville.png",
+	image: NashvilleImage.src,
 	link: "https://www.fisk-vanderbilt-bridge.org/"
 	},
 

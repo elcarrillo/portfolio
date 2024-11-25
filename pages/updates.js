@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Footer } from '../components/Footer';
 import { Nav } from '../components/Navbar';
 import { updates } from '../config/config'; 
+import headerImage from '/public/pescadero.jpg';
 
 
 const Updates = () => {
@@ -34,7 +35,7 @@ const Updates = () => {
       <div
         className="updates-header text-center text-white"
         style={{
-          backgroundImage: `url('/pescadero.jpg')`,
+          backgroundImage: `headerImage`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "400px",
