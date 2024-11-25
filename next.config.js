@@ -1,30 +1,28 @@
-const isProd = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === 'production';
+
 /*
  * Gets the BASE_PATH from the command used to start this app.
  * If BASE_PATH is specified but it does not start with a "/" 
  * then add it. 
- * https://stackoverflow.com/questions/60452054/nextjs-deploy-to-a-specific-url-path
  */
 function getBasePath() {
-  var basePath = undefined
+  let basePath = undefined;
 
   if (isProd && process.env.BASE_PATH) {
-    if (process.env.BASE_PATH.startsWith("/")) {
-      basePath = process.env.BASE_PATH;
-    } else {
-      basePath = "/" + process.env.BASE_PATH;
-    }
+    basePath = process.env.BASE_PATH.startsWith("/")
+      ? process.env.BASE_PATH
+      : `/${process.env.BASE_PATH}`;
   }
-  return basePath
+  return basePath;
 }
 
-const basePath = getBasePath()
-console.warn(
-  // "Are you publishing to <username>.github.io ? then [basePath] should be empty.\n" +
-  // "Are you publishing to <username>.github.io/<repository> ? then [basePath] should be /<repository>.\n" +
-  `P.S. [basePath] is {${basePath}}`
-)
+const basePath = getBasePath();
 
+console.warn(
+  `P.S. [basePath] is {${basePath}}`
+);
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   basePath: basePath,
@@ -32,6 +30,16 @@ const nextConfig = {
   publicRuntimeConfig: {
     basePath: basePath,
   },
-}
+  images: {
+    domains: [
+      'githubusercontent.com', // For images in GitHub-hosted markdown files
+      'unsplash.com',          // For Unsplash images
+    ],  },
+  experimental: {
+    appDir: true, // Add experimental features if needed
+  },
+};
 
-module.exports = nextConfig
+
+
+module.exports = nextConfig;

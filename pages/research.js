@@ -87,73 +87,19 @@ const Research = () => {
         ))}
       </div>
 
-      {/* Collaborations Section */}
+
+{/* Collaborations Section */}
       <div id="collaborations" className="collaborations-section py-5">
         <div className="container">
           <h2 className="text-primary fw-bold">Collaborations</h2>
+
           <p className="mb-4">
             My research has greatly benefited from collaborations with talented scientists and institutions. Additionally, my academic and professional growth has been supported by the mentorship and development opportunities provided by the Fisk-Vanderbilt Bridge Program.
           </p>
+         
 
-          <p className="mb-4">
-            Below, I highlight the individuals I have had the privilege to work with on various scientific projects.
-          </p>
 
-          <div className="row">
-            <div className="col-md-6">
-              <ul className="list-unstyled">
-                <li className="mb-3">
-                  <strong>Dr. Leif 
-                  Karlstrom</strong> – University of Oregon
-                  <p>Current Doctoral Advisor/Mentor</p>
-                </li>
-                <li className="mb-3">
-                  <strong>Dr. Kristen Fauria</strong> – Vanderbilt University
-                  <p>Mentor and Advisor for Masters Thesis</p>
-                </li>
-                <li className="mb-3">
-                  <strong>Dr. Guil Gualda</strong> – Vanderbilt University
-                  <p>Mentor and Thesis Committee Member</p>
-                </li>
-                <li className="mb-3">
-                  <strong>Liam Kelly</strong> – Vanderbilt University
-                  <p>Collaborator</p>
-                </li>
-                <li className="mb-3">
-                  <strong>Sarah Ward</strong> – Vanderbilt University
-                  <p>Collaborator</p>
-                </li>
-                <li className="mb-3">
-                  <strong>Dr. Tushar Mittal</strong> – Penn State
-                  <p>Collaborator</p>
-                </li>
-              </ul>
-            </div>
-            <div className="col-md-6">
-              <ul className="list-unstyled">
-                <li className="mb-3">
-                  <strong>Dr. Larry Mastin</strong> – USGS, Cascades Volcano Observatory (now retired) 
-                  <p>Collaborator</p>
-                </li>
-                <li className="mb-3">
-                  <strong>Anna Ruefer</strong> – Stanford University
-                  <p>Collaborator</p>
-                </li>
-                <li className="mb-3">
-                  <strong>Sarah Hickernell</strong> – Stanford University
-                  <p>Collaborator</p>
-                </li>
-                <li className="mb-3">
-                  <strong>Dr. Heather Winslow</strong> – USGS, Hawaii Volcano Observatory
-                  <p>Collaborator</p>
-                </li>
-                <li className="mb-3">
-                  <strong>Dr. Phillip Ruprecht</strong> – University of Nevada, Reno
-                  <p>Collaborator</p>
-                </li>
-              </ul>
-            </div>
-          </div>
+         
         </div>
       </div>
 

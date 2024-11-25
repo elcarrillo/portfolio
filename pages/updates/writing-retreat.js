@@ -40,7 +40,7 @@ const WritingRetreat = () => (
       </div>
 
       <p>
-        The retreat was not solely about writing—it also provided us with the opportunity to explore the breathtaking natural 
+        The retreat was not solely about writing as it also provided us with the opportunity to explore the breathtaking natural 
         beauty of the Pacific Northwest. As part of the experience, we ventured into the nearby <strong>Cascades</strong>, 
         where we examined lava flows and explored lava tubes. This fieldwork deepened my appreciation for the geological processes 
         I study and added a unique, hands-on perspective to my research.
