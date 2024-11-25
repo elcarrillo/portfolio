@@ -103,12 +103,13 @@ const Research = () => {
             <div className="col-md-6">
               <ul className="list-unstyled">
                 <li className="mb-3">
-                  <strong>Dr. Karlstrom</strong> – University of Oregon
-                  <p>Current Doctoral Advisor</p>
+                  <strong>Dr. Leif 
+                  Karlstrom</strong> – University of Oregon
+                  <p>Current Doctoral Advisor/Mentor</p>
                 </li>
                 <li className="mb-3">
                   <strong>Dr. Kristen Fauria</strong> – Vanderbilt University
-                  <p>Advisor for Masters Thesis</p>
+                  <p>Mentor and Advisor for Masters Thesis</p>
                 </li>
                 <li className="mb-3">
                   <strong>Dr. Guil Gualda</strong> – Vanderbilt University
@@ -131,7 +132,7 @@ const Research = () => {
             <div className="col-md-6">
               <ul className="list-unstyled">
                 <li className="mb-3">
-                  <strong>Dr. Larry Mastin</strong> – Retired Volcanologist, USGS
+                  <strong>Dr. Larry Mastin</strong> – USGS, Cascades Volcano Observatory (now retired) 
                   <p>Collaborator</p>
                 </li>
                 <li className="mb-3">

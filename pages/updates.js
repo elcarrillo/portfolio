@@ -79,6 +79,14 @@ const updates = [
 	},
 
 	{
+	title: "Teaching Workshop at GSA Southeastern Section!",
+	date: "April 29, 2024", 
+	snippet: "I recently attended a teaching workshop at the GSA Southeastern Section meeting in Asheville, NC. The event focused on accessible and hands-on learning techniques for undergraduate students, providing valuable insights to enhance geoscience education.",
+	type: "none",
+	image: "/images/teaching_con.png", 
+	},
+
+	{
 	title: "Writing Retreat at UO!",
 	date: "June 07, 2023", 
 	snippet: "Our advisor, Dr. Kristen Fauria, invited us to the University of Oregon during her time as a Meierjurgen Visiting Fellow. Joined by my lab mate, Sarah Ward,  we spent a productive couple of weeks at a writing retreat, making significant progress on our theses. We also had the incredible opportunity to explore the Cascades and examine lava flows!",
@@ -114,23 +122,20 @@ const updates = [
 	snippet: "Honored to present my research poster at Fisk University's Bridge Research Celebration Day! It was an exciting opportunity to showcase my work, connect with peers, and celebrate the incredible research happening within the Bridge Program.",
 	type: "none",
 	},
-
-
 	{
 	title: "Excited to Join Vandy's EES Department!",
 	date: "August 1, 2023",
 	snippet: "I am thrilled to officially begin my PhD journey in Earth and Environmental Sciences at Vanderbilt University! Building on my Master's degree in Physics, I am eager to bridge the gap between physics and volcanology by leveraging fluid mechanics and thermodynamics to address complex volcanic phenomena. Joining the EES department feels like a natural progression, as I have been a member of the Vandy Volcanology group , which has profoundly shaped my research interests and goals.",
 	type: "none",
 	},
-{
-  title: "Earth Fluids Course with Dr. David Furbish",
-  date: "May 10, 2023",
-  snippet: "In Spring 2023, I had the privilege of taking an Earth Fluids course with Dr. David Furbish, an exceptional teacher whose engaging lectures and insightful discussions profoundly shaped my understanding of fluid dynamics in Earth systems. Through this course, I gained the foundational knowledge needed to build a pyroclastic density current (PDC) model from scratch!",
-  type: "internal",
-  link: "/updates/fluids",
-  image: "/images/sketch.jpg"
-},
-
+	{
+	title: "Earth Fluids Course with Dr. David Furbish",
+	date: "May 10, 2023",
+	snippet: "In Spring 2023, I had the privilege of taking an Earth Fluids course with Dr. David Furbish, an exceptional teacher whose engaging lectures and insightful discussions profoundly shaped my understanding of fluid dynamics in Earth systems. Through this course, I gained the foundational knowledge needed to build a pyroclastic density current (PDC) model from scratch!",
+	type: "internal",
+	link: "/updates/fluids",
+	image: "/images/sketch.jpg"
+	},
 	{
 	title: "Cold weather:  Lessons in Adaptability",
 	date: "January 16, 2022",
@@ -139,8 +144,6 @@ const updates = [
 	type: "internal",
 	link: "/updates/snowy_nash"
 	},
-
-
 	{
 	title: "First Experience as a Graduate Instructor!",
 	date: "August 10, 2023",
@@ -149,15 +152,20 @@ const updates = [
 	link: "/updates/bootcamp",
 	},
 	{
-	title: "First Field Experience in Volcanology!",
+	title: "Short Course in the Eastern Sierras!",
+	date: "May 15, 2022", 
+	snippet: "I participated in a one-week short course in Bishop, CA, where we explored the Bishop Tuff and learned to examine outcrops and igneous rocks in the field. Am I a gelogist now?",
+	type: "none",
+	image: "/images/obsidian.png"
+	},
+
+	{
+	title: "Field Experience in Volcanology!",
 	date: "June 03, 2022",
 	snippet: "I embarked on my first fieldwork experience as a volcanology student in Italy, led by Dr. Guil Gualda and joined by the volcanology group from Vanderbilt University! Exploring the volcanic zones of Mount Stromboli and the Ora Caldera, I gained hands-on experience collecting samples and analyzing geological features. This unforgettable trip has deepened my passion for volcanic research.",
 	image: "/images/vesuvius.png",
 	type: "none",
 	},
-
-
-
 	{
 	title: "Diving into Volcanophysics!",
 	date: "October 15, 2021",
@@ -165,7 +173,12 @@ const updates = [
 	type: "external",
 	link: "https://sites.google.com/site/kristenfauria"
 	},
-
+	{
+	title: "Machine Learning in Material Science!",
+	date: "September 10, 2021",
+	snippet: "Just joined the Burger Lab! I will use machine learning techniques to solve challenges in material science, particularly in advancing scintillator development. This opportunity bridges computational methods and experimental materials research, paving the way for innovative solutions.",
+	type: "none"
+	},
 	{
 	title: "Going to Music City! 🎸",
 	date: "August 1, 2021",

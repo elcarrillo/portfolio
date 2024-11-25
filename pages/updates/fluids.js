@@ -43,7 +43,7 @@ const EarthFluidsCourse = () => (
         <iframe
           src="https://drive.google.com/file/d/153MzqL1UO7mDQFfF9v1t0ox7lySazhn2/preview"
           style={{
-            width: '90%',
+            width: '80%',
             height: '600px',
             border: 'none',
           }}
