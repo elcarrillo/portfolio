@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     // Validate Google Analytics environment variable in development mode only
-    if (process.env.NODE_ENV === 'development' && !process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS) {
+    if (process.env.NODE_ENV === 'development' && !'G-LJYYDQTM1K') {
       console.warn('Google Analytics tracking ID is missing.');
     }
   }, []);
@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
     // Google Analytics route change tracking
     const handleRouteChange = (url) => {
       if (window.gtag) {
-        window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+        window.gtag('config', 'G-LJYYDQTM1K', {
           page_path: url,
         });
       }
@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
       {/* Load the Google Analytics Script */}
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-LJYYDQTM1K`}
       />
       <Script
         id="google-analytics"
@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+            gtag('config', 'G-LJYYDQTM1K');
           `,
         }}
       />
