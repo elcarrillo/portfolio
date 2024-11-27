@@ -96,7 +96,7 @@ const Updates = () => {
             }}
           >
             <p className="lead">
-              The updates below capture key moments and insights from my journey in science, teaching, and outreach. Click "Read More" to dive deeper into the stories!
+              The updates below capture key moments and insights from my journey in science, teaching, and outreach. Click &quot;Read More&quot; to dive deeper into the stories!
             </p>
           </div>
         </div>
