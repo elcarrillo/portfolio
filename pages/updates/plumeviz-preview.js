@@ -57,14 +57,15 @@ const PlumeVizBetaPreview = () => (
               borderRadius: '10px',
             }}
           />
-    <figcaption 
-    className="mt-2 text-muted text-center"
-    style={{
-      maxWidth: '60%', // Ensures the text width is closer to the figure
-      margin: '0 auto', // Centers the text
-    }}
-    >
-    Vertical profiles of relative humidity, temperature, and wind data. Note the highlighted region corresponding to the umbrella cloud altitudes, 17–31 km (Gupta et al. (2022). <em>Commun. Earth Environ.</em>, 3, 314. <a href="https://doi.org/10.1038/s43247-022-00606-3" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s43247-022-00606-3</a>).
+<figcaption
+  className="mt-2 text-muted"
+  style={{
+    maxWidth: '60%', // Ensures the caption width is contained
+    margin: '0 auto', // centering margin
+    textAlign: 'left', // Aligns text to the left
+  }}
+>
+    Vertical profiles of relative humidity, temperature, and wind data. Note the highlighted region corresponding to the umbrella cloud altitudes, 17–31 km. Umbrella heights are taken from Gupta et al. (2022). <em>Commun. Earth Environ.</em>, 3, 314. <a href="https://doi.org/10.1038/s43247-022-00606-3" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s43247-022-00606-3</a>.
     </figcaption>
 
         </figure>
