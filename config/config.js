@@ -348,6 +348,15 @@ export const updates = [
 	snippet: "Excited to announce our collaboration with Volcanologist Larry Mastin from the USGS on volcanic plume modeling!",
 	type: "none",
 	},
+{
+	title: "PlumeViz Beta Coming Soon!",
+	date: "June 26, 2024",
+	snippet: "Excite to announce the beta release of PlumeViz will be soon! This cross-platform software, designed as a user-friendly wrapper for the Fortran90 version of Plumeria, comes packed with exciting features—including a atmospheric data visualization module. Click 'Read More' to see some sample plots!",
+	type: "internal",
+	link: "/updates/plumeviz-preview"
+},
+
+
 	{
 	title: "Finding Balance in PhD Life",
 	date: "January 29, 2024",
