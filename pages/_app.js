@@ -7,6 +7,13 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
+    // Validate Google Analytics environment variable in development mode only
+    if (process.env.NODE_ENV === 'development' && !process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS) {
+      console.warn('Google Analytics tracking ID is missing.');
+    }
+  }, []);
+
+  useEffect(() => {
     // Load Bootstrap JavaScript
     import('bootstrap/dist/js/bootstrap.bundle.min.js');
 
