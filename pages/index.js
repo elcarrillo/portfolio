@@ -28,6 +28,39 @@ export default function Home() {
     setIsDarkMode((prev) => !prev);
   };
 
+  // Add Schema Markup for the Home Page
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Edgar Carrillo's Portfolio",
+      "description": "A portfolio website showcasing research, skills, and projects by Edgar Carrillo.",
+      "url": "https://elcarrillo.github.io/portfolio",
+      "author": {
+        "@type": "Person",
+        "name": "Edgar Carrillo",
+        "jobTitle": "Researcher",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "University of Oregon"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/elcarrillo/",
+          "https://x.com/edgarlcarrillo"
+        ]
+      },
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.innerHTML = JSON.stringify(schema);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
     <Fragment>
       <Header seo={SEO} />
