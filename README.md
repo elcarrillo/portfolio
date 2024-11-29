@@ -68,6 +68,14 @@ In this enhanced version, we've added **dedicated pages for research and updates
 - [x] Integrated pagination for updates
 - [x] Linktree-style page
 
+**Advanced Features**
+- [x] Google Analytics
+- [x] Sitemap.xml**
+- [x] Google Search Console Verification
+
+> These features were included to showcase advanced functionality. Forkers should replace configurations (such as the Google Analytics Measurement ID) or remove them if not required ([see Notes](#notes)).
+
+
 **Built with** [Next.js](https://nextjs.org/) & [Bootstrap 5](https://getbootstrap.com).
 
 
@@ -170,7 +178,38 @@ Contributions are what make the open-source community such an amazing place to l
 Distributed under the `MIT` License. See [LICENSE](https://github.com/hashirshoaeb/portfolio/blob/main/LICENSE) for more information.
 
 ---
+# Notes
+1. Replace `<your-username>` with your GitHub username in the instructions.
+2. Update the `config/config.js` file with your personal details and content for the new sections.
 
-### Notes
-1. Remember to replace `<your-username>` with your GitHub username in the instructions.
-2. Update your `config/config.js` file with your personal details and content for the new sections.
+---
+
+## **How to Remove Advanced Features**
+
+### 1. Google Analytics
+- Locate the `Measurement ID` (e.g., `G-LJYYDQTM1K`) in the `_app.js` file or configuration.
+- Remove or comment out the Google Analytics tracking script.
+
+### 2. Sitemap.xml
+- Delete the `sitemap.xml` file from the project directory if it’s not required.
+- Optionally, remove any references to the sitemap in the `robots.txt` file (if applicable).
+
+### 3. Google Search Console Verification
+- Since the verification meta tag is included in the `_app.js` file:
+  1. Open the `_app.js` file in the `pages/` directory.
+  2. Locate the meta tag:
+     ```jsx
+     <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+     ```
+  3. Remove the meta tag or replace `YOUR_VERIFICATION_CODE` with your own Google Search Console verification code.
+  4. If you no longer need custom meta tags, reset `_app.js` to its default structure:
+     ```javascript
+     import '../styles/custom.global.scss'
+
+     function MyApp({ Component, pageProps }) {
+       return <Component {...pageProps} />
+     }
+
+     export default MyApp
+     ```
+- Save the file and redeploy your project.
