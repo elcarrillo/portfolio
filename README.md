@@ -70,7 +70,7 @@ In this enhanced version, we've added **dedicated pages for research and updates
 
 **Advanced Features**
 - [x] Google Analytics
-- [x] Sitemap.xml**
+- [x] Sitemap.xml
 - [x] Google Search Console Verification
 
 > These features were included to showcase advanced functionality. Forkers should replace configurations (such as the Google Analytics Measurement ID) or remove them if not required ([see Notes](#notes)).
