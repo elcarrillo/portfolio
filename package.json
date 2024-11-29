@@ -1,14 +1,14 @@
 {
   "name": "portfolio",
-  "description": "A portfolio website template that helps you showcase your work, projects and skills as a software developer or freelancer.",
-  "homepage": "http://hashirshoaeb.com",
-  "version": "0.2.0",
+  "description": "A personal portfolio website template showcasing research, projects, and skills as a scientist and researcher.",
+  "homepage": "https://elcarrillo.github.io/portfolio",
+  "version": "1.0.0",
   "license": "MIT",
   "private": true,
   "author": {
-    "name": "Hashir Shoaib",
-    "email": "hashirshoaeb@gmail.com",
-    "url": "https://github.com/hashirshoaeb"
+    "name": "Edgar L Carrillo",
+    "email": "elcar@uoregon.edu",
+    "url": "https://github.com/elcarrillo"
   },
   "scripts": {
     "prebuild": "node scripts/favicons.js",
@@ -17,8 +17,8 @@
     "start": "next start",
     "export": "next export",
     "predeploy": "npm run build && npm run export && touch ./out/.nojekyll",
-    "deploy": "npm run custom-domain && node scripts/pages.js hashirshoaeb master",
-    "custom-domain": "node scripts/cname.js hashirshoaeb.com www.hashirshoaeb.com",
+    "deploy": "npm run custom-domain && node scripts/pages.js elcarrillo master",
+    "custom-domain": "node scripts/cname.js elcarrillo.github.io",
     "lint": "next lint"
   },
   "dependencies": {
@@ -29,6 +29,7 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "next": "12.3.0",
+    "next-sitemap": "^4.2.3",
     "react": "18.2.0",
     "react-bootstrap": "^2.10.5",
     "react-dom": "18.2.0"
