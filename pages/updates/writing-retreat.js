@@ -16,7 +16,7 @@ const WritingRetreat = () => (
         In late May 2023, I had the incredible opportunity to participate in a writing retreat at the 
         <strong> University of Oregon (UO)</strong>. This enriching experience was made possible by our advisor, 
         Dr. Kristen Fauria, who was on sabbatical as part of the prestigious <strong>Meierjurgen Visiting Fellowship</strong>. 
-        She invited me and my Sarah Ward (PhD student in Fauria Lab) to join her at UO, where we spent two weeks immersed in writing, brainstorming, 
+        She invited me and Sarah Ward (PhD student in Fauria Lab) to join her at UO, where we spent two weeks immersed in writing, brainstorming, 
         and refining our research projects, culminating in significant progress on our MS theses.
       </p>
 
