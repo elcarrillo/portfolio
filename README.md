@@ -93,7 +93,7 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 
 1. Fork this repository and clone it to your local machine.
     ```sh
-      git clone https://github.com/<your-username>/portfolio.git
+      git clone https://github.com/elcarrillo/portfolio.git
     ``` 
 
 2. Edit the configuration files:
@@ -179,6 +179,7 @@ Distributed under the `MIT` License. See [LICENSE](https://github.com/hashirshoa
 
 ---
 # Notes
+
 1. Replace `<your-username>` with your GitHub username in the instructions.
 2. Update the `config/config.js` file with your personal details and content for the new sections.
 
