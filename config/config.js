@@ -201,10 +201,10 @@ export const links = {
 			title: "My GitHub",
 			link: "https://github.com/elcarrillo",
 		},
-		// {
-		// 	title: "My LinkedIn",
-		// 	link: "https://www.linkedin.com/in/elcarrillo/",
-		// },
+		{
+			title: "My LinkedIn",
+			link: "https://www.linkedin.com/in/elcarrillo/",
+		},
 		{
 			title: "My ORCID",
 			link: "https://orcid.org/0009-0006-4140-8637",
@@ -217,6 +217,10 @@ export const links = {
 			title: "University of Oregon ERTH",
 			link: "https://naturalsciences.uoregon.edu/earth-sciences",
 		},
+		{
+     title: "My Google Scholar Profile",
+     link: "https://scholar.google.com/citations?user=mBtiybMAAAAJ&hl=en"
+   },
 		{
 		  title: "Support my opensource work!",
 		  link: "https://buymeacoffee.com/elcarrillo",
@@ -245,7 +249,7 @@ export const research = {
   projects: [
     {
       title: "Dynamics of Shallow Conduit Flow",
-      description: `As a member of the Karlstrom lab, my research focuses on understanding the magma flow beneath the Earth's surface and during volcanic eruptions. Specifically, I examine how magma transitions from dike intrusions to conduit flow, which can lead to fissure eruptions that eventually consolidate into a single vent. Using computational fluid dynamics (CFD) simulations, 
+      description: `As a member of the Karlstrom lab in the University of Oregon, my research focuses on understanding the magma flow beneath the Earth's surface and during volcanic eruptions. Specifically, I examine how magma transitions from dike intrusions to conduit flow, which can lead to fissure eruptions that eventually consolidate into a single vent. Using computational fluid dynamics (CFD) simulations, 
 	       
 	       I analyze magma flow and conduit morphology changes over time. This is particularly challenging for thermo-viscous flows, as heat flux within the conduit alters its geometry.
 	       
@@ -273,10 +277,14 @@ export const research = {
 
 			Using the rhyolite-MELTS program, we simulated magma evolution under varying pressures and water contents. Understanding this mechanism enhances our knowledge of magma evolution and volcanic behavior, with applications to other volcanic systems to improve predictions of volcanic activity.
 
-			Our full results will be available soon! (Corresponding Author: Anna Ruefer-Stanford University; Principal Investigator: Guil Gualda-Vanderbilt University)
+			Click 'Read More' below to see the full results.
+
+ 			(Corresponding Author: Anna Ruefer - Stanford University; Principal Investigator: Guil Gualda - Vanderbilt University)
 
 			This research was conducted as part of the MESSY group at Vanderbilt University.`,
       image: pccProjectImage.src,
+      link: "https://authors.elsevier.com/c/1klu01LkU3nlhR", // Add link property
+
     },
     // add as needed
   ],
@@ -285,6 +293,13 @@ export const research = {
 
 // updates page
 export const updates = [
+{
+  title: "Published: New Paper with the MESSY Team at Vandy!",
+  date: "March 13, 2025",
+  snippet: "I'm excited to announce that a paper I contributed to, co-authored with the amazing MESSY team from Vanderbilt, is now available! I'm truly grateful for the opportunity to work with such a fantastic group. Click 'Learn More' to check it out. 🎉",
+  type: "external",
+  link: "https://authors.elsevier.com/c/1klu01LkU3nlhR"
+},
 	{
 	title: "Thrilled to Participate in the 3MT Competition",
 	date: "November 22, 2024",

@@ -44,48 +44,59 @@ const Research = () => {
       </div>
 
       {/* Research Projects - Each project as a stacked section with alternating image alignment */}
-      <div id="projects">
-        {research.projects.map((project, index) => (
-          <div
-            key={index}
-            className={`project-section py-5 ${index % 2 === 0 ? '' : 'alt'}`} // Add "alt" class for alternating sections
-          >
-            <div className="container">
-              <div className="row align-items-center">
-                {index % 2 === 0 ? (
-                  <>
-                    <div className="col-md-6 mb-4 mb-md-0">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="img-fluid rounded custom-image-size"
-                      />
-                    </div>
-                    <div className="col-md-6">
-                      <h3 className="text-primary fw-bold">{project.title}</h3>
-                      <p>{project.description}</p>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="col-md-6">
-                      <h3 className="text-primary fw-bold">{project.title}</h3>
-                      <p>{project.description}</p>
-                    </div>
-                    <div className="col-md-6 mb-4 mb-md-0">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="img-fluid rounded custom-image-size"
-                      />
-                    </div>
-                  </>
+<div id="projects">
+  {research.projects.map((project, index) => (
+    <div
+      key={index}
+      className={`project-section py-5 ${index % 2 === 0 ? '' : 'alt'}`} // Alternating sections
+    >
+      <div className="container">
+        <div className="row align-items-center">
+          {index % 2 === 0 ? (
+            <>
+              <div className="col-md-6 mb-4 mb-md-0">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="img-fluid rounded custom-image-size"
+                />
+              </div>
+              <div className="col-md-6">
+                <h3 className="text-primary fw-bold">{project.title}</h3>
+                <p>{project.description}</p>
+                {project.link && (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-2">
+                    Read More
+                  </a>
                 )}
               </div>
-            </div>
-          </div>
-        ))}
+            </>
+          ) : (
+            <>
+              <div className="col-md-6">
+                <h3 className="text-primary fw-bold">{project.title}</h3>
+                <p>{project.description}</p>
+                {project.link && (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-2">
+                    Read More
+                  </a>
+                )}
+              </div>
+              <div className="col-md-6 mb-4 mb-md-0">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="img-fluid rounded custom-image-size"
+                />
+              </div>
+            </>
+          )}
+        </div>
       </div>
+    </div>
+  ))}
+</div>
+
 
 
 {/* Collaborations Section */}
