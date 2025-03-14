@@ -67,7 +67,7 @@ export const intro = {
 		},
 		{
 			title: "CV",
-			link: "https://drive.google.com/file/d/15yFmKsu-16hAOZqNSUyLP2Cfe11UjG1o/view?usp=sharing",
+			link: "https://drive.google.com/file/d/1Fq3sUw21XO-dzhEeWyNpiktTU7rb6TaI/view?usp=sharing",
 			isPrimary: false,
 		},
 	],
