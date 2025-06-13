@@ -18,6 +18,7 @@ import snowyNashImage from '/public/images/snowy_nash.png';
 import obsidianImage from '/public/images/obsidian.png';
 import vesuviusImage from '/public/images/vesuvius.png';
 import NashvilleImage from '/public/images/nashville.png';
+import goDucks from '/public/images/go_ducks.png';
 
 
 
@@ -57,7 +58,7 @@ export const navigation = {
 
 export const intro = {
 	title: "Hi, I'm Edgar",
-	description: "A PhD student researching the dynamics of volcanic flow.",
+	description: "A PhD candidate researching the dynamics of volcanic flow.",
 	image: profile.src,
 	buttons: [
 		{
@@ -187,7 +188,7 @@ export const SEO = {
 export const links = {
 	image: profile.src,
 	title: "@EdgarLCarrillo",
-	description: "PhD Student | University of Oregon",
+	description: "PhD candidate | University of Oregon",
 	cards: [
 		{
 			title: "My website",
@@ -293,6 +294,13 @@ export const research = {
 
 // updates page
 export const updates = [
+	{
+  title: "Passed PhD Qualifying Exam!",
+  date: "June 12, 2025",
+  snippet: "I'm thrilled to announce that I’ve successfully passed my PhD qualifying exam at the University of Oregon! Huge thanks to Dr. Leif Karlstrom and my committee for their guidance and support. Ready to dive into the next phase of my research! #goDucks",
+  type: "none",
+  image: goDucks.src
+},
 {
   title: "Published: New Paper with the MESSY Team at Vandy!",
   date: "March 13, 2025",
