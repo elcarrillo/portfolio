@@ -19,7 +19,7 @@ import obsidianImage from '/public/images/obsidian.png';
 import vesuviusImage from '/public/images/vesuvius.png';
 import NashvilleImage from '/public/images/nashville.png';
 import goDucks from '/public/images/go_ducks.png';
-
+import tongaPlumeGif from '/public/images/tonga_plume.gif';
 
 
 import { faAppStore, faGithub, faGooglePlay} from '@fortawesome/free-brands-svg-icons';
@@ -68,7 +68,7 @@ export const intro = {
 		},
 		{
 			title: "CV",
-			link: "https://drive.google.com/file/d/1Vx67OHdscgNHAF23aAKiB_Zt-Y9XUzKQ/view?usp=sharing",
+			link: "https://drive.google.com/file/d/1HQis6kQxZcaNDYtKHX18NshdeVBAsQ9e/view?usp=sharing",
 			isPrimary: false,
 		},
 	],
@@ -115,48 +115,43 @@ export const work = {
 }
 
 export const projects = {
-	title: "Software Projects",
-	cards: [
-		{
-			title: "TBD",
-			description: "will be added soon.",
-			icons: [
-				{
-					icon: faAppStore,
-					link: "#url",
-				},
-				{
-					icon: faGithub,
-					link: "#url",
-				},
-			]
-		},
-//		{
-//			title: "QuranTalk",
-//			description: "An emotional well being and mental health app. The app helps people to navigate their emotions in the light of the Quran.",
-//			icons: [
-//				{
-//					icon: faAppStore,
-//					link: "https://apps.apple.com/us/app/qurantalk/id1563425149",
-//				},
-//				{
-//					icon: faGooglePlay,
-//					link: "https://play.google.com/store/apps/details?id=com.ayahemotion.quran_talk",
-//				},
-//			]
-//		},
-//		{
-//			title: "Portfolio",
-//			description: "A portfolio website template that helps you showcase your work, projects and skills as a software developer or freelancer.",
-//			icons: [
-//				{
-//					icon: faGithub,
-//					link: "https://github.com/hashirshoaeb/portfolio",
-//				},
-		// 	]
-		// },
-	],
-}
+  title: "Software Projects",
+  cards: [
+    {
+      title: "PlumeViz",
+      description:
+        "A scientific computing tool for batch-running, post-processing, and visualizing 1D volcanic plume simulations using Plumeria.",
+      icons: [
+        {
+          icon: faGithub,
+          link: "https://github.com/elcarrillo/PlumeViz",
+        },
+      ],
+    },
+    {
+      title: "StructPy",
+      description:
+        "A Python CLI tool for organizing, validating, and backing up scientific data projects.",
+      icons: [
+        {
+          icon: faGithub,
+          link: "https://github.com/elcarrillo/StructPy",
+        },
+      ],
+    },
+    {
+      title: "Master's Thesis Template",
+      description:
+        "A modular LaTeX thesis template designed for academic writing, with structured chapters, bibliography management, title page, approval sheet, figures, and formatting support.",
+      icons: [
+        {
+          icon: faGithub,
+          link: "https://github.com/elcarrillo/Masters-Thesis-Template",
+        },
+      ],
+    },
+  ],
+};
 
 export const contact = {
   title: "Get in touch",
@@ -180,8 +175,8 @@ export const contact = {
 // SEARCH ENGINE 
 export const SEO = {
 	// 50 - 60 char  
-	title: "Edgar Carrillo | PhD Student | Volcano Physics | Computational Physics",
-	description: "I am a PhD student at the University of Oregon's Dept. of Earth  Science. I research the dynamics of volcanic flows.",
+	title: "Edgar Carrillo | PhD Candidate | Volcano Physics | Computational Physics",
+	description: "I am a PhD candidate at the University of Oregon's Dept. of Earth  Science. I research the dynamics of volcanic flows.",
 	image: profile.src,
 }
 
@@ -194,10 +189,10 @@ export const links = {
 			title: "My website",
 			link: "https://elcarrillo.github.io/portfolio/",
 		},
-//		{
-//			title: "QuranTalk App",
-//			link: "https://www.qurantalk.app/",
-//		},
+{
+  title: "My ResearchGate Profile",
+  link: "https://www.researchgate.net/profile/Edgar-Carrillo-5",
+},
 		{
 			title: "My GitHub",
 			link: "https://github.com/elcarrillo",
@@ -257,21 +252,20 @@ export const research = {
 	       To address these challenges, I utilize numerical modeling to investigate the evolution of flow dynamics. By calibrating these models with observational data from real-world volcanic systems, I aim to enhance their accuracy and predictive capabilities. Understanding the mechanics of magma movement is essential because it influences how far lava flows can travel and where magma will solidify upon cooling.`,
       image: fissuresImage.src,
     },
-    {
-      title: "Dynamics of Water-Rich Columns",
-      description: `Volcanic plumes, columns of ash, and gas released during eruptions can affect the climate, spread volcanic material, and pose risks to aviation. Sometimes, these plumes collapse, leading to dangerous pyroclastic flows. Understanding when and why plume collapse occurs is crucial for safety.
+	{
+	  title: "Dynamics of Water-Rich Volcanic Columns",
+	  description: `Volcanic plumes are columns of ash, gas, and particles released during explosive eruptions. They can affect climate, spread volcanic material over large distances, and pose serious hazards to aviation. When eruption columns collapse, they can generate pyroclastic density currents, which are among the most dangerous volcanic hazards.
 
-			I explored how external water, such as seawater during underwater eruptions, influences plume collapse. We focused on the "column collapse condition," which is when a rising plume becomes unstable and falls back down.
+	I investigated how external water, such as seawater or surface water interacting with magma, influences volcanic column height and collapse. Using the 1D steady-state plume model Plumeria, we simulated eruption scenarios with varying external water content, vent exit velocity, initial magma temperature, and mass eruption rate.
 
-			Using the 1D steady state model, Plumeria, we simulated various scenarios with different amounts of external water, vent exit speeds, and initial magma temperatures.
+	Our results show that small amounts of external water can suppress column collapse and help buoyant plumes form, while larger amounts of water can promote collapse by cooling and densifying the eruptive mixture. We also found that the Richardson number remains useful for interpreting collapse behavior even when external water is present.
 
-			We discovered that small amounts of external water help prevent plume collapse, allowing plumes to rise higher. In contrast, larger amounts of water make collapse more likely. A measurement known as the Richardson number, comparing buoyancy to flow speed, is useful for predicting plume collapse even when external water is present. 
+	This work improves our understanding of how water influences explosive eruption dynamics and is especially relevant for water-rich eruptions such as the 2022 Hunga eruption.
 
-			This research enhances our understanding of how external water affects volcanic plume behavior, including height and stability. Events like the recent (2022) Hunga eruption highlight the importance of understanding water's role in volcanic eruptions. 
-
-			Full results will be available soon (manuscript in revision)! (Corresponding author: Edgar Carrillo-University of Oregon; Principal Investigator: Kristen Fauria-Vanderbilt)`,
-      image: plumesImage.src,
-    },
+	Corresponding author: Edgar Carrillo, University of Oregon. Principal Investigator: Kristen Fauria, Vanderbilt University.`,
+	  image: plumesImage.src,
+	  link: "https://www.researchgate.net/publication/404114760_Effects_of_external_water_on_volcanic_column_height_and_collapse",
+	},
     {
       title: "Thermodynamics of Magma Evolution",
       description:`The 2011-2012 eruption of Chile's Cordón Caulle volcano provides valuable insight into how high-silica rhyolite can form directly from basaltic magma. Observations of mafic (basaltic) enclaves surrounded by rhyolitic glass suggest this transformation process.
@@ -284,7 +278,7 @@ export const research = {
 
 			This research was conducted as part of the MESSY group at Vanderbilt University.`,
       image: pccProjectImage.src,
-      link: "https://authors.elsevier.com/c/1klu01LkU3nlhR", // Add link property
+      link: "https://doi.org/10.1016/j.jvolgeores.2025.108305", // Add link property
 
     },
     // add as needed
@@ -294,6 +288,16 @@ export const research = {
 
 // updates page
 export const updates = [
+
+	{
+  title: "Research Article Available!",
+  date: "April 2026",
+  snippet:
+    "My article on the effects of external water on volcanic column height and collapse is now available on ResearchGate. GIF courtesy of the Japan Meteorological Agency",
+  type: "external",
+  link: "https://www.researchgate.net/publication/404114760_Effects_of_external_water_on_volcanic_column_height_and_collapse",
+    image: tongaPlumeGif.src
+},
 	{
   title: "Passed PhD Qualifying Exam!",
   date: "June 12, 2025",
@@ -306,7 +310,7 @@ export const updates = [
   date: "March 13, 2025",
   snippet: "I'm excited to announce that a paper I contributed to, co-authored with the amazing MESSY team from Vanderbilt, is now available! I'm truly grateful for the opportunity to work with such a fantastic group. Click 'Learn More' to check it out. 🎉",
   type: "external",
-  link: "https://authors.elsevier.com/c/1klu01LkU3nlhR"
+  link: "https://drive.google.com/file/d/1UL_dAvUIWyBuWZjDM2xTIRaYpFnvRE02/view?usp=sharing"
 },
 	{
 	title: "Thrilled to Participate in the 3MT Competition",

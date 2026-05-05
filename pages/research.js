@@ -104,10 +104,13 @@ const Research = () => {
         <div className="container">
           <h2 className="text-primary fw-bold">Collaborations</h2>
 
-          <p className="mb-4">
-            My research has greatly benefited from collaborations with talented scientists and institutions. Additionally, my academic and professional growth has been supported by the mentorship and development opportunities provided by the Fisk-Vanderbilt Bridge Program.
-          </p>
-         
+        <p className="mb-4">
+          My research has benefited from collaborations with scientists and institutions
+          working at the intersection of numerical modeling, computational methods, and
+          Earth system science. If you are interested in collaborating on projects involving
+          scientific computing, geophysical modeling, data analysis, or related
+          interdisciplinary research, please feel free to reach out.
+        </p>
 
 
          
