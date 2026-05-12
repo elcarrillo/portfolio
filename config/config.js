@@ -3,6 +3,11 @@ import profile from './profile.png';
 import redwoodImage from '/public/redwood.png';
 import italyImage from '/public/italy.png';
 import utahImage from '/public/utah.png';
+import haywardImage from '/public/hayward.JPG';
+import butteImage from '/public/lavaButte.jpeg';
+import soccerImage from '/public/soccer.png';
+
+
 import fissuresImage from '/public/fissures.png';
 import plumesImage from '/public/plumes.png';
 import pccProjectImage from '/public/pcc_project.png';
@@ -20,6 +25,7 @@ import vesuviusImage from '/public/images/vesuvius.png';
 import NashvilleImage from '/public/images/nashville.png';
 import goDucks from '/public/images/go_ducks.png';
 import tongaPlumeGif from '/public/images/tonga_plume.gif';
+import idahoFalls from '/public/images/idaho_falls.jpg'
 
 
 import { faAppStore, faGithub, faGooglePlay} from '@fortawesome/free-brands-svg-icons';
@@ -225,16 +231,43 @@ export const links = {
 	]
 }
 
-// added section for pictures
+// Added section for pictures
 export const pictures = {
   title: "Memorable Moments",
-  description: "A collection of photos",
+  description: "A collection of photos from fieldwork, travel, and life outside research.",
   images: [
-    { src: redwoodImage.src, alt: 'Hiking in the California bay area', caption: 'Hiking in the California bay area' },
-    { src: italyImage.src, alt: 'Field work in northern Italy', caption: 'Field work in northern Italy' },
-    { src: utahImage.src, alt: 'Exploring Utah', caption: 'Exploring Utah' },
+    {
+      src: haywardImage.src,
+      alt: "Eugene 5K at Hayward Field",
+			caption: "Somewhere in the crowd on the Hayward Field track during the 2026 Eugene 5K. Credit: Eugene Marathon.",    },
+    {
+      src: butteImage.src,
+      alt: "Morning at Lava Butte",
+      caption: "Morning coffee after biking the gravel trail up Lava Butte.",
+    },
+    {
+		  src: soccerImage.src,
+		  alt: "Intramural soccer at Vanderbilt",
+		  caption: "Intramural soccer in between lab hours at Vanderbilt.",
+		},
+    {
+      src: italyImage.src,
+      alt: "Fieldwork in northern Italy",
+      caption: "Fieldwork in northern Italy.",
+
+    },
+    {
+      src: redwoodImage.src,
+      alt: "Hiking in the California Bay Area",
+      caption: "Hiking in the California Bay Area.",
+    },
+    {
+      src: utahImage.src,
+      alt: "Exploring Utah",
+      caption: "Exploring Utah.",
+    },
   ],
-}
+};
 
 
 // added research page
@@ -288,10 +321,16 @@ export const research = {
 
 // updates page
 export const updates = [
+	{
+  title: "Awarded DOE Graduate Fellowship for Superhot Geothermal Research",
+  date: "May 11, 2026",
+snippet: "Received a DOE SCGSR award to build on my University of Oregon research on volcanic systems, with new work at Idaho National Laboratory modeling heat exchange between magma intrusions and hydrothermal systems.",  link: "https://www.energy.gov/science/articles/outstanding-us-graduate-students-selected-department-energy-office-science",
+  image: idahoFalls.src
+},
 
 	{
   title: "Research Article Available!",
-  date: "April 2026",
+  date: "April 29, 2026",
   snippet:
     "My article on the effects of external water on volcanic column height and collapse is now available on ResearchGate. GIF courtesy of the Japan Meteorological Agency",
   type: "external",
