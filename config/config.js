@@ -325,6 +325,7 @@ export const updates = [
   title: "Awarded DOE Graduate Fellowship for Superhot Geothermal Research",
   date: "May 11, 2026",
 	snippet: "Received a DOE SCGSR award to build on my University of Oregon research on volcanic systems, with new work at Idaho National Laboratory modeling heat exchange between magma intrusions and hydrothermal systems. Photo: Wikimedia Commons, CC BY-SA 4.0",  
+	type: "external",
 	link: "https://www.energy.gov/science/articles/outstanding-us-graduate-students-selected-department-energy-office-science",
   image: idahoFalls.src
 },
