@@ -26,7 +26,9 @@ import NashvilleImage from '/public/images/nashville.png';
 import goDucks from '/public/images/go_ducks.png';
 import tongaPlumeGif from '/public/images/tonga_plume.gif';
 import idahoFalls from '/public/images/idaho_falls.jpg'
-
+import geysers from '/public/images/geysers.jpg'
+import helensImage from "../public/images/helens.jpg";
+import icelandFissure from '../public/images/iceland-fissure.jpg';
 
 import { faAppStore, faGithub, faGooglePlay} from '@fortawesome/free-brands-svg-icons';
 import { } from '@fortawesome/free-solid-svg-icons';
@@ -89,8 +91,7 @@ export const about = {
 
 			"My research focuses on developing mathematical models, running simulations, and conducting numerical experiments to explore and predict the behavior of dynamic natural systems—particularly explosive volcanic eruptions. By leveraging computational science, I aim to gain insights into complex processes that are challenging to observe directly.",
 
-			"I'm passionate about advancing our understanding of volcanic systems and their interactions with the environment. I highly value collaboration within the Earth Science community and am dedicated to mentoring and inspiring the next generation of scientists.",
-
+			"I'm passionate about advancing our understanding of volcanic systems and their interactions with the environment. I value collaboration within the Earth Science community and am dedicated to mentoring and supporting the next generation of scientists."
 	],
 }
 
@@ -273,48 +274,69 @@ export const pictures = {
 // added research page
 export const research = {
   title: "Research",
+
   description: "Highlighting my current and past research projects.",
-  headerImage: volcanoImage.src, // Add your header image path here
+
+  headerImage: volcanoImage.src,
+
   projects: [
-    {
-      title: "Dynamics of Shallow Conduit Flow",
-      description: `As a member of the Karlstrom lab in the University of Oregon, my research focuses on understanding the magma flow beneath the Earth's surface and during volcanic eruptions. Specifically, I examine how magma transitions from dike intrusions to conduit flow, which can lead to fissure eruptions that eventually consolidate into a single vent. Using computational fluid dynamics (CFD) simulations, 
-	       
-	       I analyze magma flow and conduit morphology changes over time. This is particularly challenging for thermo-viscous flows, as heat flux within the conduit alters its geometry.
-	       
-	       To address these challenges, I utilize numerical modeling to investigate the evolution of flow dynamics. By calibrating these models with observational data from real-world volcanic systems, I aim to enhance their accuracy and predictive capabilities. Understanding the mechanics of magma movement is essential because it influences how far lava flows can travel and where magma will solidify upon cooling.`,
-      image: fissuresImage.src,
-    },
-	{
-	  title: "Dynamics of Water-Rich Volcanic Columns",
-	  description: `Volcanic plumes are columns of ash, gas, and particles released during explosive eruptions. They can affect climate, spread volcanic material over large distances, and pose serious hazards to aviation. When eruption columns collapse, they can generate pyroclastic density currents, which are among the most dangerous volcanic hazards.
+		{
+		  title: "Magma–Hydrothermal Systems",
 
-	I investigated how external water, such as seawater or surface water interacting with magma, influences volcanic column height and collapse. Using the 1D steady-state plume model Plumeria, we simulated eruption scenarios with varying external water content, vent exit velocity, initial magma temperature, and mass eruption rate.
+		  description: `Magma–hydrothermal systems transfer heat from the crust into circulating groundwater, linking magmatic activity with volcanic hydrothermal systems and geothermal resources. Understanding how these systems evolve is important for constraining the persistence and distribution of heat in the subsurface and for assessing geothermal potential.
 
-	Our results show that small amounts of external water can suppress column collapse and help buoyant plumes form, while larger amounts of water can promote collapse by cooling and densifying the eruptive mixture. We also found that the Richardson number remains useful for interpreting collapse behavior even when external water is present.
+			Through a U.S. Department of Energy SCGSR research appointment, I am working with Robert Podgorney and researchers at Idaho National Laboratory to investigate heat and fluid transport in magma–hydrothermal systems.`,
 
-	This work improves our understanding of how water influences explosive eruption dynamics and is especially relevant for water-rich eruptions such as the 2022 Hunga eruption.
+		  image: geysers.src,
 
-	Corresponding author: Edgar Carrillo, University of Oregon. Principal Investigator: Kristen Fauria, Vanderbilt University.`,
-	  image: plumesImage.src,
-	  link: "https://www.researchgate.net/publication/404114760_Effects_of_external_water_on_volcanic_column_height_and_collapse",
-	},
-    {
-      title: "Thermodynamics of Magma Evolution",
-      description:`The 2011-2012 eruption of Chile's Cordón Caulle volcano provides valuable insight into how high-silica rhyolite can form directly from basaltic magma. Observations of mafic (basaltic) enclaves surrounded by rhyolitic glass suggest this transformation process.
+		  link: "https://www.energy.gov/science/articles/outstanding-us-graduate-students-selected-department-energy-office-science",
+		},
 
-			Using the rhyolite-MELTS program, we simulated magma evolution under varying pressures and water contents. Understanding this mechanism enhances our knowledge of magma evolution and volcanic behavior, with applications to other volcanic systems to improve predictions of volcanic activity.
+		{
+		  title: "Dynamics of Water-Rich Volcanic Columns",
 
-			Click 'Read More' below to see the full results.
+		  description: `Volcanic plumes can rise high into the atmosphere or collapse to form hazardous pyroclastic density currents. My research examines how external water influences this transition and the overall behavior of explosive eruption columns.
 
- 			(Corresponding Author: Anna Ruefer - Stanford University; Principal Investigator: Guil Gualda - Vanderbilt University)
+		Using the 1D plume model Plumeria, we found that small amounts of external water can suppress column collapse, while larger amounts can promote it through cooling. More recent thermodynamic work helps explain this behavior. At low to moderate water amounts, heat transferred from magma to water vapor can provide an additional buoyancy boost before cooling becomes dominant.
 
-			This research was conducted as part of the MESSY group at Vanderbilt University.`,
-      image: pccProjectImage.src,
-      link: "https://doi.org/10.1016/j.jvolgeores.2025.108305", // Add link property
+		This work helps explain how water can either promote or suppress column collapse, with implications for water-rich eruptions such as the 2022 Hunga eruption. A new paper expanding on these thermodynamic results is currently in preparation.
 
-    },
-    // add as needed
+		(Corresponding author Edgar Carrillo, University of Oregon. Principal Investigator Kristen Fauria, Vanderbilt University).`,
+
+		  image: plumesImage.src,
+
+		  link: "https://www.researchgate.net/publication/404114760_Effects_of_external_water_on_volcanic_column_height_and_collapse",
+		},
+
+{
+  title: "Evolving Volcanic Pathways in the Shallow Crust",
+
+  description: `Volcanic pathways such as dikes, sills, and conduits can evolve as magma moves through the crust and interacts with the surrounding rock. These changes in geometry can influence how magma is transported and may affect broader eruptive behavior.
+
+My research in this area explores how processes such as conduit erosion, wall failure, and magma-driven pathway evolution can feed back on volcanic dynamics. I am particularly interested in how evolving geometry may influence flow localization, vent conditions, and the potential for changes in eruption style, including column collapse.`,
+
+  image: fissuresImage.src,
+},
+
+
+
+		{
+		  title: "Thermodynamics of Magma Differentiation",
+
+		  description: `The 2011-2012 eruption of Chile's Cordón Caulle volcano provides valuable insight into how high-silica rhyolite can form directly from basaltic magma. Observations of mafic (basaltic) enclaves surrounded by rhyolitic glass suggest this transformation process.
+
+		Using the rhyolite-MELTS program, we simulated magma evolution under varying pressures and water contents. Understanding this mechanism enhances our knowledge of magma evolution and volcanic behavior, with applications to other volcanic systems to improve predictions of volcanic activity.
+
+		Click 'Read More' below to see the full results.
+
+		(Corresponding Author: Anna Ruefer - Stanford University; Principal Investigator: Guil Gualda - Vanderbilt University)
+		This research was conducted as part of the MESSY group at Vanderbilt University.`,
+
+		  image: pccProjectImage.src,
+
+		  link: "https://doi.org/10.1016/j.jvolgeores.2025.108305",
+		},
+
   ],
 };
 
@@ -322,12 +344,36 @@ export const research = {
 // updates page
 export const updates = [
 	{
+  title: "What is Volcano Physics?",
+  date: "August 20, 2026",
+  snippet: "What does it actually mean to study volcano physics? A look at how physics, math, and computational methods help us understand volcanic processes.",
+  type: "internal",
+  link: "/updates/volcano-physics",
+  image: icelandFissure.src,
+  featured: true,
+},
+
+	{
+  title: "Dufek Multiphase Flow Group",
+  date: "Aug 3, 2026",
+  snippet: "Excited to join the Dufek Multiphase Flow Group at the University of Oregon and continue my doctoral research in volcano physics. Photo Credit: USGS Cascades Volcano Observatory.",
+  type: "external",
+  image: helensImage.src,
+  link: "https://pages.uoregon.edu/jdufek/",
+},
+
+
+
+
+
+	{
   title: "Awarded DOE Graduate Fellowship for Superhot Geothermal Research",
   date: "May 11, 2026",
 	snippet: "Received a DOE SCGSR award to build on my University of Oregon research on volcanic systems, with new work at Idaho National Laboratory modeling heat exchange between magma intrusions and hydrothermal systems. Photo: Wikimedia Commons, CC BY-SA 4.0",  
 	type: "external",
 	link: "https://www.energy.gov/science/articles/outstanding-us-graduate-students-selected-department-energy-office-science",
-  image: idahoFalls.src
+  image: idahoFalls.src,
+  featured: true,
 },
 
 	{
@@ -379,13 +425,14 @@ export const updates = [
 	snippet: "Honored to share my research and academic journey as a guest seminar speaker at Lane Community College in Eugene, Oregon. Outreach opportunities like this are truly invaluable, offering a chance to discuss science and inspire others to pursue their passions in STEM!",
 	type: "none",
 	},
+
 	{
-	title: "Sco' Ducks!",
-	date: "September 16, 2024",
-	snippet: "I am excitect to continue my doctoral studies at the University of Oregon under the guidance of Dr. Leif Karlstrom! Click the link below to learn more about the Karlstrom research group. Go Ducks!",
-	type: "external",
-	image: uoLogoImage.src,
-	link: "https://pages.uoregon.edu/leif/markdown/",
+	  title: "Sco' Ducks!",
+	  date: "September 16, 2024",
+	  snippet: "I am excited to continue my doctoral studies in volcano physics at the University of Oregon. Go Ducks!",
+	  type: "external",
+	  image: uoLogoImage.src,
+	  link: "https://earthsciences.uoregon.edu/",
 	},
 
 	{
@@ -522,17 +569,19 @@ export const updates = [
 	image: vesuviusImage.src,
 	type: "none",
 	},
-	{
-	title: "Diving into Volcanophysics!",
-	date: "October 15, 2021",
-	snippet: "Excited to officially join the Fauria Research Group at Vanderbilt University's Department of Earth and Environmental Sciences! My research will focus on investigating the dynamics of shallow submarine eruptions using numerical modeling, combining physics and computational science to explore these fascinating volcanic phenomena.",
-	type: "external",
-	link: "https://sites.google.com/site/kristenfauria"
-	},
+	
+{
+  title: "Diving into Volcano Physics!",
+  date: "December 2021",
+  snippet: "Excited to join Kristen Fauria's research group at Vanderbilt University's Department of Earth and Environmental Sciences! My research will focus on the dynamics of shallow submarine eruptions using numerical modeling.",
+  type: "external",
+  link: "https://sites.google.com/site/kristenfauria"
+},
+
 	{
 	title: "Machine Learning in Material Science!",
 	date: "September 10, 2021",
-	snippet: "Just joined the Burger Lab! I will use machine learning techniques to solve challenges in material science, particularly in advancing scintillator development. This opportunity bridges computational methods and experimental materials research, paving the way for innovative solutions.",
+	snippet: "Just joined the Burger Lab! I will use machine learning techniques to solve challenges in material science, particularly in advancing scintillator development.",
 	type: "none"
 	},
 	{

@@ -50,7 +50,9 @@ const Updates = () => {
     setCurrentPage(1); // Reset to the first page
   };
 
-  const featuredUpdates = sortedUpdates.slice(0, 2); // Most recent 2 updates
+const featuredUpdates = sortedUpdates.filter(
+  (update) => update.featured
+);
 
   return (
     <div>
@@ -106,7 +108,7 @@ const Updates = () => {
         {/* Latest Updates Section */}
         <section aria-labelledby="featured-updates">
           <h2 id="featured-updates" className="text-primary fw-bold mb-4">
-            Latest Updates
+            Featured Updates
           </h2>
           <div className="row">
             {featuredUpdates.map((update, index) => (
