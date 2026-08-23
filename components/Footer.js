@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -8,6 +8,87 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
+const GoogleCalendarButton = ({ url, label }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <button
+        type="button"
+        className="btn btn-primary my-1 mx-3"
+        onClick={() => setIsOpen(true)}
+      >
+        {label}
+      </button>
+
+      {isOpen && (
+        <div
+          onClick={() => setIsOpen(false)}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            backgroundColor: 'rgba(0, 0, 0, 0.55)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999,
+            padding: '20px',
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              position: 'relative',
+              width: '100%',
+              maxWidth: '900px',
+              height: '85vh',
+              backgroundColor: '#fff',
+              borderRadius: '12px',
+              overflow: 'hidden',
+              boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3)',
+            }}
+          >
+            <button
+              type="button"
+              onClick={() => setIsOpen(false)}
+              aria-label="Close scheduling window"
+              style={{
+                position: 'absolute',
+                top: '10px',
+                right: '14px',
+                zIndex: 10,
+                border: 'none',
+                background: '#fff',
+                borderRadius: '50%',
+                width: '36px',
+                height: '36px',
+                fontSize: '24px',
+                lineHeight: '30px',
+                cursor: 'pointer',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
+              }}
+            >
+              ×
+            </button>
+
+            <iframe
+              src={url}
+              title="Schedule a meeting"
+              style={{
+                border: 0,
+                width: '100%',
+                height: '100%',
+              }}
+            />
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
 
 export const Contact = ({ title, description, buttons }) => {
   return (
@@ -28,19 +109,11 @@ export const Contact = ({ title, description, buttons }) => {
             {buttons.map((button, index) => {
               if (button.type === 'google-calendar') {
                 return (
-                  <a
+                  <GoogleCalendarButton
                     key={index}
-                    href={button.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`btn my-1 mx-3 ${
-                      button.isPrimary
-                        ? 'btn-primary'
-                        : 'btn-outline-primary'
-                    }`}
-                  >
-                    {button.title}
-                  </a>
+                    url={button.link}
+                    label={button.title}
+                  />
                 );
               }
 
@@ -64,7 +137,6 @@ export const Contact = ({ title, description, buttons }) => {
     </div>
   );
 };
-
 
 export const Footer = () => {
   return (
