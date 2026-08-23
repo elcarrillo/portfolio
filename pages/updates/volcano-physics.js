@@ -84,9 +84,7 @@ const VolcanoPhysics = () => (
       </p>
 
       <p>
-        The volcano gives us the problem. Physics gives us tools for figuring
-        out how it works.
-      </p>
+    The storage and eruption of volcanic material present the problem. Volcano physics helps us investigate the processes behind it.      </p>
     </div>
 
     <Footer />
