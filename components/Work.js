@@ -58,6 +58,8 @@ export const Projects = ({ title, cards }) => {
               title={value.title}
               description={value.description}
               icons={value.icons}
+              tags={value.tags}
+              isSoftware={true}
             />
           ))}
         </div>
@@ -66,10 +68,19 @@ export const Projects = ({ title, cards }) => {
   );
 };
 
-export const Card = ({ title, description, icons, link }) => {
+export const Card = ({
+  title,
+  description,
+  icons,
+  link,
+  tags,
+  isSoftware,
+}) => {
   const CardContent = (
     <div
-      className="card py-3 px-3 mx-sm-4 my-4 card-work"
+      className={`card py-3 px-3 mx-sm-4 my-4 card-work ${
+        isSoftware ? 'software-card' : ''
+      }`}
       style={{
         width: '20rem',
         cursor: 'pointer',
@@ -82,6 +93,16 @@ export const Card = ({ title, description, icons, link }) => {
       <p className="text-dark">
         {description}
       </p>
+
+      {tags && (
+        <div className="software-tags">
+          {tags.map((tag, index) => (
+            <span key={index} className="software-tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
 
       <div className="text-end">
         {icons &&

@@ -959,3 +959,66 @@ h5 {
     transform: none;
   }
 }
+
+
+/* =========================================================
+   Software project cards
+   ========================================================= */
+
+.software-card {
+  position: relative;
+  border-top: 4px solid #6fa6bb;
+}
+
+.software-card::before {
+  content: "●  ●  ●";
+  display: block;
+
+  margin-bottom: 0.8rem;
+
+  color: rgba(54, 91, 109, 0.45);
+
+  font-size: 0.65rem;
+  letter-spacing: 0.15rem;
+}
+
+.software-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.software-tag {
+  display: inline-block;
+
+  padding: 0.25rem 0.55rem;
+
+  background-color: rgba(54, 91, 109, 0.10);
+
+  border: 1px solid rgba(54, 91, 109, 0.14);
+  border-radius: 999px;
+
+  color: #365B6D;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+[data-bs-theme="dark"] .software-card {
+  border-top-color: #6fa6bb;
+}
+
+[data-bs-theme="dark"] .software-card::before {
+  color: rgba(111, 166, 187, 0.65);
+}
+
+[data-bs-theme="dark"] .software-tag {
+  background-color: rgba(111, 166, 187, 0.12);
+
+  border-color: rgba(111, 166, 187, 0.20);
+
+  color: #8fc0d2;
+}

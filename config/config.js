@@ -128,6 +128,7 @@ export const projects = {
       title: "PlumeViz",
       description:
         "A scientific computing tool for batch-running, post-processing, and visualizing 1D volcanic plume simulations using Plumeria.",
+      tags: ["Scientific Computing", "Plumeria", "Visualization"],
       icons: [
         {
           icon: faGithub,
@@ -139,6 +140,7 @@ export const projects = {
       title: "StructPy",
       description:
         "A Python CLI tool for organizing, validating, and backing up scientific data projects.",
+      tags: ["Python", "CLI", "Data Management"],
       icons: [
         {
           icon: faGithub,
@@ -150,6 +152,7 @@ export const projects = {
       title: "Master's Thesis Template",
       description:
         "A modular LaTeX thesis template designed for academic writing, with structured chapters, bibliography management, title page, approval sheet, figures, and formatting support.",
+      tags: ["LaTeX", "Template", "Academic Writing"],
       icons: [
         {
           icon: faGithub,
