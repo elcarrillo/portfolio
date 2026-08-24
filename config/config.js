@@ -209,6 +209,10 @@ export const links = {
 			link: "https://www.linkedin.com/in/elcarrillo/",
 		},
 		{
+     title: "My Google Scholar Profile",
+     link: "https://scholar.google.com/citations?user=mBtiybMAAAAJ&hl=en"
+    },
+		{
 			title: "My ORCID",
 			link: "https://orcid.org/0009-0006-4140-8637",
 		},
@@ -220,10 +224,7 @@ export const links = {
 			title: "University of Oregon ERTH",
 			link: "https://naturalsciences.uoregon.edu/earth-sciences",
 		},
-		{
-     title: "My Google Scholar Profile",
-     link: "https://scholar.google.com/citations?user=mBtiybMAAAAJ&hl=en"
-   },
+
 		{
 		  title: "Support my opensource work!",
 		  link: "https://buymeacoffee.com/elcarrillo",

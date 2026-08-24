@@ -2,72 +2,35 @@
 // https://getbootstrap.com/docs/5.0/customize/sass/
 
 
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+// =========================================================
+// Bootstrap setup
+// =========================================================
+
 @import "~bootstrap/scss/functions";
 
 
-// 2. Include any default variable overrides here
+// Bootstrap overrides
 
-// $primary-background: #FFFFFF;
-// $secondary-background: #F7F7F7;
-// $tertiary-background: #365B6D;
-
-// $primary-font: #000000;
-// $secondary-font: #F7F7F7;
-// $tertiary-font: #365B6D;
-// $inverted-font: #FFFFFF;
-
-// bootstrap overrides 
 $primary: #365B6D;
 $secondary: #F7F7F7;
 $light: #FFFFFF;
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
-$font-family-sans-serif: -apple-system, 'Barlow', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-family-sans-serif:
+  -apple-system,
+  'Barlow',
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji";
 
 $card-border-radius: 15px;
 
 
+// Bootstrap variables
 
-// font 
-// Title
-// font-family: Barlow;
-// font-style: normal;
-// font-weight: bold;
-// font-size: 64px;
-// line-height: 77px;
-
-// Heading1
-// font-family: Barlow;
-// font-style: normal;
-// font-weight: bold;
-// font-size: 50px;
-// line-height: 60px;
-
-// Heading2
-// font-family: Barlow;
-// font-style: normal;
-// font-weight: normal;
-// font-size: 24px;
-// line-height: 29px;
-
-// Lead Text
-// font-family: Barlow;
-// font-style: normal;
-// font-weight: normal;
-// font-size: 18px;
-// line-height: 22px;
-
-// Normal
-// font-family: Barlow;
-// font-style: normal;
-// font-weight: normal;
-// font-size: 15px;
-// line-height: 18px;
-
-
-
-// 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/variables-dark";
 @import "~bootstrap/scss/maps";
@@ -75,7 +38,8 @@ $card-border-radius: 15px;
 @import "~bootstrap/scss/utilities";
 
 
-// Layout & components (optional Bootstrap components)
+// Bootstrap layout & components
+
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/type";
@@ -106,158 +70,34 @@ $card-border-radius: 15px;
 @import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/spinners";
 @import "~bootstrap/scss/offcanvas";
-// Helpers
+
 @import "~bootstrap/scss/helpers";
-// Utilities
 @import "~bootstrap/scss/utilities/api";
 
 
-// 5. Add additional custom code here
+// =========================================================
+// Base
+// =========================================================
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+
+  background-color: #f8f9fa;
+  color: #000000;
+
+  font-family: 'Barlow', sans-serif;
+  line-height: 1.65;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a {
   text-decoration: none;
-}
-
-.icon-style {
-  font-family: $font-family-sans-serif;
-  color: $primary;
-}
-
-
-.card-work {
-  transition: box-shadow .3s;
-}
-
-.card-work:hover {
-  box-shadow: 0 0 11px rgba(33, 33, 33, .2);
-}
-
-.card-image {
-  transition: all .3s;
-  border-radius: $card-border-radius;
-  box-shadow: 1rem 1rem $primary;
-}
-
-.card-image:hover {
-  transform: translate(-0.5rem, -0.5rem);
-  box-shadow: 2rem 2rem $primary;
-}
-
-.back-to-home {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.project-section {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.project-section img {
-  border-radius: 8px;
-}
-
-#google-calendar-button button {
-  background-color: #365B6D; /* Primary color */
-  color: #FFFFFF; /* White text */
-  border: none;
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition for glow */
-}
-
-#google-calendar-button button:hover {
-  background-color: darken(#365B6D, 10%); /* Slightly darker background on hover */
-  box-shadow: 0 0 10px rgba(54, 91, 109, 0.8), 0 0 20px rgba(54, 91, 109, 0.6); /* Glow effect */
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.active {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
-  background-color: rgba(var(--bs-tertiary-bg-rgb), 0.95) !important;
-
-  transition: all 0.3s ease;
-}
-
-.navbar.scrolled {
-  background-color: rgba(var(--bs-tertiary-bg-rgb), 0.95) !important;
-  backdrop-filter: blur(5px);
-
-  transition: all 0.3s ease;
-}
-
-body {
-  background-color: var(--bs-body-bg);
-  color: var(--bs-body-color);
-
-  margin: 0;
-  font-family: 'Barlow', sans-serif;
-}
-
-.collaborations-section {
-  background-color: var(--bs-body-bg);
-}
-
-.project-section.alt {
-  background-color: var(--bs-body-bg);
-}
-
-#contact {
-  background-color: var(--bs-body-bg) !important;
-}
-
-.navbar.scrolled {
-  background-color: rgba(250, 250, 250, 0.95) !important; /* Lightest gray stays consistent when scrolled */
-  backdrop-filter: blur(5px); /* Optional blur effect */
-  transition: all 0.3s ease;
-}
-
-
-
-body {
-  background-color: #f8f9fa; /* Lightest gray */
-  color: #000000; /* Ensure text is visible */
-  margin: 0;
-  font-family: 'Barlow', sans-serif; /* Your preferred font */
-}
-
-.collaborations-section {
-  background-color: #ffffff; /* Set the background to white */
-}
-
-
-/* =========================================================
-   Visual polish
-   Cards:contentReference[oaicite:0]{index=0}============================================== */
-
-
-/* ---------- Typography ---------- */
-
-body {
-  line-height: 1.65;
 }
 
 p {
@@ -284,8 +124,15 @@ h5 {
   line-height: 1.25;
 }
 
+.icon-style {
+  font-family: $font-family-sans-serif;
+  color: $primary;
+}
 
-/* ---------- Section spacing ---------- */
+
+// =========================================================
+// General section spacing
+// =========================================================
 
 #about,
 #skills,
@@ -297,17 +144,25 @@ h5 {
   padding-bottom: 5.5rem !important;
 }
 
-.project-section {
-  padding-top: 4rem !important;
-  padding-bottom: 4rem !important;
+#about h1,
+#skills h1,
+#projects.bg-primary h1,
+#pictures h1,
+#contact h1,
+#collaborations h2 {
+  margin-bottom: 1.5rem;
 }
 
-/* ---------- General cards ---------- */
+
+// =========================================================
+// General cards
+// =========================================================
 
 .card {
+  overflow: hidden;
+
   border: 1px solid rgba(33, 37, 41, 0.08);
   border-radius: 16px;
-  overflow: hidden;
 
   box-shadow:
     0 4px 14px rgba(0, 0, 0, 0.05);
@@ -321,10 +176,10 @@ h5 {
 .card:hover {
   transform: translateY(-4px);
 
+  border-color: rgba(54, 91, 109, 0.18);
+
   box-shadow:
     0 12px 28px rgba(0, 0, 0, 0.11);
-
-  border-color: rgba(54, 91, 109, 0.18);
 }
 
 .card-body {
@@ -333,17 +188,14 @@ h5 {
 
 .card-title,
 .card h4 {
-  line-height: 1.25;
   margin-bottom: 0.75rem;
+  line-height: 1.25;
 }
 
 .card-text,
 .card p {
   line-height: 1.65;
 }
-
-
-/* ---------- Homepage work cards ---------- */
 
 .card-work {
   border-radius: 16px;
@@ -356,107 +208,58 @@ h5 {
     0 12px 28px rgba(0, 0, 0, 0.11);
 }
 
-
-/* ---------- Research page ---------- */
-
-.project-section.alt {
-  background-color: #ffffff;
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
-.project-section h3 {
-  margin-bottom: 1rem;
-}
 
-.project-section p {
-  line-height: 1.75;
-  max-width: 680px;
-}
+// =========================================================
+// Hero image card
+// =========================================================
 
-.project-section img {
-  border-radius: 16px;
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.09);
+.card-image {
+  border-radius: $card-border-radius;
+
+  box-shadow: 1rem 1rem $primary;
 
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.project-section img:hover {
-  transform: translateY(-3px);
+.card-image:hover {
+  transform: translate(-0.5rem, -0.5rem);
 
-  box-shadow:
-    0 14px 32px rgba(0, 0, 0, 0.13);
-}
-
-
-/* ---------- Section headings ---------- */
-
-#about h1,
-#skills h1,
-#projects.bg-primary h1,
-#pictures h1,
-#contact h1,
-#collaborations h2 {
-  margin-bottom: 1.5rem;
+  box-shadow: 2rem 2rem $primary;
 }
 
 
-/* ---------- Mobile ---------- */
-
-@media (max-width: 767px) {
-  #about,
-  #skills,
-  #projects.bg-primary,
-  #pictures,
-  #contact,
-  #collaborations,
-  .project-section {
-    padding-top: 4rem !important;
-    padding-bottom: 4rem !important;
-  }
-
-  .project-section p {
-    max-width: 100%;
-  }
-
-  .card:hover,
-  .card-work:hover,
-  .project-section img:hover {
-    transform: none;
-  }
-}
-
-
-/* Respect reduced-motion preferences */
-
-@media (prefers-reduced-motion: reduce) {
-  .card,
-  .card-work,
-  .project-section img {
-    transition: none;
-  }
-
-  .card:hover,
-  .card-work:hover,
-  .project-section img:hover {
-    transform: none;
-  }
-}
-
-/* =========================================================
-   Visual polish
-   Navbar + images + buttons
-   ========================================================= */
-
-
-/* ---------- Navbar ---------- */
+// =========================================================
+// Navbar
+// =========================================================
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background-color: rgba(var(--bs-tertiary-bg-rgb), 0.95) !important;
+
   border-bottom: 1px solid rgba(54, 91, 109, 0.10);
 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(250, 250, 250, 0.95) !important;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .navbar-brand {
@@ -475,15 +278,23 @@ h5 {
   color: #365B6D;
 }
 
-/* Replace the old Bootstrap-looking underline */
 .navbar .nav-link.active {
-  text-decoration: none;
   font-weight: 700;
+  text-decoration: none;
+}
+
+.navbar .dropdown-item.active {
+  color: #365B6D;
+  background-color: rgba(54, 91, 109, 0.08);
+
+  font-weight: 700;
+  text-decoration: none;
 }
 
 @media (min-width: 992px) {
   .navbar .nav-link:not(.dropdown-toggle)::after {
     content: "";
+
     position: absolute;
 
     left: 0.5rem;
@@ -507,58 +318,14 @@ h5 {
 }
 
 
-/* Dropdown active state */
-
-.navbar .dropdown-item.active {
-  text-decoration: none;
-
-  color: #365B6D;
-  background-color: rgba(54, 91, 109, 0.08);
-
-  font-weight: 700;
-}
-
-
-/* ---------- Research images ---------- */
-
-.custom-image-size {
-  width: 100%;
-
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-
-  border-radius: 12px !important;
-
-  box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.08);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.custom-image-size:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 10px 26px rgba(0, 0, 0, 0.12);
-}
-
-
-/* ---------- Update/card images ---------- */
-
-.card-img-top {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-
-/* ---------- Buttons ---------- */
+// =========================================================
+// Buttons
+// =========================================================
 
 .btn {
-  border-radius: 9px;
-
   padding: 0.6rem 1.15rem;
+
+  border-radius: 9px;
 
   font-weight: 500;
 
@@ -585,200 +352,137 @@ h5 {
 }
 
 
-/* ---------- Accessibility ---------- */
+// =========================================================
+// CV button
+// =========================================================
 
-@media (prefers-reduced-motion: reduce) {
-  .navbar .nav-link,
-  .navbar .nav-link::after,
-  .custom-image-size,
-  .btn {
-    transition: none;
-  }
+.btn-cv {
+  color: #fff;
+  background-color: #365B6D;
 
-  .custom-image-size:hover,
-  .btn:hover {
-    transform: none;
-  }
+  border: 2px solid #365B6D;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 5px 14px rgba(54, 91, 109, 0.25);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
 }
 
-/* =========================================================
-   Dark mode fixes for hard-coded Bootstrap/light colors
-   ========================================================= */
+.btn-cv:hover {
+  color: #fff;
+  background-color: #294957;
 
-[data-bs-theme="dark"] {
+  border-color: #294957;
 
-  /* Sections that were hard-coded white */
-  .bg-white {
-    background-color: var(--bs-body-bg) !important;
-  }
+  transform: translateY(-2px);
 
-  /* Sections using your fixed light-gray secondary color */
-  .bg-secondary {
-    background-color: var(--bs-tertiary-bg) !important;
-  }
-
-  /* Text explicitly forced dark */
-  .text-dark {
-    color: var(--bs-body-color) !important;
-  }
-
-  /* Research alternating sections */
-  .project-section.alt {
-    background-color: var(--bs-tertiary-bg) !important;
-  }
-
-  /* Collaborations */
-  .collaborations-section {
-    background-color: var(--bs-body-bg) !important;
-  }
-
-  /* Contact has an inline light background */
-  #contact {
-    background-color: var(--bs-body-bg) !important;
-  }
-
-  /* Cards */
-  .card {
-    background-color: var(--bs-tertiary-bg);
-    color: var(--bs-body-color);
-    border-color: var(--bs-border-color);
-  }
-
-  .card p,
-  .card-text {
-    color: var(--bs-body-color);
-  }
-
-  /* Dropdown menus */
-  .dropdown-menu {
-    background-color: var(--bs-tertiary-bg);
-    border-color: var(--bs-border-color);
-  }
-
-  .dropdown-item {
-    color: var(--bs-body-color);
-  }
-
-  .dropdown-item:hover,
-  .dropdown-item:focus {
-    background-color: var(--bs-secondary-bg);
-    color: var(--bs-body-color);
-  }
-}
-
-/* =========================================================
-   DARK MODE — FINAL COLOR OVERRIDES
-   ========================================================= */
-
-[data-bs-theme="dark"] {
-
-  /* Whole page */
-  body {
-    background-color: var(--bs-body-bg) !important;
-    color: var(--bs-body-color) !important;
-  }
-
-  /* Navbar */
-  .navbar,
-  .navbar.scrolled {
-    background-color: rgba(33, 37, 41, 0.96) !important;
-  }
-
-  /* Sections that are normally white */
-  .bg-white {
-    background-color: var(--bs-body-bg) !important;
-    color: var(--bs-body-color) !important;
-  }
-
-  /* Normally light-gray sections */
-  .bg-secondary {
-    background-color: var(--bs-tertiary-bg) !important;
-    color: var(--bs-body-color) !important;
-  }
-
-  /* Research sections */
-  .project-section {
-    background-color: var(--bs-body-bg) !important;
-    color: var(--bs-body-color) !important;
-  }
-
-  .project-section.alt {
-    background-color: var(--bs-tertiary-bg) !important;
-    color: var(--bs-body-color) !important;
-  }
-
-  /* Collaborations */
-  .collaborations-section {
-    background-color: var(--bs-body-bg) !important;
-    color: var(--bs-body-color) !important;
-  }
-
-  /* Contact */
-  #contact {
-    background-color: var(--bs-tertiary-bg) !important;
-    color: var(--bs-body-color) !important;
-  }
-
-  /* Cards */
-  .card {
-    background-color: var(--bs-tertiary-bg) !important;
-    color: var(--bs-body-color) !important;
-    border-color: var(--bs-border-color) !important;
-  }
-
-  /* Anything explicitly forced black */
-  .text-dark {
-    color: var(--bs-body-color) !important;
-  }
-
-  /* Muted text */
-  .text-muted {
-    color: var(--bs-secondary-color) !important;
-  }
-
-  /* Your normal blue is too dark against the dark background */
-  .text-primary {
-    color: #6fa6bb  !important;
-  }
-
-  /* Dropdowns */
-  .dropdown-menu {
-    background-color: var(--bs-tertiary-bg) !important;
-    border-color: var(--bs-border-color) !important;
-  }
-
-  .dropdown-item {
-    color: var(--bs-body-color) !important;
-  }
-
-  .dropdown-item:hover,
-  .dropdown-item:focus {
-    background-color: var(--bs-secondary-bg) !important;
-    color: var(--bs-body-color) !important;
-  }
+  box-shadow:
+    0 8px 18px rgba(54, 91, 109, 0.32);
 }
 
 
-/* =========================================================
-   Hero topo background
-   ========================================================= */
+// =========================================================
+// Research page
+// =========================================================
+
+.project-section {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+.project-section.alt {
+  background-color: #ffffff;
+}
+
+.project-section h3 {
+  margin-bottom: 1rem;
+}
+
+.project-section p {
+  max-width: 680px;
+
+  line-height: 1.75;
+}
+
+.project-section img {
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.09);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-section img:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.13);
+}
+
+.custom-image-size {
+  width: 100%;
+
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+
+  border-radius: 12px !important;
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.custom-image-size:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
+.collaborations-section {
+  background-color: #ffffff;
+}
+
+
+// =========================================================
+// Hero topo background
+// =========================================================
 
 .hero-section {
   position: relative;
+
   overflow: hidden;
   isolation: isolate;
 }
 
 .hero-section::before {
   content: "";
+
   position: absolute;
   inset: 0;
 
-  background-image: url("/images/usgs-topo.jpg");
+  /*
+   * The actual image URL is supplied by Intro.js.
+   * This keeps the image compatible with both local development
+   * and the /portfolio GitHub Pages base path.
+   */
+  background-image: var(--hero-topo-image);
   background-size: cover;
   background-position: center;
 
   opacity: 0.4;
+
   filter: grayscale(1) contrast(1.05);
 
   z-index: 0;
@@ -790,22 +494,14 @@ h5 {
   z-index: 1;
 }
 
-/* Keep the topo visible but subtle in dark mode */
-[data-bs-theme="dark"] .hero-section::before {
-  opacity: 0.13;
-  filter: grayscale(1) invert(1) contrast(0.95);
-}
 
-
-/* =========================================================
-   Homepage section backgrounds
-   ========================================================= */
-
-
-/* ---------- What I Do ---------- */
+// =========================================================
+// Homepage section backgrounds
+// =========================================================
 
 .skills-section {
   position: relative;
+
   overflow: hidden;
   isolation: isolate;
 
@@ -822,16 +518,15 @@ h5 {
     );
 }
 
-.skills-section .container {
+.skills-section .container,
+.projects-section .container {
   position: relative;
   z-index: 1;
 }
 
-
-/* ---------- Software Projects ---------- */
-
 .projects-section {
   position: relative;
+
   overflow: hidden;
   isolation: isolate;
 
@@ -848,74 +543,99 @@ h5 {
     );
 }
 
-.projects-section .container {
+
+// =========================================================
+// What I Do — research feature
+// =========================================================
+
+.skills-research-feature {
   position: relative;
-  z-index: 1;
-}
 
+  display: flex;
 
-/* ---------- Dark mode ---------- */
+  width: 100%;
+  height: 220px;
 
-[data-bs-theme="dark"] .skills-section {
-  background-image:
-    radial-gradient(
-      circle at 15% 20%,
-      rgba(111, 166, 187, 0.12),
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at 85% 80%,
-      rgba(111, 166, 187, 0.07),
-      transparent 30%
-    );
-}
+  margin-top: 1.5rem;
 
-/* ---------- CV button ---------- */
+  background-size: cover;
+  background-position: center;
 
-.btn-cv {
-  background-color: #365B6D;
-  color: #fff;
-  border: 2px solid #365B6D;
-  font-weight: 600;
+  border-radius: 16px;
 
-  box-shadow: 0 5px 14px rgba(54, 91, 109, 0.25);
+  overflow: hidden;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.10);
 
   transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease,
-    background-color 0.18s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.btn-cv:hover {
-  background-color: #294957;
-  border-color: #294957;
-  color: #fff;
+.skills-research-overlay {
+  position: absolute;
+  inset: 0;
 
-  transform: translateY(-2px);
+  background-color: rgba(15, 25, 30, 0.32);
 
-  box-shadow: 0 8px 18px rgba(54, 91, 109, 0.32);
+  transition: background-color 0.25s ease;
 }
 
-[data-bs-theme="dark"] .btn-cv {
-  background-color: #6fa6bb;
-  border-color: #6fa6bb;
-  color: #111;
+.skills-research-content {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
 }
 
-[data-bs-theme="dark"] .btn-cv:hover {
-  background-color: #82b5c7;
-  border-color: #82b5c7;
-  color: #111;
+.skills-research-button {
+  padding: 0.7rem 1.4rem;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 5px 16px rgba(0, 0, 0, 0.22);
 }
 
-/* =========================================================
-   Footer polish
-   ========================================================= */
+.skills-research-feature:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+.skills-research-feature:hover .skills-research-overlay {
+  background-color: rgba(15, 25, 30, 0.22);
+}
+
+
+// =========================================================
+// Contact
+// =========================================================
+
+#contact {
+  background-color: var(--bs-body-bg) !important;
+}
+
+
+// =========================================================
+// Footer
+// =========================================================
 
 .site-footer .footer-link {
   position: relative;
 
   color: rgba(255, 255, 255, 0.82);
+
   text-decoration: none;
 
   transition:
@@ -925,6 +645,7 @@ h5 {
 
 .site-footer .footer-link::after {
   content: "";
+
   position: absolute;
 
   left: 0;
@@ -949,11 +670,9 @@ h5 {
   transform: scaleX(1);
 }
 
-
-/* Social icons */
-
 .site-footer .footer-social {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
@@ -966,34 +685,18 @@ h5 {
 
 .site-footer .footer-social:hover {
   color: #6fa6bb;
+
   transform: translateY(-3px);
 }
-
-
-/* Copyright */
 
 .site-footer .footer-copyright {
   color: rgba(255, 255, 255, 0.62);
 }
 
 
-/* Accessibility */
-
-@media (prefers-reduced-motion: reduce) {
-  .site-footer .footer-link,
-  .site-footer .footer-link::after,
-  .site-footer .footer-social {
-    transition: none;
-  }
-
-  .site-footer .footer-social:hover {
-    transform: none;
-  }
-}
-
-/* =========================================================
-   Micro animations
-   ========================================================= */
+// =========================================================
+// Micro animations
+// =========================================================
 
 @keyframes heroFadeUp {
   from {
@@ -1011,9 +714,6 @@ h5 {
   animation: heroFadeUp 0.65s ease-out both;
 }
 
-
-/* Slight image zoom on hover */
-
 .card-img-top,
 .custom-image-size {
   transition:
@@ -1026,206 +726,235 @@ h5 {
 }
 
 
-/* Respect reduced-motion settings */
+// =========================================================
+// Dark mode
+// =========================================================
 
-@media (prefers-reduced-motion: reduce) {
-  .hero-content {
-    animation: none;
+[data-bs-theme="dark"] {
+
+  body {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--bs-body-color) !important;
   }
 
-  .card-img-top,
-  .custom-image-size {
-    transition: none;
+  /* Navbar */
+
+  .navbar,
+  .navbar.scrolled {
+    background-color: rgba(33, 37, 41, 0.96) !important;
   }
 
-  .card:hover .card-img-top {
-    transform: none;
+  /* Standard light sections */
+
+  .bg-white {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--bs-body-color) !important;
+  }
+
+  .bg-secondary {
+    background-color: var(--bs-tertiary-bg) !important;
+    color: var(--bs-body-color) !important;
+  }
+
+  /* Research */
+
+  .project-section {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--bs-body-color) !important;
+  }
+
+  .project-section.alt {
+    background-color: var(--bs-tertiary-bg) !important;
+    color: var(--bs-body-color) !important;
+  }
+
+  .collaborations-section {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--bs-body-color) !important;
+  }
+
+  /* Contact */
+
+  #contact {
+    background-color: var(--bs-tertiary-bg) !important;
+    color: var(--bs-body-color) !important;
+  }
+
+  /* Cards */
+
+  .card {
+    background-color: var(--bs-tertiary-bg) !important;
+    color: var(--bs-body-color) !important;
+
+    border-color: var(--bs-border-color) !important;
+  }
+
+  /* Explicit text utilities */
+
+  .text-dark {
+    color: var(--bs-body-color) !important;
+  }
+
+  .text-muted {
+    color: var(--bs-secondary-color) !important;
+  }
+
+  .text-primary {
+    color: #6fa6bb !important;
+  }
+
+  /* Dropdowns */
+
+  .dropdown-menu {
+    background-color: var(--bs-tertiary-bg) !important;
+
+    border-color: var(--bs-border-color) !important;
+  }
+
+  .dropdown-item {
+    color: var(--bs-body-color) !important;
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: var(--bs-secondary-bg) !important;
+    color: var(--bs-body-color) !important;
+  }
+
+  /* Hero topo */
+
+  .hero-section::before {
+    opacity: 0.13;
+
+    filter:
+      grayscale(1)
+      invert(1)
+      contrast(0.95);
+  }
+
+  /* Homepage background */
+
+  .skills-section {
+    background-image:
+      radial-gradient(
+        circle at 15% 20%,
+        rgba(111, 166, 187, 0.12),
+        transparent 35%
+      ),
+      radial-gradient(
+        circle at 85% 80%,
+        rgba(111, 166, 187, 0.07),
+        transparent 30%
+      );
+  }
+
+  /* CV */
+
+  .btn-cv {
+    color: #111;
+    background-color: #6fa6bb;
+
+    border-color: #6fa6bb;
+  }
+
+  .btn-cv:hover {
+    color: #111;
+    background-color: #82b5c7;
+
+    border-color: #82b5c7;
   }
 }
 
-/* =========================================================
-   Research image strip
-   ========================================================= */
 
-.research-strip {
-  position: relative;
-  display: flex;
+// =========================================================
+// Miscellaneous
+// =========================================================
 
-  width: 100%;
-  height: 260px;
+.back-to-home {
+  position: fixed;
 
-  background-size: cover;
-  background-position: center;
+  top: 20px;
+  right: 20px;
 
-  overflow: hidden;
-
-  text-decoration: none;
-
-  isolation: isolate;
+  z-index: 1000;
 }
 
-.research-strip-overlay {
-  position: absolute;
-  inset: 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(15, 25, 30, 0.48),
-      rgba(15, 25, 30, 0.20)
-    );
-
-  transition: background 0.3s ease;
-}
-
-.research-strip-content {
-  position: relative;
-  z-index: 1;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-
-  color: #fff;
-
-  font-size: 2.2rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.research-strip {
-  transition: filter 0.3s ease;
-}
-
-.research-strip:hover {
-  filter: brightness(1.06);
-}
-
-.research-strip:hover .research-strip-overlay {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(15, 25, 30, 0.36),
-      rgba(15, 25, 30, 0.12)
-    );
-}
+// =========================================================
+// Mobile
+// =========================================================
 
 @media (max-width: 767px) {
-  .research-strip {
-    height: 190px;
-    background-position: center;
+
+  #about,
+  #skills,
+  #projects.bg-primary,
+  #pictures,
+  #contact,
+  #collaborations,
+  .project-section {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
   }
 
-  .research-strip-content {
-    font-size: 1.7rem;
+  .project-section p {
+    max-width: 100%;
   }
-}
 
-@media (prefers-reduced-motion: reduce) {
-  .research-strip,
-  .research-strip-overlay {
-    transition: none;
-  }
-}
-
-/* =========================================================
-   What I Do — research feature
-   ========================================================= */
-
-.skills-research-feature {
-  position: relative;
-
-  display: flex;
-
-  width: 100%;
-  height: 220px;
-
-  margin-top: 1.5rem;
-
-  background-size: cover;
-  background-position: center;
-
-  border-radius: 16px;
-  overflow: hidden;
-
-  text-decoration: none;
-
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.10);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.skills-research-overlay {
-  position: absolute;
-  inset: 0;
-
-  background: rgba(15, 25, 30, 0.32);
-
-  transition: background 0.25s ease;
-}
-
-.skills-research-content {
-  position: relative;
-  z-index: 1;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-}
-
-.skills-research-button {
-  font-weight: 600;
-
-  padding: 0.7rem 1.4rem;
-
-  border-radius: 10px;
-
-  box-shadow:
-    0 5px 16px rgba(0, 0, 0, 0.22);
-}
-
-.skills-research-feature:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.16);
-}
-
-.skills-research-feature:hover .skills-research-overlay {
-  background: rgba(15, 25, 30, 0.22);
-}
-
-
-/* Mobile */
-
-@media (max-width: 767px) {
   .skills-research-feature {
     height: 180px;
+
     margin-top: 1rem;
   }
 
   .skills-research-button {
     padding: 0.6rem 1rem;
+
     font-size: 0.95rem;
+  }
+
+  .card:hover,
+  .card-work:hover,
+  .project-section img:hover,
+  .custom-image-size:hover {
+    transform: none;
   }
 }
 
 
-/* Reduced motion */
+// =========================================================
+// Reduced motion
+// =========================================================
 
 @media (prefers-reduced-motion: reduce) {
+
+  .card,
+  .card-work,
+  .card-img-top,
+  .custom-image-size,
+  .project-section img,
+  .navbar .nav-link,
+  .navbar .nav-link::after,
+  .btn,
+  .site-footer .footer-link,
+  .site-footer .footer-link::after,
+  .site-footer .footer-social,
   .skills-research-feature,
   .skills-research-overlay {
     transition: none;
   }
 
+  .hero-content {
+    animation: none;
+  }
+
+  .card:hover,
+  .card-work:hover,
+  .card:hover .card-img-top,
+  .custom-image-size:hover,
+  .project-section img:hover,
+  .btn:hover,
+  .site-footer .footer-social:hover,
   .skills-research-feature:hover {
     transform: none;
   }

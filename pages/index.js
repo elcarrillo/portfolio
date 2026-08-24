@@ -6,6 +6,9 @@ import { Footer, Contact } from '../components/Footer';
 import { about, contact, intro, navigation, projects, SEO, work, pictures } from '../config/config';
 import { Header } from '../components/Header';
 import Pictures from '../components/Pictures';
+import Link from 'next/link';
+import cascadesImage from '../public/images/cascades.png';
+
 
 export default function Home() {
   const [key, setKey] = useState(0); // Add state for key
@@ -84,15 +87,12 @@ export default function Home() {
         title={work.title}
         cards={work.cards}
       />
+
       <Projects
         title={projects.title}
         cards={projects.cards}
       />
-      <Pictures
-        title={pictures.title}
-        description={pictures.description}
-        images={pictures.images}
-      />
+
       <Contact
         key={key} // Force remount on key change
         title={contact.title}
