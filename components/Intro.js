@@ -7,7 +7,7 @@ const { publicRuntimeConfig } = getConfig()
 export const Intro = ({ title, description, image, buttons }) => {
 	return (
 		<div className="hero-section bg-secondary py-5 px-5">
-			<div className="container">
+			<div className="container hero-content">
 				<div className=" row align-items-center">
 					<div className="col-sm-6">
 						<h1 className="text-primary fw-bold display-3">{title}</h1>

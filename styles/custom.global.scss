@@ -990,3 +990,55 @@ h5 {
     transform: none;
   }
 }
+
+/* =========================================================
+   Micro animations
+   ========================================================= */
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: heroFadeUp 0.65s ease-out both;
+}
+
+
+/* Slight image zoom on hover */
+
+.card-img-top,
+.custom-image-size {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.02);
+}
+
+
+/* Respect reduced-motion settings */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content {
+    animation: none;
+  }
+
+  .card-img-top,
+  .custom-image-size {
+    transition: none;
+  }
+
+  .card:hover .card-img-top {
+    transform: none;
+  }
+}
