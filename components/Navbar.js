@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 export const Nav = ({ title }) => {
   const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [theme, setTheme] = useState('light');
 
   // Scroll effect for navbar shadow
   useEffect(() => {
@@ -13,39 +14,94 @@ export const Nav = ({ title }) => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
-  const isActive = (path) => (router.pathname === path ? 'active' : '');
-  const isSectionActive = (id) => (router.asPath.endsWith(id) ? 'active' : '');
+  // Load saved theme or use system preference
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+
+    const preferredTheme =
+      savedTheme ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light');
+
+    setTheme(preferredTheme);
+
+    document.documentElement.setAttribute(
+      'data-bs-theme',
+      preferredTheme
+    );
+  }, []);
+
+  // Toggle light/dark mode
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+
+    setTheme(newTheme);
+
+    localStorage.setItem('theme', newTheme);
+
+    document.documentElement.setAttribute(
+      'data-bs-theme',
+      newTheme
+    );
+  };
+
+  const isActive = (path) =>
+    router.pathname === path ? 'active' : '';
+
+  const isSectionActive = (id) =>
+    router.asPath.endsWith(id) ? 'active' : '';
 
   const NavLink = ({ href, children, isDropdown = false }) => (
     <Link href={href} passHref>
-      <a className={`nav-link ${isDropdown ? '' : isActive(href)}`}>{children}</a>
+      <a
+        className={`nav-link ${
+          isDropdown ? '' : isActive(href)
+        }`}
+      >
+        {children}
+      </a>
     </Link>
   );
 
   const DropdownLink = ({ href, children }) => (
     <Link href={href} passHref>
-      <a className={`dropdown-item ${isSectionActive(href)}`}>{children}</a>
+      <a
+        className={`dropdown-item ${isSectionActive(href)}`}
+      >
+        {children}
+      </a>
     </Link>
   );
 
   return (
     <nav
-      className={`navbar navbar-expand-lg navbar-light bg-light sticky-nav ${isScrolled ? 'scrolled' : ''}`}
+      className={`navbar navbar-expand-lg bg-body-tertiary sticky-nav ${
+        isScrolled ? 'scrolled' : ''
+      }`}
       style={{
         position: 'sticky',
         top: 0,
         zIndex: 1000,
-        boxShadow: isScrolled ? '0 2px 5px rgba(0, 0, 0, 0.1)' : 'none',
+        boxShadow: isScrolled
+          ? '0 2px 5px rgba(0, 0, 0, 0.1)'
+          : 'none',
         transition: 'box-shadow 0.3s ease',
       }}
     >
       <div className="container">
+
         {/* Brand/Title */}
         <Link href="/" passHref>
-          <a className="navbar-brand fw-bold">{title}</a>
+          <a className="navbar-brand fw-bold">
+            {title}
+          </a>
         </Link>
 
         {/* Toggler for mobile */}
@@ -62,8 +118,12 @@ export const Nav = ({ title }) => {
         </button>
 
         {/* Navigation Links */}
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div
+          className="collapse navbar-collapse"
+          id="navbarNav"
+        >
           <ul className="navbar-nav ms-auto">
+
             {/* Dropdown for Main Sections */}
             <li className="nav-item dropdown">
               <a
@@ -76,18 +136,35 @@ export const Nav = ({ title }) => {
               >
                 Edgar
               </a>
-              <ul className="dropdown-menu" aria-labelledby="mainDropdown">
+
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="mainDropdown"
+              >
                 {router.pathname === '/' ? (
                   <>
-                    <DropdownLink href="#about">About</DropdownLink>
-                    <DropdownLink href="#projects">Software Projects</DropdownLink>
-                    <DropdownLink href="#pictures">Pictures</DropdownLink>
-                    <DropdownLink href="#contact">Contact</DropdownLink>
+                    <DropdownLink href="#about">
+                      About
+                    </DropdownLink>
+
+                    <DropdownLink href="#projects">
+                      Software Projects
+                    </DropdownLink>
+
+                    <DropdownLink href="#pictures">
+                      Pictures
+                    </DropdownLink>
+
+                    <DropdownLink href="#contact">
+                      Contact
+                    </DropdownLink>
                   </>
                 ) : (
                   <li>
                     <Link href="/" passHref>
-                      <a className="dropdown-item">Back to Main</a>
+                      <a className="dropdown-item">
+                        Back to Main
+                      </a>
                     </Link>
                   </li>
                 )}
@@ -107,26 +184,67 @@ export const Nav = ({ title }) => {
                 >
                   Research
                 </a>
-                <ul className="dropdown-menu" aria-labelledby="researchDropdown">
-                  <DropdownLink href="#projects">Projects</DropdownLink>
-                  <DropdownLink href="#collaborations">Collaborations</DropdownLink>
+
+                <ul
+                  className="dropdown-menu"
+                  aria-labelledby="researchDropdown"
+                >
+                  <DropdownLink href="#projects">
+                    Projects
+                  </DropdownLink>
+
+                  <DropdownLink href="#collaborations">
+                    Collaborations
+                  </DropdownLink>
                 </ul>
               </li>
             ) : (
-              <li className={`nav-item ${isActive('/research')}`}>
-                <NavLink href="/research">Research</NavLink>
+              <li
+                className={`nav-item ${isActive(
+                  '/research'
+                )}`}
+              >
+                <NavLink href="/research">
+                  Research
+                </NavLink>
               </li>
             )}
 
             {/* Updates */}
-            <li className={`nav-item ${isActive('/updates')}`}>
-              <NavLink href="/updates">Updates</NavLink>
+            <li
+              className={`nav-item ${isActive(
+                '/updates'
+              )}`}
+            >
+              <NavLink href="/updates">
+                Updates
+              </NavLink>
             </li>
 
             {/* Links */}
-            <li className={`nav-item ${isActive('/links')}`}>
-              <NavLink href="/links">Links</NavLink>
+            <li
+              className={`nav-item ${isActive(
+                '/links'
+              )}`}
+            >
+              <NavLink href="/links">
+                Links
+              </NavLink>
             </li>
+
+            {/* Theme Toggle */}
+            <li className="nav-item ms-lg-2 d-flex align-items-center">
+              <button
+                type="button"
+                className="btn btn-sm btn-outline-primary"
+                onClick={toggleTheme}
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode"
+              >
+                {theme === 'light' ? '🌙' : '☀️'}
+              </button>
+            </li>
+
           </ul>
         </div>
       </div>
