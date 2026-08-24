@@ -50,9 +50,9 @@ const Updates = () => {
     setCurrentPage(1); // Reset to the first page
   };
 
-const featuredUpdates = sortedUpdates.filter(
-  (update) => update.featured
-);
+  const featuredUpdates = sortedUpdates.filter(
+    (update) => update.featured
+  );
 
   return (
     <div>
@@ -105,56 +105,99 @@ const featuredUpdates = sortedUpdates.filter(
       </div>
 
       <div className="container py-5">
-        {/* Latest Updates Section */}
-        <section aria-labelledby="featured-updates">
-          <h2 id="featured-updates" className="text-primary fw-bold mb-4">
-            Featured Updates
-          </h2>
-          <div className="row">
-            {featuredUpdates.map((update, index) => (
-              <article key={index} className="col-md-6 mb-4">
-                <div className="card shadow">
-                  {update.image && (
-                    <img
-                      src={update.image}
-                      alt={`Image for ${update.title}`}
-                      className="card-img-top"
-                      style={{
-                        maxHeight: '200px',
-                        width: '100%',
-                        objectFit: 'cover',
-                      }}
-                      loading="lazy"
-                    />
-                  )}
-                  <div className="card-body">
-                    <h5 className="card-title">{update.title}</h5>
-                    <p className="card-text text-muted">{update.date}</p>
-                    <p className="card-text">{update.snippet}</p>
-                    {update.type === 'internal' && (
-                      <Link href={update.link} passHref>
-                        <a className="btn btn-primary" aria-label={`Read more about ${update.title}`}>
-                          Read More
-                        </a>
-                      </Link>
-                    )}
-                    {update.type === 'external' && (
-                      <a
-                        href={update.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-primary"
-                        aria-label={`Learn more about ${update.title}`}
-                      >
-                        Learn More
-                      </a>
-                    )}
-                  </div>
+      
+    {/* Featured Updates Section */}
+    <section aria-labelledby="featured-updates">
+      <h2
+        id="featured-updates"
+        className="text-primary fw-bold mb-4"
+      >
+        Featured Updates
+      </h2>
+
+      <div className="row">
+        {featuredUpdates.map((update, index) => (
+          <article
+            key={index}
+            className="col-md-6 mb-4 d-flex"
+          >
+            <div
+              className="card shadow h-100 w-100"
+              style={{
+                borderTop: '4px solid var(--bs-primary)',
+              }}
+            >
+              {update.image && (
+                <img
+                  src={update.image}
+                  alt={`Image for ${update.title}`}
+                  className="card-img-top"
+                  style={{
+                    height: '250px',
+                    width: '100%',
+                    objectFit: 'cover',
+                  }}
+                  loading="lazy"
+                />
+              )}
+
+              <div className="card-body d-flex flex-column">
+                {/* Badges */}
+                <div className="mb-3">
+                  <span className="badge bg-primary me-2">
+                    Featured
+                  </span>
+
+                  <span className="badge bg-secondary text-dark">
+                    {update.type === 'internal'
+                      ? 'Blog'
+                      : 'Update'}
+                  </span>
                 </div>
-              </article>
-            ))}
-          </div>
-        </section>
+
+                <h4 className="card-title fw-bold">
+                  {update.title}
+                </h4>
+
+                <p className="card-text text-muted small">
+                  {update.date}
+                </p>
+
+                <p className="card-text">
+                  {update.snippet}
+                </p>
+
+                {/* Push button to bottom so both cards align */}
+                <div className="mt-auto pt-2">
+                  {update.type === 'internal' && (
+                    <Link href={update.link} passHref>
+                      <a
+                        className="btn btn-primary"
+                        aria-label={`Read more about ${update.title}`}
+                      >
+                        Read More
+                      </a>
+                    </Link>
+                  )}
+
+                  {update.type === 'external' && (
+                    <a
+                      href={update.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary"
+                      aria-label={`Learn more about ${update.title}`}
+                    >
+                      Learn More
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
 
         {/* Filter Section */}
         <div className="d-flex justify-content-between align-items-center mb-4">

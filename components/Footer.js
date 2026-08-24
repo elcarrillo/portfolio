@@ -140,7 +140,7 @@ export const Contact = ({ title, description, buttons }) => {
 
 export const Footer = () => {
   return (
-    <footer className="bg-dark text-light py-4">
+    <footer className="site-footer bg-dark text-light py-4">
       <div className="container">
         <div className="row">
 
@@ -150,34 +150,28 @@ export const Footer = () => {
             <p className="mb-0">PhD Candidate | Volcano Physicist</p>
           </div>
 
-          {/* Quick Links */}
-          <div className="col-md-4 text-center mb-3 mb-md-0">
-            <h5 className="fw-bold">Quick Links</h5>
+            {/* Quick Links */}
+            <div className="col-md-4 text-center mb-3 mb-md-0">
+              <h5 className="fw-bold">Quick Links</h5>
 
-            <ul className="list-unstyled">
-              <li>
-                <Link
-                  href="https://elcarrillo.github.io/portfolio"
-                  passHref
-                >
-                  <a className="text-light text-decoration-none">
-                    Main Page
-                  </a>
-                </Link>
-              </li>
+              <ul className="list-unstyled">
+                <li>
+                  <Link href="/" passHref>
+                    <a className="footer-link">
+                      Main Page
+                    </a>
+                  </Link>
+                </li>
 
-              <li>
-                <Link
-                  href="https://elcarrillo.github.io/portfolio/research"
-                  passHref
-                >
-                  <a className="text-light text-decoration-none">
-                    Research Page
-                  </a>
-                </Link>
-              </li>
-            </ul>
-          </div>
+                <li>
+                  <Link href="/research" passHref>
+                    <a className="footer-link">
+                      Research Page
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
           {/* Social Media Links */}
           <div className="col-md-4 text-center text-md-end">
@@ -185,9 +179,10 @@ export const Footer = () => {
 
             <Link href="https://github.com/elcarrillo" passHref>
               <a
-                className="text-light me-3"
+                className="footer-social me-3"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
               >
                 <FontAwesomeIcon icon={faGithub} size="lg" />
               </a>
@@ -198,9 +193,10 @@ export const Footer = () => {
               passHref
             >
               <a
-                className="text-light me-3"
+                className="footer-social me-3"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
                 <FontAwesomeIcon icon={faLinkedin} size="lg" />
               </a>
@@ -208,9 +204,10 @@ export const Footer = () => {
 
             <Link href="https://x.com/edgarlcarrillo" passHref>
               <a
-                className="text-light me-3"
+                className="footer-social me-3"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="X"
               >
                 <FontAwesomeIcon icon={faTwitter} size="lg" />
               </a>
@@ -221,9 +218,10 @@ export const Footer = () => {
               passHref
             >
               <a
-                className="text-light"
+                className="footer-social"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
                 <FontAwesomeIcon icon={faInstagram} size="lg" />
               </a>
@@ -232,14 +230,16 @@ export const Footer = () => {
         </div>
 
         {/* Copyright Section */}
-        <div className="text-center mt-4">
+        <div className="footer-copyright text-center mt-4">
           <small>
             Open sourced with love under{' '}
             <Link
               href="https://github.com/elcarrillo/portfolio/blob/main/LICENSE"
               passHref
             >
-              <a className="text-light">MIT</a>
+              <a className="footer-link">
+                MIT
+              </a>
             </Link>{' '}
             License &copy; elcarrillo {new Date().getFullYear()}
           </small>

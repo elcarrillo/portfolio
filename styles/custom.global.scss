@@ -758,3 +758,235 @@ h5 {
   }
 }
 
+
+/* =========================================================
+   Hero topo background
+   ========================================================= */
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/images/usgs-topo.jpg");
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0.4;
+  filter: grayscale(1) contrast(1.05);
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Keep the topo visible but subtle in dark mode */
+[data-bs-theme="dark"] .hero-section::before {
+  opacity: 0.13;
+  filter: grayscale(1) invert(1) contrast(0.95);
+}
+
+
+/* =========================================================
+   Homepage section backgrounds
+   ========================================================= */
+
+
+/* ---------- What I Do ---------- */
+
+.skills-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  background-image:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(54, 91, 109, 0.10),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(54, 91, 109, 0.06),
+      transparent 30%
+    );
+}
+
+.skills-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ---------- Software Projects ---------- */
+
+.projects-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.08),
+      transparent 35%
+    );
+}
+
+.projects-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ---------- Dark mode ---------- */
+
+[data-bs-theme="dark"] .skills-section {
+  background-image:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(111, 166, 187, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(111, 166, 187, 0.07),
+      transparent 30%
+    );
+}
+
+/* ---------- CV button ---------- */
+
+.btn-cv {
+  background-color: #365B6D;
+  color: #fff;
+  border: 2px solid #365B6D;
+  font-weight: 600;
+
+  box-shadow: 0 5px 14px rgba(54, 91, 109, 0.25);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.btn-cv:hover {
+  background-color: #294957;
+  border-color: #294957;
+  color: #fff;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px rgba(54, 91, 109, 0.32);
+}
+
+[data-bs-theme="dark"] .btn-cv {
+  background-color: #6fa6bb;
+  border-color: #6fa6bb;
+  color: #111;
+}
+
+[data-bs-theme="dark"] .btn-cv:hover {
+  background-color: #82b5c7;
+  border-color: #82b5c7;
+  color: #111;
+}
+
+/* =========================================================
+   Footer polish
+   ========================================================= */
+
+.site-footer .footer-link {
+  position: relative;
+
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.site-footer .footer-link::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: -2px;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: #6fa6bb;
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.2s ease;
+}
+
+.site-footer .footer-link:hover {
+  color: #ffffff;
+}
+
+.site-footer .footer-link:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* Social icons */
+
+.site-footer .footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.site-footer .footer-social:hover {
+  color: #6fa6bb;
+  transform: translateY(-3px);
+}
+
+
+/* Copyright */
+
+.site-footer .footer-copyright {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer .footer-link,
+  .site-footer .footer-link::after,
+  .site-footer .footer-social {
+    transition: none;
+  }
+
+  .site-footer .footer-social:hover {
+    transform: none;
+  }
+}

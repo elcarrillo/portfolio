@@ -6,7 +6,7 @@ const { publicRuntimeConfig } = getConfig()
 
 export const Intro = ({ title, description, image, buttons }) => {
 	return (
-		<div className="bg-secondary py-5 px-5">
+		<div className="hero-section bg-secondary py-5 px-5">
 			<div className="container">
 				<div className=" row align-items-center">
 					<div className="col-sm-6">
@@ -20,7 +20,19 @@ export const Intro = ({ title, description, image, buttons }) => {
 									</Link>
 									:
 									<Link key={index} href={value.link}>
-										<a target="_blank" rel="noreferrer" className="btn btn-outline-primary my-1 mx-3">{value.title}</a>
+																				
+										<a
+										  target="_blank"
+										  rel="noreferrer"
+										  className={`btn my-1 mx-3 ${
+										    value.title === 'CV'
+										      ? 'btn-cv'
+										      : 'btn-outline-primary'
+										  }`}
+										>
+										  {value.title}
+										</a>
+									
 									</Link>
 							))}
 						</div>
