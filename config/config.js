@@ -162,7 +162,7 @@ export const projects = {
 
 export const contact = {
   title: "Get in touch",
-  description: "Coffee Chat! Please do not hesitate to reach out. My email is elcar@uoregon.edu.",
+  description: "Coffee Chat! Please do not hesitate to reach out. My email is: elcar@uoregon.edu",
   buttons: [
     {
       title: "Email Me",
