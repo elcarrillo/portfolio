@@ -1090,3 +1090,45 @@ h5 {
   margin-top: auto;
   padding-top: 1rem;
 }
+
+.software-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.software-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(54, 91, 109, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(54, 91, 109, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 24px 24px;
+
+  z-index: -1;
+  pointer-events: none;
+}
+
+[data-bs-theme="dark"] .software-card::after {
+  background-image:
+    linear-gradient(
+      rgba(111, 166, 187, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(111, 166, 187, 0.055) 1px,
+      transparent 1px
+    );
+}
