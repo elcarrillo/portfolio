@@ -139,9 +139,9 @@ h5 {
   padding-top: 4rem !important;
   padding-bottom: 4rem !important;
 }
+
 #projects.bg-primary,
 #pictures,
-#contact,
 #collaborations {
   padding-top: 5.5rem !important;
   padding-bottom: 5.5rem !important;
@@ -475,11 +475,6 @@ h5 {
   position: absolute;
   inset: 0;
 
-  /*
-   * The actual image URL is supplied by Intro.js.
-   * This keeps the image compatible with both local development
-   * and the /portfolio GitHub Pages base path.
-   */
   background-image: var(--hero-topo-image);
   background-size: cover;
   background-position: center;
@@ -559,7 +554,7 @@ h5 {
   width: 100%;
   height: 220px;
 
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
 
   background-size: cover;
   background-position: center;
@@ -590,10 +585,13 @@ h5 {
 .skills-research-content {
   position: relative;
   z-index: 1;
+
   display: flex;
   align-items: flex-end;
   justify-content: center;
+
   width: 100%;
+
   padding-bottom: 1.5rem;
 }
 
@@ -606,6 +604,18 @@ h5 {
 
   box-shadow:
     0 5px 16px rgba(0, 0, 0, 0.22);
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.skills-research-button:hover {
+  background-color: #FEE11A;
+  border-color: #FEE11A;
+  color: #154733;
 }
 
 .skills-research-feature:hover {
@@ -619,16 +629,270 @@ h5 {
   background-color: rgba(15, 25, 30, 0.22);
 }
 
-.skills-research-feature {
-  margin-top: 0.75rem;
-}
 
 // =========================================================
-// Contact
+// Software project cards
+// =========================================================
+
+.software-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  border-top: 4px solid #6fa6bb;
+}
+
+.software-card::before {
+  content: "●  ●  ●";
+
+  display: block;
+
+  margin-bottom: 0.8rem;
+
+  color: rgba(54, 91, 109, 0.45);
+
+  font-size: 0.65rem;
+  letter-spacing: 0.15rem;
+}
+
+.software-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(54, 91, 109, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(54, 91, 109, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 24px 24px;
+
+  z-index: -1;
+  pointer-events: none;
+}
+
+.software-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.4rem;
+
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.software-tag {
+  display: inline-block;
+
+  padding: 0.25rem 0.55rem;
+
+  background-color: rgba(54, 91, 109, 0.10);
+
+  border: 1px solid rgba(54, 91, 109, 0.14);
+  border-radius: 999px;
+
+  color: #365B6D;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.software-card .text-end {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+
+// =========================================================
+// Software GitHub icon interaction
+// =========================================================
+
+.software-card .text-end a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.45rem;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.software-card .text-end a:hover {
+  transform: translateY(-3px) scale(1.08);
+
+  background-color: rgba(54, 91, 109, 0.10);
+
+  box-shadow:
+    0 4px 12px rgba(54, 91, 109, 0.18);
+}
+
+.software-card .text-end a:active {
+  transform: translateY(0) scale(0.97);
+}
+
+
+// =========================================================
+// Software section background details
+// =========================================================
+
+.projects-section::before {
+  content:
+    "$ ./run\A"
+    ">_";
+
+  position: absolute;
+
+  left: 2rem;
+  bottom: 1.75rem;
+
+  white-space: pre;
+
+  font-family: monospace;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.35;
+
+  color: #ffffff;
+  opacity: 0.09;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.projects-section::after {
+  content:
+    "       ~\A"
+    "      ~ ~\A"
+    "       /\\\A"
+    "     _/  \\_\A"
+    "   _/      \\_\A"
+    "__/          \\__";
+
+  position: absolute;
+
+  right: 2rem;
+  bottom: 1.5rem;
+
+  white-space: pre;
+
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+
+  color: #ffffff;
+  opacity: 0.09;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+// =========================================================
+// Memorable Moments
+// =========================================================
+
+#pictures img {
+  filter:
+    saturate(0.80)
+    contrast(0.96)
+    brightness(0.98);
+
+  transition:
+    filter 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+#pictures img:hover {
+  filter:
+    saturate(1)
+    contrast(1)
+    brightness(1);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.13);
+}
+
+
+// =========================================================
+// Contact section
 // =========================================================
 
 #contact {
+  position: relative;
+
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+
   background-color: var(--bs-body-bg) !important;
+
+  background-image:
+    linear-gradient(
+      rgba(20, 28, 32, 0.28),
+      rgba(20, 28, 32, 0.28)
+    ),
+    var(--contact-bg-image);
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+#contact .container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 760px;
+
+  padding: 2.5rem 3rem;
+
+  background-color: rgba(255, 255, 255, 0.68);
+
+  border: 1px solid rgba(255, 255, 255, 0.60);
+  border-radius: 18px;
+
+  text-align: center;
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+#contact h1 {
+  margin-bottom: 0.75rem;
+}
+
+#contact p {
+  margin-bottom: 1.5rem;
+}
+
+#contact .btn {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
 }
 
 
@@ -696,6 +960,62 @@ h5 {
 
 .site-footer .footer-copyright {
   color: rgba(255, 255, 255, 0.62);
+}
+
+
+// =========================================================
+// Duck easter egg
+// =========================================================
+
+.duck-waddle {
+  position: fixed;
+
+  left: -100px;
+  bottom: 18px;
+
+  z-index: 999;
+
+  pointer-events: none;
+
+  opacity: 0.55;
+
+  animation: duck-cross 6s linear forwards;
+}
+
+.duck-sprite {
+  width: 32px;
+  height: 32px;
+
+  background-repeat: no-repeat;
+  background-size: 192px 128px;
+  background-position: 0 -32px;
+
+  image-rendering: pixelated;
+
+  transform: scale(2.7);
+  transform-origin: bottom left;
+
+  animation: duck-walk 0.45s steps(6) infinite;
+}
+
+@keyframes duck-walk {
+  from {
+    background-position: 0 -32px;
+  }
+
+  to {
+    background-position: -192px -32px;
+  }
+}
+
+@keyframes duck-cross {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(100vw + 200px));
+  }
 }
 
 
@@ -785,6 +1105,15 @@ h5 {
     color: var(--bs-body-color) !important;
   }
 
+  #contact .container {
+    background-color: rgba(33, 37, 41, 0.68);
+
+    border-color: rgba(111, 166, 187, 0.25);
+
+    box-shadow:
+      0 10px 32px rgba(0, 0, 0, 0.30);
+  }
+
   /* Cards */
 
   .card {
@@ -837,7 +1166,7 @@ h5 {
       contrast(0.95);
   }
 
-  /* Homepage background */
+  /* What I Do */
 
   .skills-section {
     background-image:
@@ -868,6 +1197,44 @@ h5 {
 
     border-color: #82b5c7;
   }
+
+  /* Software cards */
+
+  .software-card {
+    border-top-color: #6fa6bb;
+  }
+
+  .software-card::before {
+    color: rgba(111, 166, 187, 0.65);
+  }
+
+  .software-card::after {
+    background-image:
+      linear-gradient(
+        rgba(111, 166, 187, 0.055) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(111, 166, 187, 0.055) 1px,
+        transparent 1px
+      );
+  }
+
+  .software-tag {
+    background-color: rgba(111, 166, 187, 0.12);
+
+    border-color: rgba(111, 166, 187, 0.20);
+
+    color: #8fc0d2;
+  }
+
+  .software-card .text-end a:hover {
+    background-color: rgba(111, 166, 187, 0.14);
+
+    box-shadow:
+      0 4px 14px rgba(111, 166, 187, 0.18);
+  }
 }
 
 
@@ -895,7 +1262,6 @@ h5 {
   #skills,
   #projects.bg-primary,
   #pictures,
-  #contact,
   #collaborations,
   .project-section {
     padding-top: 4rem !important;
@@ -916,6 +1282,32 @@ h5 {
     padding: 0.6rem 1rem;
 
     font-size: 0.95rem;
+  }
+
+  .projects-section::before {
+    left: 0.75rem;
+    bottom: 0.75rem;
+
+    font-size: 0.8rem;
+    opacity: 0.06;
+  }
+
+  .projects-section::after {
+    right: 0.75rem;
+    bottom: 0.75rem;
+
+    font-size: 0.7rem;
+    opacity: 0.06;
+  }
+
+  #contact {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  #contact .container {
+    margin: 0 0.5rem;
+    padding: 2rem 1.25rem;
   }
 
   .card:hover,
@@ -945,7 +1337,10 @@ h5 {
   .site-footer .footer-link::after,
   .site-footer .footer-social,
   .skills-research-feature,
-  .skills-research-overlay {
+  .skills-research-overlay,
+  .skills-research-button,
+  .software-card .text-end a,
+  #pictures img {
     transition: none;
   }
 
@@ -960,470 +1355,10 @@ h5 {
   .project-section img:hover,
   .btn:hover,
   .site-footer .footer-social:hover,
-  .skills-research-feature:hover {
-    transform: none;
-  }
-}
-
-
-/* =========================================================
-   Software project cards
-   ========================================================= */
-
-.software-card {
-  position: relative;
-  border-top: 4px solid #6fa6bb;
-}
-
-.software-card::before {
-  content: "●  ●  ●";
-  display: block;
-
-  margin-bottom: 0.8rem;
-
-  color: rgba(54, 91, 109, 0.45);
-
-  font-size: 0.65rem;
-  letter-spacing: 0.15rem;
-}
-
-.software-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-
-  margin-top: 0.25rem;
-  margin-bottom: 1rem;
-}
-
-.software-tag {
-  display: inline-block;
-
-  padding: 0.25rem 0.55rem;
-
-  background-color: rgba(54, 91, 109, 0.10);
-
-  border: 1px solid rgba(54, 91, 109, 0.14);
-  border-radius: 999px;
-
-  color: #365B6D;
-
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-[data-bs-theme="dark"] .software-card {
-  border-top-color: #6fa6bb;
-}
-
-[data-bs-theme="dark"] .software-card::before {
-  color: rgba(111, 166, 187, 0.65);
-}
-
-[data-bs-theme="dark"] .software-tag {
-  background-color: rgba(111, 166, 187, 0.12);
-
-  border-color: rgba(111, 166, 187, 0.20);
-
-  color: #8fc0d2;
-}
-
-/* =========================================================
-   Software GitHub icon interaction
-   ========================================================= */
-
-.software-card .text-end a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0.45rem;
-
-  border-radius: 50%;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.18s ease,
-    background-color 0.18s ease,
-    box-shadow 0.18s ease;
-}
-
-.software-card .text-end a:hover {
-  transform: translateY(-3px) scale(1.08);
-
-  background-color: rgba(54, 91, 109, 0.10);
-
-  box-shadow:
-    0 4px 12px rgba(54, 91, 109, 0.18);
-}
-
-.software-card .text-end a:active {
-  transform: translateY(0) scale(0.97);
-}
-
-
-/* Dark mode */
-
-[data-bs-theme="dark"] .software-card .text-end a:hover {
-  background-color: rgba(111, 166, 187, 0.14);
-
-  box-shadow:
-    0 4px 14px rgba(111, 166, 187, 0.18);
-}
-
-
-/* Reduced motion */
-
-@media (prefers-reduced-motion: reduce) {
-  .software-card .text-end a {
-    transition: none;
-  }
-
+  .skills-research-feature:hover,
   .software-card .text-end a:hover,
-  .software-card .text-end a:active {
-    transform: none;
-  }
-}
-
-.software-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.software-card .text-end {
-  margin-top: auto;
-  padding-top: 1rem;
-}
-
-.software-card {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.software-card::after {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    linear-gradient(
-      rgba(54, 91, 109, 0.045) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(54, 91, 109, 0.045) 1px,
-      transparent 1px
-    );
-
-  background-size: 24px 24px;
-
-  z-index: -1;
-  pointer-events: none;
-}
-
-[data-bs-theme="dark"] .software-card::after {
-  background-image:
-    linear-gradient(
-      rgba(111, 166, 187, 0.055) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(111, 166, 187, 0.055) 1px,
-      transparent 1px
-    );
-}
-
-/* =========================================================
-   Software section background details
-   ========================================================= */
-
-.projects-section::before {
-  content:
-    "$ ./run\A"
-    ">_";
-
-  position: absolute;
-  left: 2rem;
-  bottom: 1.75rem;
-
-  white-space: pre;
-
-  font-family: monospace;
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.35;
-
-  color: #ffffff;
-  opacity: 0.09;
-
-  pointer-events: none;
-  z-index: 0;
-}
-
-
-.projects-section::after {
-  content:
-    "       ~\A"
-    "      ~ ~\A"
-    "       /\\\A"
-    "     _/  \\_\A"
-    "   _/      \\_\A"
-    "__/          \\__";
-
-  position: absolute;
-  right: 2rem;
-  bottom: 1.5rem;
-
-  white-space: pre;
-
-  font-family: monospace;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1;
-
-  color: #ffffff;
-  opacity: 0.09;
-
-  pointer-events: none;
-  z-index: 0;
-}
-
-
-.projects-section .container {
-  position: relative;
-  z-index: 1;
-}
-
-
-/* Mobile */
-
-@media (max-width: 767px) {
-  .projects-section::before {
-    left: 0.75rem;
-    bottom: 0.75rem;
-
-    font-size: 0.8rem;
-    opacity: 0.06;
-  }
-
-  .projects-section::after {
-    right: 0.75rem;
-    bottom: 0.75rem;
-
-    font-size: 0.7rem;
-    opacity: 0.06;
-  }
-}
-
-.skills-research-button {
-  transition: all 0.2s ease;
-}
-
-.skills-research-button:hover {
-  background-color: #FEE11A;
-  border-color: #FEE11A;
-  color: #222;
-}
-
-.skills-research-button {
-  transition: all 0.2s ease;
-}
-
-.skills-research-button:hover {
-  background-color: #FEE11A;
-  border-color: #FEE11A;
-  color: #154733;
-}
-
-
-/* Duck easter egg */
-
-.duck-waddle {
-  position: fixed;
-  left: -100px;
-  bottom: 18px;
-  z-index: 999;
-  pointer-events: none;
-  opacity: 0.55;
-
-  animation: duck-cross 6s linear forwards;
-}
-
-.duck-sprite {
-  width: 32px;
-  height: 32px;
-
-  background-repeat: no-repeat;
-  background-size: 192px 128px;
-
-  /* Second row of sprite sheet */
-  background-position: 0 -32px;
-
-  image-rendering: pixelated;
-
-  transform: scale(2.7);
-  transform-origin: bottom left;
-
-  animation: duck-walk 0.45s steps(6) infinite;
-}
-
-@keyframes duck-walk {
-  from {
-    background-position: 0 -32px;
-  }
-
-  to {
-    background-position: -192px -32px;
-  }
-}
-
-@keyframes duck-cross {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(100vw + 200px));
-  }
-}
-
-/* Desktop only */
-
-/*
-@media (max-width: 991px) {
-  .duck-waddle {
-    display: none;
-  }
-}
-*/
-
-
-
-/* =========================================================
-   Contact section
-   ========================================================= */
-
-#contact {
-  position: relative;
-
-  padding-top: 4rem !important;
-  padding-bottom: 4rem !important;
-
-  background-image:
-    linear-gradient(
-      rgba(20, 28, 32, 0.28),
-      rgba(20, 28, 32, 0.28)
-    ),
-    var(--contact-bg-image);
-
-  background-size: cover;
-  background-position: center;
-
-  overflow: hidden;
-}
-
-#contact .container {
-  position: relative;
-  z-index: 1;
-
-  max-width: 760px;
-
-  padding: 2.5rem 3rem;
-
-  background-color: rgba(255, 255, 255, 0.68);
-
-  border: 1px solid rgba(255, 255, 255, 0.60);
-  border-radius: 18px;
-
-  text-align: center;
-
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.18);
-}
-
-#contact h1 {
-  margin-bottom: 0.75rem;
-}
-
-#contact p {
-  margin-bottom: 1.5rem;
-}
-
-#contact .btn {
-  margin-top: 0.35rem;
-  margin-bottom: 0.35rem;
-}
-
-
-/* Dark mode */
-
-[data-bs-theme="dark"] #contact .container {
-  background-color: rgba(33, 37, 41, 0.68);
-
-  border-color: rgba(111, 166, 187, 0.25);
-
-  box-shadow:
-    0 10px 32px rgba(0, 0, 0, 0.30);
-}
-
-
-/* Mobile */
-
-@media (max-width: 767px) {
-  #contact {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
-
-  #contact .container {
-    margin: 0 0.5rem;
-    padding: 2rem 1.25rem;
-  }
-}
-
-/* =========================================================
-   Memorable Moments
-   ========================================================= */
-
-#pictures img {
-  filter:
-    saturate(0.80)
-    contrast(0.96)
-    brightness(0.98);
-
-  transition:
-    filter 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-#pictures img:hover {
-  filter:
-    saturate(1)
-    contrast(1)
-    brightness(1);
-
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.13);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #pictures img {
-    transition: none;
-  }
-
+  .software-card .text-end a:active,
   #pictures img:hover {
     transform: none;
   }
 }
-
