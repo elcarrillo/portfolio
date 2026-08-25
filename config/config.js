@@ -8,30 +8,36 @@ import butteImage from '/public/lavaButte.jpeg';
 import soccerImage from '/public/soccer.png';
 
 
-import fissuresImage from '/public/fissures.png';
+// import fissuresImage from '/public/fissures.png';
 import plumesImage from '/public/plumes.png';
-import pccProjectImage from '/public/pcc_project.png';
-import volcanoImage from '/public/crater_lake.JPG';
+// import pccProjectImage from '/public/pcc_project.png';
+// import volcanoImage from '/public/crater_lake.JPG';
 
 import uoLogoImage from '/public/images/uo_logo.png';
 import webfootImage from '/public/images/webfoot.png';
 //import yellowO from '/public/images/yellow-o.png';
 import uoBlock from '/public/images/uo-block.png';
-import radnorImage from '/public/images/radnor_lake.png';
-import ashvilleImage from '/public/images/teaching_con.png';
-import FauriaLabImage from '/public/images/fauria_lab_cascades.png';
-import creekImage from '/public/images/creek.png';
 import sketchImage from '/public/images/sketch.jpg';
-import snowyNashImage from '/public/images/snowy_nash.png';
-import obsidianImage from '/public/images/obsidian.png';
-import vesuviusImage from '/public/images/vesuvius.png';
-import NashvilleImage from '/public/images/nashville.png';
 import goDucks from '/public/images/go_ducks.png';
 import tongaPlumeGif from '/public/images/tonga_plume.gif';
 import idahoFalls from '/public/images/idaho_falls.jpg'
 import geysers from '/public/images/geysers.jpg'
 import helensImage from "../public/images/helens.jpg";
-import icelandFissure from '../public/images/iceland-fissure.jpg';
+
+import radnorImage from '/public/images/radnor_lake.webp';
+import ashvilleImage from '/public/images/teaching_con.webp';
+import FauriaLabImage from '/public/images/fauria_lab_cascades.webp';
+import creekImage from '/public/images/creek.webp';
+import snowyNashImage from '/public/images/snowy_nash.webp';
+import obsidianImage from '/public/images/obsidian.webp';
+import vesuviusImage from '/public/images/vesuvius.webp';
+import NashvilleImage from '/public/images/nashville.webp';
+//import goDucks from '/public/images/go_ducks.webp';
+import icelandFissure from '../public/images/iceland-fissure.webp';
+
+import fissuresImage from '/public/fissures.webp';
+import pccProjectImage from '/public/pcc_project.webp';
+import volcanoImage from '/public/crater_lake.webp';
 
 import { faAppStore, faGithub, faGooglePlay} from '@fortawesome/free-brands-svg-icons';
 import { } from '@fortawesome/free-solid-svg-icons';
