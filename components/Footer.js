@@ -90,7 +90,17 @@ const GoogleCalendarButton = ({ url, label }) => {
   );
 };
 
-export const Contact = ({ title, description, buttons }) => {
+export const Contact = ({
+  title,
+  description,
+  buttons,
+  office,
+  address,
+  email,
+  phone,
+  logo,
+//  webfoot,
+}) => {
   return (
     <div
       id="contact"
@@ -100,38 +110,102 @@ export const Contact = ({ title, description, buttons }) => {
       }}
     >
       <div className="container">
-        <h1 className="text-primary fw-bold">{title}</h1>
+        <h1 className="text-primary fw-bold mb-4">{title}</h1>
 
-        <div className="px-sm-5">
-          <p>{description}</p>
+        <div className="row align-items-center g-5">
 
-          <div className="d-flex flex-wrap align-items-center">
-            {buttons.map((button, index) => {
-              if (button.type === 'google-calendar') {
+          {/* Left side */}
+          <div className="col-lg-7">
+            <p
+              className="mb-4"
+              style={{
+                fontSize: '1.05rem',
+                lineHeight: '1.7',
+              }}
+            >
+              {description}
+            </p>
+
+            <div className="mb-4">
+              <p className="fw-bold mb-1">{office}</p>
+
+              <p className="mb-3">
+                {address}
+              </p>
+
+              <p className="mb-1">
+                <a
+                  href={`mailto:${email}`}
+                  className="text-decoration-none"
+                >
+                  {email}
+                </a>
+              </p>
+
+              <p className="mb-0">
+                <a
+                  href="tel:5413578079"
+                  className="text-decoration-none"
+                >
+                  {phone}
+                </a>
+              </p>
+            </div>
+
+            <div className="d-flex flex-wrap align-items-center">
+              {buttons.map((button, index) => {
+                if (button.type === 'google-calendar') {
+                  return (
+                    <GoogleCalendarButton
+                      key={index}
+                      url={button.link}
+                      label={button.title}
+                    />
+                  );
+                }
+
                 return (
-                  <GoogleCalendarButton
-                    key={index}
-                    url={button.link}
-                    label={button.title}
-                  />
+                  <Link key={index} href={button.link} passHref>
+                    <a
+                      className={`btn my-1 mx-3 ${
+                        button.isPrimary
+                          ? 'btn-primary'
+                          : 'btn-outline-primary'
+                      }`}
+                    >
+                      {button.title}
+                    </a>
+                  </Link>
                 );
-              }
-
-              return (
-                <Link key={index} href={button.link} passHref>
-                  <a
-                    className={`btn my-1 mx-3 ${
-                      button.isPrimary
-                        ? 'btn-primary'
-                        : 'btn-outline-primary'
-                    }`}
-                  >
-                    {button.title}
-                  </a>
-                </Link>
-              );
-            })}
+              })}
+            </div>
           </div>
+
+{/* University of Oregon signature */}
+<div className="col-lg-5 mt-4 mt-lg-0">
+  <div
+    style={{
+      minHeight: '190px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '20px 30px',
+    }}
+  >
+    <img
+      src={logo}
+      alt="University of Oregon"
+      style={{
+        width: '100%',
+        maxWidth: '400px',
+        height: 'auto',
+        display: 'block',
+        transform: 'translateX(-60px)',
+      }}
+    />
+  </div>
+</div>
+
         </div>
       </div>
     </div>
@@ -150,28 +224,28 @@ export const Footer = () => {
             <p className="mb-0">PhD Candidate | Volcano Physicist</p>
           </div>
 
-            {/* Quick Links */}
-            <div className="col-md-4 text-center mb-3 mb-md-0">
-              <h5 className="fw-bold">Quick Links</h5>
+          {/* Quick Links */}
+          <div className="col-md-4 text-center mb-3 mb-md-0">
+            <h5 className="fw-bold">Quick Links</h5>
 
-              <ul className="list-unstyled">
-                <li>
-                  <Link href="/" passHref>
-                    <a className="footer-link">
-                      Main Page
-                    </a>
-                  </Link>
-                </li>
+            <ul className="list-unstyled">
+              <li>
+                <Link href="/" passHref>
+                  <a className="footer-link">
+                    Main Page
+                  </a>
+                </Link>
+              </li>
 
-                <li>
-                  <Link href="/research" passHref>
-                    <a className="footer-link">
-                      Research Page
-                    </a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
+              <li>
+                <Link href="/research" passHref>
+                  <a className="footer-link">
+                    Research Page
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </div>
 
           {/* Social Media Links */}
           <div className="col-md-4 text-center text-md-end">

@@ -14,6 +14,9 @@ import pccProjectImage from '/public/pcc_project.png';
 import volcanoImage from '/public/crater_lake.JPG';
 
 import uoLogoImage from '/public/images/uo_logo.png';
+import webfootImage from '/public/images/webfoot.png';
+//import yellowO from '/public/images/yellow-o.png';
+import uoBlock from '/public/images/uo-block.png';
 import radnorImage from '/public/images/radnor_lake.png';
 import ashvilleImage from '/public/images/teaching_con.png';
 import FauriaLabImage from '/public/images/fauria_lab_cascades.png';
@@ -165,7 +168,17 @@ export const projects = {
 
 export const contact = {
   title: "Get in touch",
-  description: "Coffee Chat! Please do not hesitate to reach out. My email is: elcar@uoregon.edu",
+
+  description:
+    "Coffee Chat! Please feel free to reach out.",
+
+  office: "Cascade Hall, 105-B",
+  address: "1275 E 13th Ave, Eugene, OR 97403",
+  email: "elcar@uoregon.edu",
+  phone: "(541) 357-8079",
+
+	logo: uoBlock.src,
+
   buttons: [
     {
       title: "Email Me",
@@ -180,7 +193,6 @@ export const contact = {
     },
   ],
 };
-
 
 // SEARCH ENGINE 
 export const SEO = {

@@ -31,7 +31,7 @@ export default function Home() {
     setIsDarkMode((prev) => !prev);
   };
 
-  // Add Schema Markup for the Home Page
+  // Add schema markup for the home page
   useEffect(() => {
     const schema = {
       "@context": "https://schema.org",
@@ -94,10 +94,8 @@ export default function Home() {
       />
 
       <Contact
-        key={key} // Force remount on key change
-        title={contact.title}
-        description={contact.description}
-        buttons={contact.buttons}
+        key={key} // force remount on key change
+        {...contact}
       />
       <Footer />
     </Fragment>
