@@ -92,6 +92,12 @@ export default function Home() {
         title={projects.title}
         cards={projects.cards}
       />
+      
+      <Pictures
+        title={pictures.title}
+        description={pictures.description}
+        images={pictures.images}
+      />
 
       <Contact
         key={key} // force remount on key change
