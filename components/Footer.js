@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -10,6 +11,7 @@ import {
 
 import DuckWaddle from './DuckWaddle';
 import mistyImage from '../public/images/misty.webp';
+
 
 const GoogleCalendarButton = ({ url, label }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,71 +26,76 @@ const GoogleCalendarButton = ({ url, label }) => {
         {label}
       </button>
 
-      {isOpen && (
-        <div
-          onClick={() => setIsOpen(false)}
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100vw',
-            height: '100vh',
-            backgroundColor: 'rgba(0, 0, 0, 0.55)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 9999,
-            padding: '20px',
-          }}
-        >
+      {isOpen &&
+        typeof document !== 'undefined' &&
+        createPortal(
           <div
-            onClick={(e) => e.stopPropagation()}
+            onClick={() => setIsOpen(false)}
             style={{
-              position: 'relative',
-              width: '100%',
-              maxWidth: '900px',
-              height: '85vh',
-              backgroundColor: '#fff',
-              borderRadius: '12px',
-              overflow: 'hidden',
-              boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3)',
+              position: 'fixed',
+              inset: 0,
+              width: '100vw',
+              height: '100vh',
+              backgroundColor: 'rgba(0, 0, 0, 0.55)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              zIndex: 999999,
+              padding: '20px',
             }}
           >
-            <button
-              type="button"
-              onClick={() => setIsOpen(false)}
-              aria-label="Close scheduling window"
+            <div
+              onClick={(e) => e.stopPropagation()}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Schedule a meeting"
               style={{
-                position: 'absolute',
-                top: '10px',
-                right: '14px',
-                zIndex: 10,
-                border: 'none',
-                background: '#fff',
-                borderRadius: '50%',
-                width: '36px',
-                height: '36px',
-                fontSize: '24px',
-                lineHeight: '30px',
-                cursor: 'pointer',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
+                position: 'relative',
+                width: '100%',
+                maxWidth: '760px',
+                height: '72vh',
+                backgroundColor: '#fff',
+                borderRadius: '12px',
+                overflow: 'hidden',
+                boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3)',
               }}
             >
-              ×
-            </button>
+              <button
+                type="button"
+                onClick={() => setIsOpen(false)}
+                aria-label="Close scheduling window"
+                style={{
+                  position: 'absolute',
+                  top: '10px',
+                  right: '14px',
+                  zIndex: 10,
+                  border: 'none',
+                  background: '#fff',
+                  borderRadius: '50%',
+                  width: '36px',
+                  height: '36px',
+                  fontSize: '24px',
+                  lineHeight: '30px',
+                  cursor: 'pointer',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
+                }}
+              >
+                ×
+              </button>
 
-            <iframe
-              src={url}
-              title="Schedule a meeting"
-              style={{
-                border: 0,
-                width: '100%',
-                height: '100%',
-              }}
-            />
-          </div>
-        </div>
-      )}
+              <iframe
+                src={url}
+                title="Schedule a meeting"
+                style={{
+                  border: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+              />
+            </div>
+          </div>,
+          document.body
+        )}
     </>
   );
 };
@@ -121,13 +128,13 @@ export const Contact = ({
   };
 
   return (
-<div
-  id="contact"
-  className="py-5 px-5"
-  style={{
-    '--contact-bg-image': `url(${mistyImage.src})`,
-  }}
->
+    <div
+      id="contact"
+      className="py-5 px-5"
+      style={{
+        '--contact-bg-image': `url(${mistyImage.src})`,
+      }}
+    >
       <div className="container">
         <h1 className="text-primary fw-bold mb-4">
           {title}
@@ -239,9 +246,12 @@ export const Contact = ({
       </div>
 
       {/* Hidden duck easter egg */}
-      {duckTrigger > 0 && (
-        <DuckWaddle key={duckTrigger} />
-      )}
+      {duckTrigger > 0 &&
+        typeof document !== 'undefined' &&
+        createPortal(
+          <DuckWaddle key={duckTrigger} />,
+          document.body
+        )}
     </div>
   );
 };
