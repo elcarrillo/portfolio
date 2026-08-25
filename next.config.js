@@ -2,8 +2,8 @@ const isProd = process.env.NODE_ENV === 'production';
 
 /*
  * Gets the BASE_PATH from the command used to start this app.
- * If BASE_PATH is specified but it does not start with a "/" 
- * then add it. 
+ * If BASE_PATH is specified but it does not start with a "/"
+ * then add it.
  */
 function getBasePath() {
   let basePath = undefined;
@@ -13,6 +13,7 @@ function getBasePath() {
       ? process.env.BASE_PATH
       : `/${process.env.BASE_PATH}`;
   }
+
   return basePath;
 }
 
@@ -22,16 +23,19 @@ console.warn(
   `P.S. [basePath] is {${basePath}}`
 );
 
-
 const nextConfig = {
-
   reactStrictMode: true,
+
   basePath: basePath,
   assetPrefix: basePath,
+
+  images: {
+    unoptimized: true,
+  },
+
   publicRuntimeConfig: {
     basePath: basePath,
-
   },
-}
+};
 
 module.exports = nextConfig;
