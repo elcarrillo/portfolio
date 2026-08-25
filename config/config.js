@@ -8,10 +8,7 @@ import butteImage from '/public/lavaButte.jpeg';
 import soccerImage from '/public/soccer.png';
 
 
-// import fissuresImage from '/public/fissures.png';
 import plumesImage from '/public/plumes.png';
-// import pccProjectImage from '/public/pcc_project.png';
-// import volcanoImage from '/public/crater_lake.JPG';
 
 import uoLogoImage from '/public/images/uo_logo.png';
 import webfootImage from '/public/images/webfoot.png';
@@ -32,7 +29,6 @@ import snowyNashImage from '/public/images/snowy_nash.webp';
 import obsidianImage from '/public/images/obsidian.webp';
 import vesuviusImage from '/public/images/vesuvius.webp';
 import NashvilleImage from '/public/images/nashville.webp';
-//import goDucks from '/public/images/go_ducks.webp';
 import icelandFissure from '../public/images/iceland-fissure.webp';
 
 import fissuresImage from '/public/fissures.webp';

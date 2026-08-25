@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Footer } from '../components/Footer';
 import { Nav } from '../components/Navbar';
 import { updates } from '../config/config';
-import headerImage from '/public/pescadero.jpg';
+import headerImage from '/public/pescadero.webp';
 
 const Updates = () => {
   const [currentPage, setCurrentPage] = useState(1);
