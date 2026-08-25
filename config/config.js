@@ -1,4 +1,4 @@
-import profile from './profile.png';
+import profile from './profile.webp';
 
 import redwoodImage from '/public/redwood.png';
 import italyImage from '/public/italy.png';
