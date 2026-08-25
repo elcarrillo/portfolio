@@ -1233,3 +1233,62 @@ h5 {
   border-color: #FEE11A;
   color: #154733;
 }
+
+
+/* Duck easter egg */
+
+.duck-waddle {
+  position: fixed;
+  left: -100px;
+  bottom: 18px;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.55;
+
+  animation: duck-cross 6s linear forwards;
+}
+
+.duck-sprite {
+  width: 32px;
+  height: 32px;
+
+  background-repeat: no-repeat;
+  background-size: 192px 128px;
+
+  /* Second row of sprite sheet */
+  background-position: 0 -32px;
+
+  image-rendering: pixelated;
+
+  transform: scale(2.7);
+  transform-origin: bottom left;
+
+  animation: duck-walk 0.45s steps(6) infinite;
+}
+
+@keyframes duck-walk {
+  from {
+    background-position: 0 -32px;
+  }
+
+  to {
+    background-position: -192px -32px;
+  }
+}
+
+@keyframes duck-cross {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(100vw + 200px));
+  }
+}
+
+/* Desktop only */
+@media (max-width: 991px) {
+  .duck-waddle {
+    display: none;
+  }
+}

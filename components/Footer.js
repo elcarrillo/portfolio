@@ -8,6 +8,9 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
+import DuckWaddle from './DuckWaddle';
+
+
 const GoogleCalendarButton = ({ url, label }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -90,6 +93,7 @@ const GoogleCalendarButton = ({ url, label }) => {
   );
 };
 
+
 export const Contact = ({
   title,
   description,
@@ -99,8 +103,23 @@ export const Contact = ({
   email,
   phone,
   logo,
-//  webfoot,
 }) => {
+  const [logoClicks, setLogoClicks] = useState(0);
+  const [duckTrigger, setDuckTrigger] = useState(0);
+
+  const handleLogoClick = () => {
+    setLogoClicks((previousClicks) => {
+      const nextClicks = previousClicks + 1;
+
+      if (nextClicks >= 3) {
+        setDuckTrigger((trigger) => trigger + 1);
+        return 0;
+      }
+
+      return nextClicks;
+    });
+  };
+
   return (
     <div
       id="contact"
@@ -110,7 +129,9 @@ export const Contact = ({
       }}
     >
       <div className="container">
-        <h1 className="text-primary fw-bold mb-4">{title}</h1>
+        <h1 className="text-primary fw-bold mb-4">
+          {title}
+        </h1>
 
         <div className="row align-items-center g-5">
 
@@ -127,7 +148,9 @@ export const Contact = ({
             </p>
 
             <div className="mb-4">
-              <p className="fw-bold mb-1">{office}</p>
+              <p className="fw-bold mb-1">
+                {office}
+              </p>
 
               <p className="mb-3">
                 {address}
@@ -165,7 +188,11 @@ export const Contact = ({
                 }
 
                 return (
-                  <Link key={index} href={button.link} passHref>
+                  <Link
+                    key={index}
+                    href={button.link}
+                    passHref
+                  >
                     <a
                       className={`btn my-1 mx-3 ${
                         button.isPrimary
@@ -181,36 +208,44 @@ export const Contact = ({
             </div>
           </div>
 
-{/* University of Oregon signature */}
-<div className="col-lg-5 mt-4 mt-lg-0">
-  <div
-    style={{
-      minHeight: '190px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '20px 30px',
-    }}
-  >
-    <img
-      src={logo}
-      alt="University of Oregon"
-      style={{
-        width: '100%',
-        maxWidth: '400px',
-        height: 'auto',
-        display: 'block',
-        transform: 'translateX(-60px)',
-      }}
-    />
-  </div>
-</div>
+          {/* University of Oregon signature */}
+          <div className="col-lg-5 mt-4 mt-lg-0">
+            <div
+              style={{
+                minHeight: '190px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '20px 30px',
+              }}
+            >
+              <img
+                src={logo}
+                alt="University of Oregon"
+                onClick={handleLogoClick}
+                style={{
+                  width: '100%',
+                  maxWidth: '390px',
+                  height: 'auto',
+                  display: 'block',
+                  transform: 'translateX(-40px)',
+                  userSelect: 'none',
+                }}
+              />
+            </div>
+          </div>
 
         </div>
       </div>
+
+      {/* Hidden duck easter egg */}
+      {duckTrigger > 0 && (
+        <DuckWaddle key={duckTrigger} />
+      )}
     </div>
   );
 };
+
 
 export const Footer = () => {
   return (
@@ -220,13 +255,20 @@ export const Footer = () => {
 
           {/* Branding Section */}
           <div className="col-md-4 text-center text-md-start mb-3 mb-md-0">
-            <h5 className="fw-bold">Edgar Carrillo</h5>
-            <p className="mb-0">PhD Candidate | Volcano Physicist</p>
+            <h5 className="fw-bold">
+              Edgar Carrillo
+            </h5>
+
+            <p className="mb-0">
+              PhD Candidate | Volcano Physicist
+            </p>
           </div>
 
           {/* Quick Links */}
           <div className="col-md-4 text-center mb-3 mb-md-0">
-            <h5 className="fw-bold">Quick Links</h5>
+            <h5 className="fw-bold">
+              Quick Links
+            </h5>
 
             <ul className="list-unstyled">
               <li>
@@ -249,16 +291,24 @@ export const Footer = () => {
 
           {/* Social Media Links */}
           <div className="col-md-4 text-center text-md-end">
-            <h5 className="fw-bold">Follow Me</h5>
+            <h5 className="fw-bold">
+              Follow Me
+            </h5>
 
-            <Link href="https://github.com/elcarrillo" passHref>
+            <Link
+              href="https://github.com/elcarrillo"
+              passHref
+            >
               <a
                 className="footer-social me-3"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
               >
-                <FontAwesomeIcon icon={faGithub} size="lg" />
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  size="lg"
+                />
               </a>
             </Link>
 
@@ -272,18 +322,27 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  size="lg"
+                />
               </a>
             </Link>
 
-            <Link href="https://x.com/edgarlcarrillo" passHref>
+            <Link
+              href="https://x.com/edgarlcarrillo"
+              passHref
+            >
               <a
                 className="footer-social me-3"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X"
               >
-                <FontAwesomeIcon icon={faTwitter} size="lg" />
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  size="lg"
+                />
               </a>
             </Link>
 
@@ -297,7 +356,10 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Instagram"
               >
-                <FontAwesomeIcon icon={faInstagram} size="lg" />
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  size="lg"
+                />
               </a>
             </Link>
           </div>
@@ -315,7 +377,8 @@ export const Footer = () => {
                 MIT
               </a>
             </Link>{' '}
-            License &copy; elcarrillo {new Date().getFullYear()}
+            License &copy; elcarrillo{' '}
+            {new Date().getFullYear()}
           </small>
         </div>
       </div>

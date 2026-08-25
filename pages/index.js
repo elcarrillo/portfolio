@@ -97,7 +97,8 @@ export default function Home() {
         key={key} // force remount on key change
         {...contact}
       />
-      <Footer />
+
+<Footer />
     </Fragment>
   );
 }
