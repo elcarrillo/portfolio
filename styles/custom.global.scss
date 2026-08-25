@@ -135,7 +135,10 @@ h5 {
 // =========================================================
 
 #about,
-#skills,
+#skills {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
 #projects.bg-primary,
 #pictures,
 #contact,
@@ -616,6 +619,9 @@ h5 {
   background-color: rgba(15, 25, 30, 0.22);
 }
 
+.skills-research-feature {
+  margin-top: 0.75rem;
+}
 
 // =========================================================
 // Contact
