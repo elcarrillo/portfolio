@@ -94,7 +94,7 @@ export const about = {
 
 			"Using my background in Physics (B.S. and M.S.), I apply principles of fluid mechanics and thermodynamics to study volcanic eruption processes.",
 
-			"My research focuses on developing mathematical models, running simulations, and conducting numerical experiments to explore and predict the behavior of dynamic natural systems—particularly explosive volcanic eruptions. By leveraging computational science, I aim to gain insights into complex processes that are challenging to observe directly.",
+			"My research focuses on developing mathematical models, running simulations, and conducting numerical experiments to explore and predict the behavior of dynamic natural systems. Particularly explosive volcanic eruptions. By leveraging computational science, I aim to gain insights into complex processes that are challenging to observe directly.",
 
 			"I'm passionate about advancing our understanding of volcanic systems and their interactions with the environment. I value collaboration within the Earth Science community and am dedicated to mentoring and supporting the next generation of scientists."
 	],
