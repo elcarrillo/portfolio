@@ -1301,3 +1301,129 @@ h5 {
   }
 }
 */
+
+
+
+/* =========================================================
+   Contact section
+   ========================================================= */
+
+#contact {
+  position: relative;
+
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+
+  background-image:
+    linear-gradient(
+      rgba(20, 28, 32, 0.28),
+      rgba(20, 28, 32, 0.28)
+    ),
+    var(--contact-bg-image);
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+#contact .container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 760px;
+
+  padding: 2.5rem 3rem;
+
+  background-color: rgba(255, 255, 255, 0.68);
+
+  border: 1px solid rgba(255, 255, 255, 0.60);
+  border-radius: 18px;
+
+  text-align: center;
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+#contact h1 {
+  margin-bottom: 0.75rem;
+}
+
+#contact p {
+  margin-bottom: 1.5rem;
+}
+
+#contact .btn {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+
+/* Dark mode */
+
+[data-bs-theme="dark"] #contact .container {
+  background-color: rgba(33, 37, 41, 0.68);
+
+  border-color: rgba(111, 166, 187, 0.25);
+
+  box-shadow:
+    0 10px 32px rgba(0, 0, 0, 0.30);
+}
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  #contact {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  #contact .container {
+    margin: 0 0.5rem;
+    padding: 2rem 1.25rem;
+  }
+}
+
+/* =========================================================
+   Memorable Moments
+   ========================================================= */
+
+#pictures img {
+  filter:
+    saturate(0.80)
+    contrast(0.96)
+    brightness(0.98);
+
+  transition:
+    filter 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+#pictures img:hover {
+  filter:
+    saturate(1)
+    contrast(1)
+    brightness(1);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.13);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #pictures img {
+    transition: none;
+  }
+
+  #pictures img:hover {
+    transform: none;
+  }
+}
+

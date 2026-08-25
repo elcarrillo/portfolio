@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import DuckWaddle from './DuckWaddle';
-
+import mistyImage from '../public/images/misty.webp';
 
 const GoogleCalendarButton = ({ url, label }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -121,13 +121,13 @@ export const Contact = ({
   };
 
   return (
-    <div
-      id="contact"
-      className="py-5 px-5"
-      style={{
-        backgroundColor: '#f8f9fa',
-      }}
-    >
+<div
+  id="contact"
+  className="py-5 px-5"
+  style={{
+    '--contact-bg-image': `url(${mistyImage.src})`,
+  }}
+>
       <div className="container">
         <h1 className="text-primary fw-bold mb-4">
           {title}
