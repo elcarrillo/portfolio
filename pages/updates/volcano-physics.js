@@ -1,8 +1,7 @@
 import React from 'react';
 import { Footer } from '../../components/Footer';
 import { Nav } from '../../components/Navbar';
-import icelandFissure from './../../public/images/iceland-fissure.jpg';
-
+import icelandFissure from './../../public/images/iceland-fissure.webp';
 const VolcanoPhysics = () => (
   <div>
     <Nav title="Edgar" />
