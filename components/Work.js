@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
-import cascadesImage from '../public/images/cascades.png';
+import cascadesImage from '../public/images/cascades.webp';
 
 export const Skills = ({ title, cards }) => {
   return (

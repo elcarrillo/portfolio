@@ -1,12 +1,7 @@
 import profile from './profile.webp';
 
-// import redwoodImage from '/public/redwood.png';
-// import italyImage from '/public/italy.png';
-// import utahImage from '/public/utah.png';
-import haywardImage from '/public/hayward.JPG';
-// import butteImage from '/public/lavaButte.jpeg';
-// import soccerImage from '/public/soccer.png';
 
+import haywardImage from '/public/hayward.JPG';
 import redwoodImage from '/public/redwood.webp';
 import italyImage from '/public/italy.webp';
 import utahImage from '/public/utah.webp';
