@@ -7,7 +7,7 @@ const Research = () => {
   return (
     <div>
       {/* Navbar */}
-      <Nav title="Edgar" links={[]} />
+      <Nav title="Edgar" />
 
       {/* Header Section with Image and Title */}
       <div
