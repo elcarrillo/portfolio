@@ -10,7 +10,6 @@
     "email": "elcar@uoregon.edu",
     "url": "https://github.com/elcarrillo"
   },
-
   "scripts": {
     "prebuild": "node scripts/favicons.js",
     "build": "next build",
@@ -27,7 +26,6 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "next": "12.3.0",
-    "next-sitemap": "^4.2.3",
     "react": "18.2.0",
     "react-bootstrap": "^2.10.5",
     "react-dom": "18.2.0"
