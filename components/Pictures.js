@@ -1,8 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import getConfig from 'next/config';
-
-const { publicRuntimeConfig } = getConfig();
 
 const Pictures = ({ title, description, images }) => {
   return (

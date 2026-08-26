@@ -1,9 +1,7 @@
 import React from 'react';
-import getConfig from 'next/config'
 import Link from 'next/link'
 import topoImage from '../public/images/usgs-topo.jpg';
 
-const { publicRuntimeConfig } = getConfig()
 
 export const Intro = ({ title, description, image, buttons }) => {
 	return (

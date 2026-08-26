@@ -6,8 +6,6 @@ import { Footer, Contact } from '../components/Footer';
 import { about, contact, intro, navigation, projects, SEO, work, pictures } from '../config/config';
 import { Header } from '../components/Header';
 import Pictures from '../components/Pictures';
-import Link from 'next/link';
-import cascadesImage from '../public/images/cascades.png';
 
 
 export default function Home() {

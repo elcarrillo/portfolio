@@ -4,7 +4,6 @@ import { Nav } from '../../components/Navbar';
 import bridgeCrew from './../../public/images/bridge_crew.png';
 import soccer from './../../public/images/soccer.png';
 import friends from './../../public/images/bonfire.png';
-import cabin from './../../public/images/cabin.png';
 
 const TakeABreak = () => (
   <div>
