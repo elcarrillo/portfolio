@@ -6,12 +6,6 @@ import { useRouter } from 'next/router';
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
-  useEffect(() => {
-    // Validate Google Analytics environment variable in development mode only
-    if (process.env.NODE_ENV === 'development' && !'G-LJYYDQTM1K') {
-      console.warn('Google Analytics tracking ID is missing.');
-    }
-  }, []);
 
   useEffect(() => {
     // Load Bootstrap JavaScript

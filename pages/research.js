@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { research } from '../config/config';
 import { Footer } from '../components/Footer'; // Import Footer component
 import { Nav } from '../components/Navbar'; // Import Navbar component
