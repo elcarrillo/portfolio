@@ -1039,8 +1039,7 @@ h5 {
   animation: heroFadeUp 0.65s ease-out both;
 }
 
-.card-img-top,
-.custom-image-size {
+.card-img-top {
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
@@ -1324,6 +1323,10 @@ h5 {
 // =========================================================
 
 @media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
 
   .card,
   .card-work,

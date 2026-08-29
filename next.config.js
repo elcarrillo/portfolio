@@ -19,9 +19,6 @@ function getBasePath() {
 
 const basePath = getBasePath();
 
-console.warn(
-  `P.S. [basePath] is {${basePath}}`
-);
 
 const nextConfig = {
   reactStrictMode: true,
@@ -31,10 +28,6 @@ const nextConfig = {
 
   images: {
     unoptimized: true,
-  },
-
-  publicRuntimeConfig: {
-    basePath: basePath,
   },
 };
 
