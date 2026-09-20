@@ -119,10 +119,10 @@ const Updates = () => {
         {featuredUpdates.map((update, index) => (
           <article
             key={index}
-            className="col-md-6 mb-4 d-flex"
+            className="col-lg-4 col-md-6 mb-4"
           >
             <div
-              className="card shadow h-100 w-100"
+              className="card shadow w-100"
               style={{
                 borderTop: '4px solid var(--bs-primary)',
               }}
@@ -133,7 +133,7 @@ const Updates = () => {
                   alt={`Image for ${update.title}`}
                   className="card-img-top"
                   style={{
-                    height: '250px',
+                    height: '170px',
                     width: '100%',
                     objectFit: 'cover',
                   }}
@@ -163,10 +163,17 @@ const Updates = () => {
                   {update.date}
                 </p>
 
-                <p className="card-text">
+                <p
+                  className="card-text"
+                  style={{
+                    height: '90px',
+                    overflowY: 'auto',
+                    paddingRight: '4px',
+                  }}
+                >
                   {update.snippet}
                 </p>
-
+                
                 {/* Push button to bottom so both cards align */}
                 <div className="mt-auto pt-2">
                   {update.type === 'internal' && (
