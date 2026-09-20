@@ -51,6 +51,10 @@ export const Projects = ({ title, cards }) => {
           Software Projects
         </h1>
 
+        <p className ="text-light opacity-75 mb-3">
+          Click an icon to open the project link.
+        </p>
+
         <div className="d-flex flex-row flex-wrap justify-content-center">
           {cards.map((value, index) => (
             <Card

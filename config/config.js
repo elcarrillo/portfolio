@@ -35,9 +35,10 @@ import icelandFissure from '../public/images/iceland-fissure.webp';
 import fissuresImage from '/public/fissures.webp';
 import pccProjectImage from '/public/pcc_project.webp';
 import volcanoImage from '/public/crater_lake.webp';
+import plumeApp from '/public/images/plume-app.png';
 
 import { faAppStore, faGithub, faGooglePlay} from '@fortawesome/free-brands-svg-icons';
-import { } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 export const navigation = {
 	name: "Edgar",
@@ -97,7 +98,7 @@ export const about = {
 
 			"My research focuses on developing mathematical models, running simulations, and conducting numerical experiments to explore and predict the behavior of dynamic natural systems. Particularly explosive volcanic eruptions. By leveraging computational science, I aim to gain insights into complex processes that are challenging to observe directly.",
 
-			"I'm passionate about advancing our understanding of volcanic systems and their interactions with the environment. I value collaboration within the Earth Science community and am dedicated to mentoring and supporting the next generation of scientists."
+			"I value collaboration within the Earth Science community and am dedicated to mentoring and supporting the next generation of scientists."
 	],
 }
 
@@ -133,12 +134,16 @@ export const projects = {
     {
       title: "PlumeViz",
       description:
-        "A scientific computing tool for batch-running, post-processing, and visualizing 1D volcanic plume simulations using Plumeria.",
-      tags: ["Scientific Computing", "Plumeria", "Visualization"],
+        "A Python interface for running, exploring, and visualizing 1D volcanic plume simulations using the USGS Plumeria model, with research tools and browser-based access.",
+      tags: ["Scientific Computing", "Plumeria", "Web App"],
       icons: [
         {
           icon: faGithub,
           link: "https://github.com/elcarrillo/PlumeViz",
+        },
+        {
+          icon: faGlobe,
+          link: "https://plumeviz.streamlit.app/",
         },
       ],
     },
@@ -362,6 +367,15 @@ My research in this area explores how processes such as conduit erosion, wall fa
 
 // updates page
 export const updates = [
+{
+  title: "PlumeViz 1.0.0 Released!",
+  date: "September 16, 2026",
+  snippet: "PlumeViz has reached its first stable release! It provides a modern Python interface for running, exploring, and visualizing USGS Plumeria volcanic plume simulations.",
+  type: "internal",
+  image: plumeApp.src,
+  link: "/updates/plumeviz-1-0-0",
+  featured: true,
+},
 	{
   title: "What is Volcano Physics?",
   date: "August 20, 2026",
@@ -380,9 +394,6 @@ export const updates = [
   image: helensImage.src,
   link: "https://pages.uoregon.edu/jdufek/",
 },
-
-
-
 
 
 	{
