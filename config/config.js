@@ -92,13 +92,9 @@ export const intro = {
 export const about = {
 	title: "Who I am",
 	description: [
-
-
-			"Using my background in Physics (B.S. and M.S.), I apply principles of fluid mechanics and thermodynamics to study volcanic eruption processes.",
-
-			"My research focuses on developing mathematical models, running simulations, and conducting numerical experiments to explore and predict the behavior of dynamic natural systems. Particularly explosive volcanic eruptions. By leveraging computational science, I aim to gain insights into complex processes that are challenging to observe directly.",
-
-			"I value collaboration within the Earth Science community and am dedicated to mentoring and supporting the next generation of scientists."
+		"Hi, I’m Edgar. I’m a volcano physicist and computational scientist who likes building things, from models and software to experiments. My work has taken me across volcanic plumes, multiphase systems, geothermal heat transport, and other problems that catch my interest. I tend to follow the problem wherever it flows.",
+		"I’m drawn to problems that I can explore through math, computation, and physical modeling. That can mean developing a mathematical model, running large numerical simulations, or building a tool because the thing I need does not exist yet. I like having different ways to approach a problem and seeing where each one takes me.",
+		"I also care a lot about teaching, mentoring STEM students, and helping make technical spaces more welcoming and accessible. Sometimes I’m thinking about multiphase systems. Other times, I’m just thinking about ducks."
 	],
 }
 
@@ -106,25 +102,24 @@ export const work = {
 	title: "What I do",
 	cards: [
 		{
-			title: "Research Assistant",
-			description:
-			    "As a research assistant at the University of Oregon, I study the physics of volcanic eruption processes.",
+			title: "Researcher",
+			description: "I use mathematical and numerical models to study fluid dynamics, thermodynamics, and multiphase processes in volcanoes.",
 			link: "https://pages.uoregon.edu/volcanologycenter/",
 			icons: null,
 		},
 
 		{
-			title: "Computational Science",
-			description: "I build and use computational tools, spanning from automating routine tasks to developing numerical models that capture complex physical phenomena",
+			title: "Scientific Software",
+			description: "I build scientific software and computational tools for simulation, data analysis, visualization, and reproducible research workflows.",
 			link: "https://github.com/elcarrillo",
 			icons: null,
 		},
-        {
-            title: "Student Advocate",
-            description: "In part because of experiencing the difficulties associated with being a first-generation Underrepresented Minority (URM) student firsthand, I dedicate time for outreach and mentorship of prospective/current students in physical science.",
-            link: "https://gems-program.org/",
-            icons: null,
-        }
+		{
+			title: "Teaching & Mentorship",
+			description: "I teach and mentor students across STEM disciplines and dedicate time to outreach, shaped in part by my own experience as a first-generation Underrepresented Minority (URM) student.",
+			link: "https://gems-program.org/",
+			icons: null,
+		}
 	],
 }
 
