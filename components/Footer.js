@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
   faLinkedin,
-  faTwitter,
+  faBluesky,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
@@ -340,17 +340,17 @@ export const Footer = () => {
             </Link>
 
             <Link
-              href="https://x.com/edgarlcarrillo"
+              href="https://bsky.app/profile/elcarrillo.bsky.social"
               passHref
             >
               <a
                 className="footer-social me-3"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="X"
+                aria-label="Bluesky"
               >
                 <FontAwesomeIcon
-                  icon={faTwitter}
+                  icon={faBluesky}
                   size="lg"
                 />
               </a>
