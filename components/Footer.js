@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
@@ -258,6 +259,8 @@ export const Contact = ({
 
 
 export const Footer = () => {
+  const { basePath } = useRouter();
+
   return (
     <footer className="site-footer bg-dark text-light py-4">
       <div className="container">
@@ -265,7 +268,12 @@ export const Footer = () => {
 
           {/* Branding Section */}
           <div className="col-md-4 text-center text-md-start mb-3 mb-md-0">
-            <h5 className="fw-bold">
+            <h5 className="fw-bold d-flex align-items-center justify-content-center justify-content-md-start">
+              <img
+                src={`${basePath}/images/elc-logo-white.png`}
+                alt="ELC logo"
+                className="footer-logo me-2"
+              />
               Edgar Carrillo
             </h5>
 
