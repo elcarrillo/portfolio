@@ -99,7 +99,12 @@ export const Nav = ({ title }) => {
 
         {/* Brand/Title */}
         <Link href="/" passHref>
-          <a className="navbar-brand fw-bold">
+          <a className="navbar-brand fw-bold d-flex align-items-center">
+            <img
+              src={`${router.basePath}/images/elc-logo-${theme === 'dark' ? 'white' : 'black'}.png`}
+              alt="ELC logo"
+              className="navbar-logo me-2"
+            />
             {title}
           </a>
         </Link>
